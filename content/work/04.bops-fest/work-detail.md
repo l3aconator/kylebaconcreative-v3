@@ -12,6 +12,8 @@ metadata:
     'twitter:description': 'Transforming the Portland Jazz Festival into a brand that brings it back to the core experimental vibe of jazz and something the next generation would be interested in. This system removes the prententious feel that comes with jazz in the modern world.'
     'twitter:image': 'http://www.kylebaconcreative.com/user/pages/02.work/04.bops-fest/homepage-preview.jpg'
 
+featured: true
+
 datacategoryone: print
 
 homepagepreview: 'homepage-preview.jpg'

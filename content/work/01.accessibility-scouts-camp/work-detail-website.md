@@ -14,6 +14,8 @@ datacategoryone: web
 taxonomy:
     tag: [featured, Web/UX, HTML5, CSS3, GravCMS]
 
+featured: true
+
 homepagepreview: 'homepage-preview.jpg'
 homepageteaser: 'Helping you make the web a better place. There’s a hole in the industry when it comes to creating accessibile websites. This online camp gets you up and running in a easy-to-understand manner.'
 

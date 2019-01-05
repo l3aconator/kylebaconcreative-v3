@@ -14,6 +14,8 @@ datacategoryone: web
 taxonomy:
     tag: [featured, Web/UX, Marketing, HTML5, CSS3]
 
+featured: true
+
 homepagepreview: 'homepage-preview.jpg'
 homepageteaser: 'Redesign and rebuild of the Red Flags marketing and purchase site. Breathing personaility into a personable game.'
 

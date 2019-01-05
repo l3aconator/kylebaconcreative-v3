@@ -14,6 +14,8 @@ datacategoryone: web
 taxonomy:
     tag: [featured, Web/UX, app, HTML5, CSS3]
 
+featured: true
+
 homepagepreview: 'homepage-preview.jpg'
 homepageteaser: 'Welcome Home Catalog application. Your one stop app to catalog your home for accurate representation of your property value for insurance or personal use.'
 
