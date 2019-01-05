@@ -13,28 +13,46 @@ class Work extends React.Component {
         return (
             <Layout location={this.props.location} title={siteTitle}>
                 <SEO
-                    title="All posts"
+                    title="Some of my work"
                     keywords={[`blog`, `gatsby`, `javascript`, `react`]}
                 />
-                <div className="main-content">
+                <div className="main-content work-gallery">
                     <div className="container">
-                        {posts.map(({ node }) => {
-                            const title = node.frontmatter.title || node.fields.slug
-                            return (
-                                <div key={`/work/${node.fields.slug}`}>
-                                    <h3>
-                                        <Link style={{ boxShadow: `none` }} to={`/work/${node.fields.slug}`}>
-                                            {title}
+                        <div class="page-hero">
+                            <h1>Some of my work</h1>
+                        </div>
+                        <div class="grid flex-grid--gutters">
+                            {posts.map(({ node }) => {
+                                const title = node.frontmatter.title || node.fields.slug
+                                const teaser = node.frontmatter.homepageteaser
+                                const slug = `/work/${node.fields.slug}`
+                                const image = node.frontmatter.homepagepreview.childImageSharp.fluid.src;
+                                const classArray = ['work--orange', 'work--blue__light', 'work--pink', 'work--turq'];
+                                const widthArray = ['four', 'eight']
+                                const generateClass = classArray[Math.floor(Math.random() * Math.floor(4))];
+                                const width = widthArray[Math.floor(Math.random() * Math.floor(2))]
+                                return (
+                                    <div className={`col col--width__${width}`} key={slug}>
+                                        <Link to={slug}>
+                                            <div className={`work-image-box ${generateClass}`} style={{
+                                                backgroundImage: `url(${image})`
+                                            }}>
+                                                <div className="work-meta">
+                                                    <div className="work-meta--content">
+                                                        <p className="work-meta--content-title">{title}</p>
+                                                        <p class="work-meta--content-teaser">{teaser}</p>
+                                                        <img className="work-meta--content-arrow" src="/prev-arrow.svg" alt="An arrow to go onto the work." />
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </Link>
-                                    </h3>
-                                    <small>{node.frontmatter.date}</small>
-                                    <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-                                </div>
-                            )
-                        })}
+                                    </div>
+                                )
+                            })}
+                        </div>
                     </div>
                 </div>
-            </Layout>
+            </Layout >
         )
     }
 }
@@ -58,6 +76,14 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            homepagepreview {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            homepageteaser
           }
         }
       }
