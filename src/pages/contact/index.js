@@ -12,7 +12,7 @@ class Contact extends React.Component {
         return (
             <Layout location={this.props.location} title={siteTitle}>
                 <SEO
-                    title="All posts"
+                    title="Contact"
                     keywords={[`blog`, `gatsby`, `javascript`, `react`]}
                 />
                 <div class="main-content contact">
@@ -22,7 +22,7 @@ class Contact extends React.Component {
                             <h3>I would love to help consult, code, or design your next project!</h3>
                         </div>
                         <fieldset class="contact-form">
-                            <form data-netlify="true" method="POST" data-netlify-honeypot="bot-field" name="contact" action="/contact/thanks">
+                            <form data-netlify="true" method="POST" data-netlify-honeypot="bot-field" name="contact">
                                 <div class="form-row">
                                     <div class="grid flex-grid">
                                         <div class="col--width__six">
