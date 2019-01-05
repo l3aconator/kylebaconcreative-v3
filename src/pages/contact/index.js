@@ -22,7 +22,7 @@ class Contact extends React.Component {
                             <h3>I would love to help consult, code, or design your next project!</h3>
                         </div>
                         <fieldset class="contact-form">
-                            <form data-netlify="true" method="POST" data-netlify-honeypot="bot-field" name="contact">
+                            <form data-netlify="true" method="POST" data-netlify-honeypot="bot-field" name="contact" action="/contact/thanks">
                                 <input type="hidden" name="form-name" value="contact" />
                                 <div class="form-row">
                                     <div class="grid flex-grid">
