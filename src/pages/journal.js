@@ -16,22 +16,39 @@ class Homepage extends React.Component {
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        <div className="main-content">
+        <div className="main-content journal-feed">
           <div className="container">
-            {posts.map(({ node }) => {
-              const title = node.frontmatter.title || node.fields.slug
-              return (
-                <div key={`/journal/${node.fields.slug}`}>
-                  <h3>
-                    <Link style={{ boxShadow: `none` }} to={`/journal/${node.fields.slug}`}>
-                      {title}
-                    </Link>
-                  </h3>
-                  <small>{node.frontmatter.date}</small>
-                  <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-                </div>
-              )
-            })}
+            <div className="page-hero">
+              <h1>Inside the brain of Bacon</h1>
+            </div>
+            <div className="grid flex-grid--gutters">
+              {posts.map(({ node }) => {
+                const title = node.frontmatter.title || node.fields.slug
+                const image = node.frontmatter.journalhero.childImageSharp.fluid.src;
+                const classArray = ['journal--orange', 'journal--blue__light', 'journal--pink', 'journal--turq'];
+                const generateClass = classArray[Math.floor(Math.random() * Math.floor(4))];
+                return (
+                  <div className="col col--width__six" key={`/journal/${node.fields.slug}`}>
+                    <div className={`journal-feed-item ${generateClass}`} >
+                      <div className="journal-hero" style={{
+                        backgroundImage: `url(${image})`
+                      }}>
+                        <h4 className="journal-main-heading"><Link to={`/journal/${node.fields.slug}`}>{title}</Link></h4>
+                      </div>
+                      <section className="journal-information">
+                        <span className="list-blog-date"><span>Posted on <span>{node.frontmatter.date}</span></span></span>
+                      </section>
+                      <div className="journal-feed-content">
+                        <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                        <Link className="button-link" to={`/journal/${node.fields.slug}`}>
+                          <button className="u-center dark">Read more&hellip;</button>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
           </div>
         </div>
       </Layout>
@@ -58,6 +75,13 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            journalhero {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
           }
         }
       }

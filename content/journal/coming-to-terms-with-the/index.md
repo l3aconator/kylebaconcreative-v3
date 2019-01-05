@@ -1,7 +1,7 @@
 ---
 title: 'Coming to terms with the “framework”'
 published: true
-date: '2015-05-01T22:12:03.284Z'
+date: '2014-09-07'
 taxonomy:
     tag:
         - Thoughts
@@ -18,7 +18,7 @@ metadata:
     'twitter:description': 'Journal Entry from Web Developer and Freelancer Kyle Bacon. Rant about coming to terms with the framework.'
     'twitter:image': 'http://www.kylebaconcreative.com/user/pages/05.journal/coming-to-terms-with-the-framework/journal-hero.jpeg'
 journalhero: journal-hero.jpeg
-journalherocircle: journal-hero.jpg
+journalherocircle: journal-circle.jpg
 journalherocirclealt: testingx`
 ---
 

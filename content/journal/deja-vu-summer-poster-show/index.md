@@ -1,7 +1,7 @@
 ---
 title: 'Deja Vu Summer Poster Show'
 published: true
-date: '2015-05-01T22:12:03.284Z'
+date: '2014-10-08'
 metadata:
     description: 'Journal Entry from Web Developer and Freelancer Kyle Bacon. It''s okay to be lost when everything seems to be hard. Deja Vu Summer Poster Show  in Portland, OR'
     'og:title': 'Deja Vu Summer Poster Show Journal Entry'
@@ -25,15 +25,20 @@ journalherocirclealt: testing
 
 Deja Vu Summer poster show. These were my favorite pieces. Shout out to my Prof. Jason Sturgill for having a piece in the show, Slush Kitty.
 
-![My Image](tumblr_nd4urcOt5S1qcrdmgo2_1280.jpg?classes=thirds,float-left,clearfix)
-![My Image](tumblr_nd4urcOt5S1qcrdmgo3_1280.jpg?classes=thirds,float-left,clearfix)
-![My Image](tumblr_nd4urcOt5S1qcrdmgo4_1280.jpg?classes=thirds,float-left,clearfix)
+![My Image](tumblr_nd4urcOt5S1qcrdmgo2_1280.jpg)
 
-![My Image](tumblr_nd4urcOt5S1qcrdmgo5_1280.jpg?classes=half,float-left,clearfix)
-![My Image](tumblr_nd4urcOt5S1qcrdmgo6_1280.jpg?classes=half,float-left,clearfix)
+![My Image](tumblr_nd4urcOt5S1qcrdmgo3_1280.jpg)
 
-![My Image](tumblr_nd4urcOt5S1qcrdmgo10_1280.jpg?classes=full,clearfix)
+![My Image](tumblr_nd4urcOt5S1qcrdmgo4_1280.jpg)
 
-![My Image](tumblr_nd4urcOt5S1qcrdmgo7_1280.jpg?classes=thirds,float-left,clearfix)
-![My Image](tumblr_nd4urcOt5S1qcrdmgo8_1280.jpg?classes=thirds,float-left,clearfix)
-![My Image](tumblr_nd4urcOt5S1qcrdmgo9_1280.jpg?classes=thirds,float-left,clearfix)
+![My Image](tumblr_nd4urcOt5S1qcrdmgo5_1280.jpg)
+
+![My Image](tumblr_nd4urcOt5S1qcrdmgo6_1280.jpg)
+
+![My Image](tumblr_nd4urcOt5S1qcrdmgo10_1280.jpg)
+
+![My Image](tumblr_nd4urcOt5S1qcrdmgo8_1280.jpg)
+
+![My Image](tumblr_nd4urcOt5S1qcrdmgo7_1280.jpg)
+
+![My Image](tumblr_nd4urcOt5S1qcrdmgo9_1280.jpg)

@@ -1,7 +1,7 @@
 ---
 title: 'Some Travels During Design Week Portland'
 published: true
-date: '2015-05-01T22:12:03.284Z'
+date: '2014-10-08'
 taxonomy:
     tag:
         - Inspiration
@@ -25,22 +25,28 @@ journalherocirclealt: testing
 
 Just general pictures from my monday morning and afternoon at the Design Week PDX HQ.
 
-![My Image](tumblr_nd1yy4yexH1qcrdmgo1_1280.jpg?classes=half,float-left,clearfix)
-![My Image](tumblr_nd1z95uKlu1qcrdmgo1_1280.jpg?classes=half,float-left,clearfix)
+![My Image](tumblr_nd1yy4yexH1qcrdmgo1_1280.jpg)
 
-![My Image](tumblr_nd1zj2Gtjo1qcrdmgo1_1280.jpg?classes=full,clearfix)
+![My Image](tumblr_nd1z95uKlu1qcrdmgo1_1280.jpg)
 
-![My Image](tumblr_nd1zj2Gtjo1qcrdmgo2_1280.jpg?classes=thirds,float-left,clearfix)
-![My Image](tumblr_nd1zj2Gtjo1qcrdmgo3_1280.jpg?classes=thirds,float-left,clearfix)
-![My Image](tumblr_nd1zj2Gtjo1qcrdmgo4_1280.jpg?classes=thirds,float-left,clearfix)
+![My Image](tumblr_nd1zj2Gtjo1qcrdmgo1_1280.jpg)
 
-![My Image](tumblr_nd1zj2Gtjo1qcrdmgo5_1280.jpg?classes=half,float-left,clearfix)
-![My Image](tumblr_nd1zj2Gtjo1qcrdmgo6_1280.jpg?classes=half,float-left,clearfix)
+![My Image](tumblr_nd1zj2Gtjo1qcrdmgo2_1280.jpg)
 
-![My Image](tumblr_nd1zj2Gtjo1qcrdmgo7_1280.jpg?classes=half,float-left,clearfix)
-![My Image](tumblr_nd1zj2Gtjo1qcrdmgo8_1280.jpg?classes=half,float-left,clearfix)
+![My Image](tumblr_nd1zj2Gtjo1qcrdmgo3_1280.jpg)
 
-![My Image](tumblr_nd1zj2Gtjo1qcrdmgo9_1280.jpg?classes=half,float-left,clearfix)
-![My Image](tumblr_nd1zj2Gtjo1qcrdmgo10_1280.jpg?classes=half,float-left,clearfix)
+![My Image](tumblr_nd1zj2Gtjo1qcrdmgo4_1280.jpg)
+
+![My Image](tumblr_nd1zj2Gtjo1qcrdmgo5_1280.jpg)
+
+![My Image](tumblr_nd1zj2Gtjo1qcrdmgo6_1280.jpg)
+
+![My Image](tumblr_nd1zj2Gtjo1qcrdmgo7_1280.jpg)
+
+![My Image](tumblr_nd1zj2Gtjo1qcrdmgo8_1280.jpg)
+
+![My Image](tumblr_nd1zj2Gtjo1qcrdmgo9_1280.jpg)
+
+![My Image](tumblr_nd1zj2Gtjo1qcrdmgo10_1280.jpg)
 
 
