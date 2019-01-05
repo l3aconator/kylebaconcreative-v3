@@ -23,6 +23,7 @@ class Contact extends React.Component {
                         </div>
                         <fieldset class="contact-form">
                             <form data-netlify="true" method="POST" data-netlify-honeypot="bot-field" name="contact">
+                                <input type="hidden" name="form-name" value="contact" />
                                 <div class="form-row">
                                     <div class="grid flex-grid">
                                         <div class="col--width__six">
@@ -61,7 +62,7 @@ class Contact extends React.Component {
                                 </div>
                                 <textarea name="message" draggable="false" placeholder="Transmission here…"></textarea>
                                 <input type="hidden" name="bot-field" />
-                                <button class="form-button" type="submit">submit</button>
+                                <button class="form-button" type="submit">Send</button>
                             </form>
                         </fieldset>
                     </div>
