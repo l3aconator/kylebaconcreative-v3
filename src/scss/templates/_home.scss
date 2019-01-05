@@ -1,0 +1,152 @@
+.home {
+
+    .page-hero {
+        margin-bottom: 100px;
+        margin-top: 50px;
+
+        h1 {
+            color: $turq;
+            margin-bottom: $padding-large;
+
+            span {
+                color: $blue--light;
+            }
+        }
+
+        h2 {
+            color: $turq;
+            line-height: 1.5em;
+        }
+    }
+
+    .page-list {
+        margin-bottom: 20vh;
+
+        h3 {
+            margin-bottom: $padding-base-by-2;
+        }
+
+        .home--list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin-bottom: $padding-base-by-4;
+                color: $turq;
+                font-size: $h4;
+            }
+        }
+    }
+
+    .page-work,
+    .page-about {
+        margin-bottom: 20vh;
+
+        h4 {
+            margin-bottom: $padding-base-by-2;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: $padding-base-by-2;
+        }
+    }
+
+    .page-about {
+        margin-bottom: 0vh;
+    }
+
+    .page-about {
+
+        .about {
+            background-color: $turq;
+            padding: 90px 0;
+
+            h3,
+            .h3 {
+                color: $white;
+            }
+
+            .page-list {
+                margin-bottom: 0vh;
+
+                h3 {
+                    margin-top: $padding-base;
+                }
+            }
+
+            h4,
+            p,
+            ul,
+            h3 {
+                margin: 0 auto;
+                margin-bottom: $padding-base-by-2;
+                max-width: 700px;
+            }
+
+            li {
+                margin-bottom: $padding-base;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            .process-title,
+            .process-description {
+                display: block;
+                color: $white;
+            }
+
+            .process-title {
+                margin-bottom: $padding-base-by-2;
+                font-size: $h4;
+            }
+
+            .process-description {
+                line-height: 2em;
+                font-size: 20px;
+            }
+
+            .icon-box {
+                width: 175px;
+                height: 175px;
+                background-color: $blue--base;
+                border-radius: 30px;
+                padding: 30px;
+                box-shadow: 2px 0px 7px 2px rgba(10,11,32,0.4);
+
+                svg {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 479px) {
+
+    .home {
+
+        .page-hero {
+            margin-bottom: 100px;
+            margin-top: 175px;
+        }
+    }
+
+
+
+    .page-hero {
+        margin-top: 130px;
+
+        h1 {
+            font-size: 2em;
+        }
+
+        h3 {
+            font-size: 1.75em;
+        }
+    }
+}

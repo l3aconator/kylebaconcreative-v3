@@ -1,0 +1,27 @@
+// Load Normalize
+@import "normalize/normalize";
+
+// Load Variables and Mixins
+@import "framework/fonts";
+@import "framework/variables";
+
+// Load Base Framework
+@import "framework/grid";
+@import "framework/typography";
+@import "framework/buttons";
+@import "framework/backgrounds";
+@import "framework/utilities";
+
+// Load Layout Partials
+@import "layout-partials/navigation";
+
+// Load Page Templates
+@import "templates/base";
+@import "templates/home";
+@import "templates/work";
+@import "templates/work-detail";
+@import "templates/work-detail-website";
+@import "templates/contact";
+@import "templates/journal-feed";
+@import "templates/journal-entry";
+@import "templates/temp-media-queries";

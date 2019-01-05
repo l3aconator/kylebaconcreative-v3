@@ -1,0 +1,93 @@
+.journal-feed {
+    margin-bottom: 90px;
+
+    .journal-feed-item {
+        transition: $base-transition;
+        height: 710px;
+        background-color: white;
+        margin-bottom: 30px;
+        border-radius: 30px;
+        border: 20px solid transparent;
+
+        &.journal--orange {
+            border-color: $orange;
+            background-color: $orange;
+        }
+
+        &.journal--blue__light {
+            border-color: $blue--light;
+            background-color: $blue--light;
+        }
+
+        &.journal--pink {
+            border-color: $pink;
+            background-color: $pink;
+        }
+
+        &.journal--turq {
+            border-color: $turq;
+            background-color: $turq;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            box-shadow: 0px 4px 26px 4px rgba(0,0,0,0.30);
+        }
+
+        img {
+            display: none;
+        }
+
+        .journal-feed-content {
+
+            a {
+                display: block;
+                margin-top: 25px;
+            }
+        }
+    }
+
+    .journal-hero {
+        background-color: $blue--base;
+        min-height: 266px;
+
+        .journal-main-heading {
+            padding-left: $padding-base-by-2;
+            padding-right: $padding-base-by-2;
+            font-size: 1.75em;
+            word-wrap: break-word;
+            margin-bottom: 0px;
+        }
+    }
+
+    .journal-feed-content {
+        padding-left: $padding-base-by-2;
+        padding-right: $padding-base-by-2;
+        font-size: 16px;
+        color: $white;
+
+        button {
+            width: 100%;
+            margin-bottom: $margin-base;
+        }
+    }
+
+    .journal-information {
+        padding: $padding-base-by-2;
+
+        .list-blog-date {
+            font-size: .875em;
+        }
+    }
+}
+
+@media (max-width: 951px) {
+
+    .journal-feed {
+
+        .journal-feed-item {
+            height: 100%;
+        }
+    }
+}

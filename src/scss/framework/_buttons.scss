@@ -1,0 +1,52 @@
+/*Buttons*/
+
+.button,
+a .button,
+input .button,
+button,
+a button {
+    background-color: $turq;
+    color: $white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 200ms ease-in;
+    padding: 8px 30px;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: white;
+        color: $turq;
+    }
+
+    &.dark {
+        color: $white;
+        background-color: $blue--dark;
+
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: white;
+            color: $blue--dark;
+        }
+    }
+}
+
+.button-link {
+    text-decoration: none;
+}
+
+.text-link {
+
+    &.white {
+        text-decoration: underline;
+        color: $blue--light;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: lighten($blue--light, 20%);
+        }
+    }
+}

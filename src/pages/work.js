@@ -17,24 +17,28 @@ class Work extends React.Component {
                     title="All posts"
                     keywords={[`blog`, `gatsby`, `javascript`, `react`]}
                 />
-                {posts.map(({ node }) => {
-                    const title = node.frontmatter.title || node.fields.slug
-                    return (
-                        <div key={`/work/${node.fields.slug}`}>
-                            <h3
-                                style={{
-                                    marginBottom: rhythm(1 / 4),
-                                }}
-                            >
-                                <Link style={{ boxShadow: `none` }} to={`/work/${node.fields.slug}`}>
-                                    {title}
-                                </Link>
-                            </h3>
-                            <small>{node.frontmatter.date}</small>
-                            <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-                        </div>
-                    )
-                })}
+                <div className="main-content">
+                    <div className="container">
+                        {posts.map(({ node }) => {
+                            const title = node.frontmatter.title || node.fields.slug
+                            return (
+                                <div key={`/work/${node.fields.slug}`}>
+                                    <h3
+                                        style={{
+                                            marginBottom: rhythm(1 / 4),
+                                        }}
+                                    >
+                                        <Link style={{ boxShadow: `none` }} to={`/work/${node.fields.slug}`}>
+                                            {title}
+                                        </Link>
+                                    </h3>
+                                    <small>{node.frontmatter.date}</small>
+                                    <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                                </div>
+                            )
+                        })}
+                    </div>
+                </div>
             </Layout>
         )
     }
