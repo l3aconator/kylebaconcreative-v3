@@ -61,7 +61,7 @@ class Contact extends React.Component {
                                 </div>
                                 <textarea name="message" draggable="false" placeholder="Transmission here…"></textarea>
                                 <input type="hidden" name="bot-field" />
-                                <input class="form-button" type="submit" />
+                                <button class="form-button" type="submit">submit</button>
                             </form>
                         </fieldset>
                     </div>
