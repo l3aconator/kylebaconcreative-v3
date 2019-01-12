@@ -26,7 +26,7 @@ circleteasertwo: true
 circleteasertwoimage: 'circle-big.png'
 
 workdetailwebsiteprimary: true
-workdetailwebsiteprimaryhero: 'redflags.gif'
+workdetailwebsiteprimaryhero: 'redflags-2.jpg'
 workdetailwebsiteprimaryheroalt: 'A gif of the red flags interactive game.'
 
 workdetailwebsitesecondary: true

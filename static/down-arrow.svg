@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="23px" height="13px" viewBox="0 0 23 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5.2 (25235) - http://www.bohemiancoding.com/sketch -->
+    <title>down-arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Concept-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="work-detail-page-basic_desktop" sketch:type="MSArtboardGroup" transform="translate(-1138.000000, -671.000000)" fill="#FFFFFF">
+            <g id="detail-page-body" sketch:type="MSLayerGroup" transform="translate(337.000000, 0.000000)">
+                <g id="scroll-down" transform="translate(790.000000, 654.000000)" sketch:type="MSShapeGroup">
+                    <g id="down-arrow" transform="translate(11.000000, 17.000000)">
+                        <g transform="translate(11.500000, 6.500000) rotate(-180.000000) translate(-11.500000, -6.500000) translate(0.000000, -0.000000)">
+                            <path d="M10.4397192,2.08623984 C10.2110302,1.85709881 10.2105245,1.48609446 10.4465597,1.24959282 L11.2727692,0.421750486 C11.5052361,0.188824124 11.8797203,0.186400165 12.107766,0.414896536 L22.5389253,10.8666707 C22.7676143,11.0958118 22.76812,11.4668161 22.5320848,11.7033178 L21.7058753,12.5311601 C21.4734084,12.7640865 21.0989242,12.7665104 20.8708785,12.538014 L10.4397192,2.08623984 L10.4397192,2.08623984 Z" id="Rectangle-215"></path>
+                            <path d="M11.2917206,0.414896536 C11.5204097,0.185755506 11.8906823,0.18524884 12.1267174,0.421750486 L12.9529269,1.24959282 C13.1853939,1.48251918 13.187813,1.85774347 12.9597674,2.08623984 L2.52860809,12.538014 C2.29991901,12.7671551 1.92964643,12.7676617 1.69361126,12.5311601 L0.867401754,11.7033178 C0.634934813,11.4703914 0.632515635,11.0951671 0.860561323,10.8666707 L11.2917206,0.414896536 L11.2917206,0.414896536 Z" id="Rectangle-215-Copy"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

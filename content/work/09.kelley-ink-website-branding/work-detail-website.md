@@ -92,7 +92,7 @@ workdetailwebsitetertiarycontentmainimagealt: 'An image of the Grav CMS Dashboar
 
 workdetailiconography: true
 workdetailiconographyheading: 'Custom Iconography'
-workdetailiconographycontent: 'I illustrated a <em>custom icon set</em> that is used on the homepage of the site showcasing the skills of Kelley. If you hover over them, one gets a sweet little CSS3 animation that was inspired by pushing the keys of a typewriter, further pushing the writing and typewriter vibe.'
+workdetailiconographycontent: 'I illustrated a custom icon set that is used on the homepage of the site showcasing the skills of Kelley. If you hover over them, one gets a sweet little CSS3 animation that was inspired by pushing the keys of a typewriter, further pushing the writing and typewriter vibe.'
 workdetailiconographybutton: 'See the icons live'
 workdetailiconographyurl: 'http://www.kelley.ink/'
 workdetailiconographyicons:

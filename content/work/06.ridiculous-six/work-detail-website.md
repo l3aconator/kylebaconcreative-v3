@@ -24,7 +24,7 @@ circleteasertwo: true
 circleteasertwoimage: 'circle-small.jpg'
 
 workdetailwebsiteprimary: true
-workdetailwebsiteprimaryhero: 'six-middle.gif'
+workdetailwebsiteprimaryhero: 'six-1.jpg'
 workdetailwebsiteprimaryheroalt: 'A preview of some of interactions on the site.'
 
 workdetailwebsiteprimaryheading: 'Web app tie in'

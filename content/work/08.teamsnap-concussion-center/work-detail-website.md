@@ -22,7 +22,7 @@ heroimage: 'center-header.jpg'
 heroimagealt: 'A shot of the intro of the site.'
 
 workdetailwebsiteprimary: true
-workdetailwebsiteprimaryhero: 'center-middle.gif'
+workdetailwebsiteprimaryhero: 'center-1.jpg'
 workdetailwebsiteprimaryheroalt: 'A preview of some of the animations on the page.'
 
 workdetailwebsiteprimaryheading: 'Collected content'

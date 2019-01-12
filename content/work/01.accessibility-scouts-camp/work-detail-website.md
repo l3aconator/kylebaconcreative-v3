@@ -57,7 +57,6 @@ workdetailwebsitelasturl: 'https://accessibilityscouts.camp/badge'
 workdetailwebsitefooter: true
 workdetailwebsitefooterheading: 'Camp manuals'
 workdetailwebsitefootercontent: 'The camp is split up into manuals of the different sense used on the web. Each section has their own set of badges and challenges to keep in mind when designing and coding on the web.'
-
 workdetailwebsitefooterimage: 'accessibility-footer.jpg'
 workdetailwebsitefooterimagealt: 'The camp manual images.'
 ---
