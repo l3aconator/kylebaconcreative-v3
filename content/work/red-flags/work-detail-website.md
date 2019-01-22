@@ -35,7 +35,7 @@ workdetailwebsitesecondarycontent: 'Given that their exisiting site is basically
 workdetailwebsitesecondarycontentmainimage: 'redflags-2.jpg'
 workdetailwebsitesecondarycontentmainimagealt: 'A preview image of the game demo'
 workdetailwebsitesecondarybutton: 'Checkout the demo'
-workdetailwebsitesecondaryurl: 'https://dev.kylebaconcreative.com/school/interactive-2/red-flags/#play'
+workdetailwebsitesecondaryurl: 'https://pensive-heyrovsky-a34277.netlify.com/red-flags/#play'
 
 workdetailwebsitelast: true
 workdetailwebsitelastheading: 'Checkout flow'
@@ -43,7 +43,7 @@ workdetailwebsitelastcontent: 'Ecommerce is something most designers want to avo
 workdetailwebsitelastcontentmainimage: 'redflags-3.jpg'
 workdetailwebsitelastcontentmainimagealt: 'A preview image of the checkout flow.'
 workdetailwebsitelastbutton: 'See the checkout page'
-workdetailwebsitelasturl: 'https://dev.kylebaconcreative.com/school/interactive-2/red-flags/checkout.html'
+workdetailwebsitelasturl: 'https://pensive-heyrovsky-a34277.netlify.com/checkout.html'
 ---
 When tasked with the prompt to design a site for a product that was engaging, well-written, and interactive, I jumped at the chance to redesign the experience for the card game Red Flags. Their site in the current state is an off-the-shelf theme, that isn’t very interesting or engaging. The design is very clean, but doesn’t entice one to want to buy from them.
 
