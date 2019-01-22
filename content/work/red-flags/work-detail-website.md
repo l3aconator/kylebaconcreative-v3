@@ -35,7 +35,7 @@ workdetailwebsitesecondarycontent: 'Given that their exisiting site is basically
 workdetailwebsitesecondarycontentmainimage: 'redflags-2.jpg'
 workdetailwebsitesecondarycontentmainimagealt: 'A preview image of the game demo'
 workdetailwebsitesecondarybutton: 'Checkout the demo'
-workdetailwebsitesecondaryurl: 'https://pensive-heyrovsky-a34277.netlify.com/red-flags/#play'
+workdetailwebsitesecondaryurl: 'https://pensive-heyrovsky-a34277.netlify.com/#play'
 
 workdetailwebsitelast: true
 workdetailwebsitelastheading: 'Checkout flow'
