@@ -344,31 +344,44 @@ class WorkPostTemplate extends React.Component {
             />
           )}
         </div>
-
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
+        <section class="work-carousel align-center main-content">
+          <div class="container">
+            <div class="grid flex-grid--gutters">
+              <div class="col col--width__six">
+                <div class="grid flex-grid--gutters">
+                  <div class="col col--width__nine left-name">
+                    {previous && (
+                      <React.Fragment>
+                        <div class="work-carousel-name">Previous post</div>
+                        <Link to={`/work/${previous.fields.slug}`} rel="prev">
+                          <div class="work-carousel-project">
+                            {previous.frontmatter.title}
+                          </div>
+                        </Link>
+                      </React.Fragment>
+                    )}
+                  </div>
+                </div>
+              </div>
+              <div class="col col--width__six">
+                <div class="grid flex-grid--gutters">
+                  <div class="col col--width__nine right-name">
+                    {next && (
+                      <React.Fragment>
+                        <div class="work-carousel-name">Next post</div>
+                        <Link to={`/work/${next.fields.slug}`} rel="next">
+                          <div class="work-carousel-project">
+                            {next.frontmatter.title}
+                          </div>
+                        </Link>
+                      </React.Fragment>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </Layout>
     );
   }
