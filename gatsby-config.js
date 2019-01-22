@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Kyle Bacon`,
     author: `Kyle Bacon`,
-    description: `Kyle Bacon is a web developer and designer in the Portland area with experience in web and print design, branding, outdoor advertising, and more.`,
+    description: `Kyle Bacon is a React, CSS, and GRAV web developer and designer in the Portland and SW Washington area.`,
     siteUrl: `https://kylebaconcreative.com`,
     social: {
       twitter: `l3acon`,
@@ -24,13 +24,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/assets`,
-        name: `assets`,
-      },
-    },
-    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
@@ -38,12 +31,6 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,
-            },
-          },
-          {
-            resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
           `gatsby-remark-prismjs`,
@@ -57,7 +44,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-58782911-1`,
       },
     },
     `gatsby-plugin-feed`,
@@ -65,16 +52,16 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Kyle Bacon Creative`,
+        short_name: `Kyle Bacon`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `static/mstile-310x310.png`,
       },
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
   ],
-}
+};

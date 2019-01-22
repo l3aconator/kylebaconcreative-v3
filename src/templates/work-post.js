@@ -344,17 +344,17 @@ class WorkPostTemplate extends React.Component {
             />
           )}
         </div>
-        <section class="work-carousel align-center main-content">
-          <div class="container">
-            <div class="grid flex-grid--gutters">
-              <div class="col col--width__six">
-                <div class="grid flex-grid--gutters">
-                  <div class="col col--width__nine left-name">
+        <section className="work-carousel align-center main-content">
+          <div className="container">
+            <div className="grid flex-grid--gutters">
+              <div className="col col--width__six">
+                <div className="grid flex-grid--gutters">
+                  <div className="col col--width__nine left-name">
                     {previous && (
                       <React.Fragment>
-                        <div class="work-carousel-name">Previous post</div>
+                        <div className="work-carousel-name">Previous post</div>
                         <Link to={`/work/${previous.fields.slug}`} rel="prev">
-                          <div class="work-carousel-project">
+                          <div className="work-carousel-project">
                             {previous.frontmatter.title}
                           </div>
                         </Link>
@@ -363,14 +363,14 @@ class WorkPostTemplate extends React.Component {
                   </div>
                 </div>
               </div>
-              <div class="col col--width__six">
-                <div class="grid flex-grid--gutters">
-                  <div class="col col--width__nine right-name">
+              <div className="col col--width__six">
+                <div className="grid flex-grid--gutters">
+                  <div className="col col--width__nine right-name">
                     {next && (
                       <React.Fragment>
-                        <div class="work-carousel-name">Next post</div>
+                        <div className="work-carousel-name">Next post</div>
                         <Link to={`/work/${next.fields.slug}`} rel="next">
-                          <div class="work-carousel-project">
+                          <div className="work-carousel-project">
                             {next.frontmatter.title}
                           </div>
                         </Link>
