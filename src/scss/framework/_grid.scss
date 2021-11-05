@@ -1,3 +1,5 @@
+@use "sass:math";
+
 * {
     box-sizing: border-box;
 }
@@ -33,51 +35,51 @@
         flex: 1;
 
         &--width__one {
-            flex-basis: (1/12) * 100%;
+            flex-basis: math.div(1, 12) * 100%;
         }
 
         &--width__two {
-            flex-basis: (2/12) * 100%;
+            flex-basis: math.div(2, 12) * 100%;
         }
 
         &--width__three {
-            flex-basis: (3/12) * 100%;
+            flex-basis: math.div(3, 12) * 100%;
         }
 
         &--width__four {
-            flex-basis: (4/12) * 100%;
+            flex-basis: math.div(4, 12) * 100%;
         }
 
         &--width__five {
-            flex-basis: (5/12) * 100%;
+            flex-basis: math.div(5, 12) * 100%;
         }
 
         &--width__six {
-            flex-basis: (6/12) * 100%;
+            flex-basis: math.div(6, 12) * 100%;
         }
 
         &--width__seven {
-            flex-basis: (7/12) * 100%;
+            flex-basis: math.div(7, 12) * 100%;
         }
 
         &--width__eight {
-            flex-basis: (8/12) * 100%;
+            flex-basis: math.div(8, 12) * 100%;
         }
 
         &--width__nine {
-            flex-basis: (9/12) * 100%;
+            flex-basis: math.div(9, 12) * 100%;
         }
 
         &--width__ten {
-            flex-basis: (10/12) * 100%;
+            flex-basis: math.div(10, 12) * 100%;
         }
 
         &--width__eleven {
-            flex-basis: (11/12) * 100%;
+            flex-basis: math.div(11, 12) * 100%;
         }
 
         &--width__twelve {
-            flex-basis: (12/12) * 100%;
+            flex-basis: math.div(12, 12) * 100%;
         }
     }
 
@@ -90,51 +92,51 @@
             padding-left: $grid--gutter;
 
             &--width__one {
-                flex-basis: (1/12) * 100%;
+                flex-basis: math.div(1, 12) * 100%;
             }
 
             &--width__two {
-                flex-basis: (2/12) * 100%;
+                flex-basis: math.div(2, 12) * 100%;
             }
 
             &--width__three {
-                flex-basis: (3/12) * 100%;
+                flex-basis: math.div(3, 12) * 100%;
             }
 
             &--width__four {
-                flex-basis: (4/12) * 100%;
+                flex-basis: math.div(4, 12) * 100%;
             }
 
             &--width__five {
-                flex-basis: (5/12) * 100%;
+                flex-basis: math.div(5, 12) * 100%;
             }
 
             &--width__six {
-                flex-basis: (6/12) * 100%;
+                flex-basis: math.div(6, 12) * 100%;
             }
 
             &--width__seven {
-                flex-basis: (7/12) * 100%;
+                flex-basis: math.div(7, 12) * 100%;
             }
 
             &--width__eight {
-                flex-basis: (8/12) * 100%;
+                flex-basis: math.div(8, 12) * 100%;
             }
 
             &--width__nine {
-                flex-basis: (9/12) * 100%;
+                flex-basis: math.div(9, 12) * 100%;
             }
 
             &--width__ten {
-                flex-basis: (10/12) * 100%;
+                flex-basis: math.div(10, 12) * 100%;
             }
 
             &--width__eleven {
-                flex-basis: (11/12) * 100%;
+                flex-basis: math.div(11, 12) * 100%;
             }
 
             &--width__twelve {
-                flex-basis: (12/12) * 100%;
+                flex-basis: math.div(12, 12) * 100%;
             }
         }
     }
@@ -149,7 +151,7 @@
 
         > .col {
             display: block;
-            flex-basis: (12/12) * 100%;
+            flex-basis: math.div(12, 12) * 100%;
             width: 100%;
             margin: 0 0 10px 0;
         }

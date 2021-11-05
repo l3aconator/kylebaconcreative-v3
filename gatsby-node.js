@@ -72,8 +72,6 @@ exports.createPages = ({ graphql, actions }) => {
       const workPostTemplate = path.resolve(`./src/templates/work-post.js`);
       const posts = result.data.allMarkdownRemark.edges;
 
-      console.log(posts);
-
       posts.forEach((post, index) => {
         const previous =
           index === posts.length - 1 ? null : posts[index + 1].node;
