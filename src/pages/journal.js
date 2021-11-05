@@ -31,7 +31,7 @@ class Homepage extends React.Component {
                 return (
                   <div
                     className="col col--width__six"
-                    key={`/journal/${node.fields.slug}`}
+                    key={`/journal${node.fields.slug}`}
                   >
                     <div className={`journal-feed-item ${generateClass}`}>
                       <div
@@ -41,7 +41,7 @@ class Homepage extends React.Component {
                         }}
                       >
                         <h4 className="journal-main-heading">
-                          <Link to={`/journal/${node.fields.slug}`}>
+                          <Link to={`/journal${node.fields.slug}`}>
                             {title}
                           </Link>
                         </h4>
@@ -57,7 +57,7 @@ class Homepage extends React.Component {
                         <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
                         <Link
                           className="button-link"
-                          to={`/journal/${node.fields.slug}`}
+                          to={`/journal${node.fields.slug}`}
                         >
                           <button className="u-center dark">
                             Read more&hellip;

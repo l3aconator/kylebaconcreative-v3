@@ -29,7 +29,7 @@ class BlogPostTemplate extends React.Component {
                 <div className="grid flex-grid--gutters">
                   <div className="col col--width__seven">
                     <h1 className="journal-main-heading">
-                      <Link to={`/journal/${slug}`}>
+                      <Link to={`/journal${slug}`}>
                         {post.frontmatter.title}
                       </Link>
                     </h1>
@@ -71,10 +71,7 @@ class BlogPostTemplate extends React.Component {
                     {previous && (
                       <React.Fragment>
                         <div className="work-carousel-name">Previous post</div>
-                        <Link
-                          to={`/journal/${previous.fields.slug}`}
-                          rel="prev"
-                        >
+                        <Link to={`/journal${previous.fields.slug}`} rel="prev">
                           <div className="work-carousel-project">
                             {previous.frontmatter.title}
                           </div>
@@ -90,7 +87,7 @@ class BlogPostTemplate extends React.Component {
                     {next && (
                       <React.Fragment>
                         <div className="work-carousel-name">Next post</div>
-                        <Link to={`/journal/${next.fields.slug}`} rel="next">
+                        <Link to={`/journal${next.fields.slug}`} rel="next">
                           <div className="work-carousel-project">
                             {next.frontmatter.title}
                           </div>
