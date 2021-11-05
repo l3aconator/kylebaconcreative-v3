@@ -22,7 +22,7 @@ class Work extends React.Component {
               {posts.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug;
                 const teaser = node.frontmatter.homepageteaser;
-                const slug = `/work/${node.fields.slug}`;
+                const slug = `/work${node.fields.slug}`;
                 const image =
                   node.frontmatter.homepagepreview.childImageSharp.fluid.src;
                 const classArray = [
