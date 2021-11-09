@@ -79,8 +79,6 @@ const WorkPostTemplate = (props) => {
     footeralt,
   } = post.frontmatter;
 
-  console.log(post.frontmatter);
-
   // Imagery for all the templates
   const heroimage =
     post?.frontmatter?.heroimage?.childImageSharp?.gatsbyImageData?.images
