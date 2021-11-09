@@ -1,21 +1,13 @@
-import React from 'react'
-import Sidebar from './Sidebar';
+import React from 'react';
+import Header from './Header';
 
 import '../scss/styles.scss';
 
-class Layout extends React.Component {
-  render() {
-    const { location, title, children } = this.props
-
-    return (
-     <React.Fragment>
-       <Sidebar />
-       <section>
-          {children}
-       </section>
-     </React.Fragment>
-    )
-  }
+export default function Layout({ children }) {
+  return (
+    <>
+      <Header />
+      <main>{children}</main>
+    </>
+  );
 }
-
-export default Layout
