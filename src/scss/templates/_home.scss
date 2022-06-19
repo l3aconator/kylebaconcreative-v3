@@ -19,6 +19,10 @@
     letter-spacing: 0.3rem;
     font-family: $sans-serif-medium;
     margin: 0px;
+
+    @media (max-width: $breakpoint--tablet) {
+      font-size: 0.8rem;
+    }
   }
 
   .content--container {
@@ -28,6 +32,10 @@
   h1 {
     margin-bottom: 4rem;
     color: $turq;
+
+    @media (max-width: $breakpoint--tablet) {
+      font-size: 2rem;
+    }
   }
 
   @media (max-width: $breakpoint--tablet) {
@@ -38,6 +46,19 @@
 .ctas {
   .button {
     margin-right: 30px;
+  }
+
+  @media (max-width: $breakpoint--tablet) {
+    .text-link,
+    .button {
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+
+    .text-link {
+      margin-top: 45px;
+    }
   }
 }
 
@@ -110,6 +131,7 @@
       }
     }
   }
+
   h5 {
     color: white;
     font-size: 1.3rem;
@@ -119,6 +141,10 @@
     text-decoration-thickness: 3px;
     text-underline-offset: 0.5rem;
     transition: all 200ms ease-in;
+
+    @media (max-width: $breakpoint--tablet) {
+      line-height: 2.7rem;
+    }
   }
 
   p {

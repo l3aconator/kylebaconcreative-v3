@@ -1,275 +1,263 @@
 // ---- Work Detail ----
 
 .work-detail {
-
-   img {
-      width: 100%;
-   }
+  img {
+    width: 100%;
+  }
 }
 
 .work-detail-img-box {
-   position: relative;
+  position: relative;
 }
 
 .close-up-circle {
-   background: white;
-   box-shadow: 0px 4px 26px 4px rgba(0,0,0,0.40);
-   border-radius: 100%;
+  background: white;
+  box-shadow: 0px 4px 26px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 100%;
 
-   img {
-      border-radius: 100%;
-      padding: 0;
-      margin: 0;
-      display: block;
-   }
+  img {
+    border-radius: 100%;
+    padding: 0;
+    margin: 0;
+    display: block;
+  }
 
-   &.large {
-      width: 20%;
-      height: auto;
-      position: absolute;
-      top: 20%;
-      margin-right: 30%;
-      right: 0;
-   }
+  &.large {
+    width: 20%;
+    height: auto;
+    position: absolute;
+    top: 20%;
+    margin-right: 30%;
+    right: 0;
+  }
 
-   &.medium {
-      width: 35%;
-      height: auto;
-      margin: 30% auto 0 auto;
-   }
+  &.medium {
+    width: 35%;
+    height: auto;
+    margin: 30% auto 0 auto;
+  }
 }
 
 .down-circle {
-   margin: 10% 30% 0 auto;
-   background: $turq;
-   box-shadow: 0px 4px 26px 4px rgba(0,0,0,0.40);
-   border-radius: 100%;
-   width: 44px;
-   height: 44px;
+  margin: 10% 30% 0 auto;
+  background: $turq;
+  box-shadow: 0px 4px 26px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 100%;
+  width: 44px;
+  height: 44px;
 
-   img {
-      width: 55%;
-      display: block;
-      margin: 0 auto;
-      padding-top: 40%;
-   }
+  img {
+    width: 55%;
+    display: block;
+    margin: 0 auto;
+    padding-top: 40%;
+  }
 }
 
 .project {
+  p {
+    margin: 0px 0px 30px 0px;
 
-   p {
-      margin: 0px 0px 30px 0px;
+    &:last-child {
+      margin: 0px 0px 60px 0px;
+    }
+  }
 
-      &:last-child {
-           margin: 0px 0px 60px 0px;
-      }
-   }
-
-   .name {
-      margin: 60px 0px 15px 0px;
-   }
+  .name {
+    margin: 60px 0px 15px 0px;
+  }
 }
 
 .work-detail-middle {
-   padding: 60px 0px;
+  padding: 60px 0px;
 }
 
 .work-detail-secondary-img {
-   padding-right: 15px;
+  padding-right: 15px;
 }
 
 .work-detail-tall-img {
-   padding-left: 15px;
+  padding-left: 15px;
 }
 
 .device-container {
-
-   img {
-      width: 35%;
-      display: block;
-      margin: 0 auto 60px auto;
-   }
+  img {
+    width: 35%;
+    display: block;
+    margin: 0 auto 60px auto;
+  }
 }
 
 .infographic-container {
-   margin-bottom: 60px;
-   text-align: center;
+  margin-bottom: 60px;
+  text-align: center;
 
-   img {
-      width: 50%;
-      cursor: zoom-in;
-   }
+  img {
+    width: 50%;
+    cursor: zoom-in;
+  }
 }
 
 .iphone-five {
-
-   img {
-      width: 35%;
-      margin: 0 auto;
-      display: block;
-   }
+  img {
+    width: 35%;
+    margin: 0 auto;
+    display: block;
+  }
 }
 
 .church-icon-set-container {
-   text-align: center;
+  text-align: center;
 }
 
 .download-amount-section {
-   background-color: $turq;
-   padding: 120px;
-   color: white;
-   text-align: center;
-   font-size: 2em;
-   letter-spacing: .04em;
+  background-color: $turq;
+  padding: 120px;
+  color: white;
+  text-align: center;
+  font-size: 2em;
+  letter-spacing: 0.04em;
 }
 
 .quote-section {
-   background-color: $turq;
-   padding: 120px;
-   color: white;
-   text-align: center;
-   font-size: 2em;
-   letter-spacing: .04em;
+  background-color: $turq;
+  padding: 120px;
+  color: white;
+  text-align: center;
+  font-size: 2em;
+  letter-spacing: 0.04em;
 }
 
 .quote-mark {
-   font-family: $sans-serif-base;
-   font-size: 5em;
-   text-transform: uppercase;
-   letter-spacing: 0.1666em;
-   margin: 0;
-   padding: 0;
-   line-height: .5em;
+  font-family: $sans-serif-base;
+  font-size: 5em;
+  text-transform: uppercase;
+  letter-spacing: 0.1666em;
+  margin: 0;
+  padding: 0;
+  line-height: 0.5em;
 }
 
 .quote-attribute {
-   font-size: .5em;
-   font-family: $sans-serif-base;
-   text-transform: uppercase;
-   letter-spacing: 0.1666em;
+  font-size: 0.5em;
+  font-family: $sans-serif-base;
+  text-transform: uppercase;
+  letter-spacing: 0.1666em;
 }
 
 .download-amount {
-   font-family: $sans-serif-base;
-   font-size: 3em;
-   text-transform: uppercase;
-   letter-spacing: 0.1666em;
+  font-family: $sans-serif-base;
+  font-size: 3em;
+  text-transform: uppercase;
+  letter-spacing: 0.1666em;
 }
 
 .work-carousel {
-   background-color: $blue--light;
-   padding: 30px;
-   color: white;
+  background-color: $blue--light;
+  padding: 30px;
+  color: white;
 
-   img {
-      width: 100%;
-      border-radius: 1000px;
-   }
+  img {
+    width: 100%;
+    border-radius: 1000px;
+  }
 
-   .icon-box {
-      width: 74px;
-      height: 74px;
-   }
+  .icon-box {
+    width: 74px;
+    height: 74px;
+  }
 }
 
 .work-carousel-name {
-   display: inline;
-   font-family: $sans-serif-base;
-   font-size: 0.9333em;
-   letter-spacing: 0.1666em;
-   text-transform: uppercase;
-   margin-bottom: 30px;
+  display: inline;
+  font-family: $sans-serif-base;
+  font-size: 0.9333em;
+  letter-spacing: 0.1666em;
+  text-transform: uppercase;
+  margin-bottom: 30px;
 }
 
 .work-carousel-project {
-   font-size: 1.5em;
-   margin-right: 30px
+  font-size: 1.5em;
+  margin-right: 30px;
 }
 
 .left-name {
+  a {
+    text-decoration: none;
+    color: white;
+  }
 
-   a {
-      text-decoration: none;
-      color: white;
-   }
-
-   &:hover {
-
-      .icon-box {
-         -webkit-transform: scale(1.1);
-         -ms-transform: scale(1.1);
-         transform: scale(1.1);
-      }
-   }
+  &:hover {
+    .icon-box {
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+  }
 }
 
 .right-name {
-
-   a {
-      text-decoration: none;
-      color: white;
-   }
+  a {
+    text-decoration: none;
+    color: white;
+  }
 }
 
 .arrow {
-   position: absolute;
-   width: 25%;
-   top: 50%;
-   transform: translatey(-50%);
-   transition: left 400ms ease-in;
+  position: absolute;
+  width: 25%;
+  top: 50%;
+  transform: translatey(-50%);
+  transition: left 400ms ease-in;
 }
 
 .left {
-
-   &.arrow {
-      left: -15px;
-   }
+  &.arrow {
+    left: -15px;
+  }
 }
 
 .right {
-
-   &.arrow {
-      left: 60px;
-   }
+  &.arrow {
+    left: 60px;
+  }
 }
 
 .arrow-container {
-   position: relative;
+  position: relative;
 
-   .icon-box {
-      transition: transform 400ms ease-in;
-   }
+  .icon-box {
+    transition: transform 400ms ease-in;
+  }
 
-   &:hover {
+  &:hover {
+    .icon-box {
+      transform: scale(1.1);
+    }
 
-      .icon-box {
-         transform: scale(1.1);
+    .left {
+      &.arrow {
+        left: -45px;
       }
+    }
 
-      .left {
-
-         &.arrow {
-            left: -45px;
-         }
+    .right {
+      &.arrow {
+        left: 90px;
       }
-
-      .right {
-
-         &.arrow {
-            left: 90px;
-         }
-      }
-   }
+    }
+  }
 }
 
 .cta-bar {
-   background-color: $blue--light;
-   padding: 60px 120px;
-   margin: 0px;
+  background-color: $blue--light;
+  padding: 60px 120px;
+  margin: 0px;
 }
 
 .cta-text {
-   font-family: $sans-serif-base;
-   font-size: 2.250em;
-   color: white;
+  font-family: $sans-serif-base;
+  font-size: 2.25em;
+  color: white;
 }

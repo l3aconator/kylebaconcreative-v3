@@ -20,37 +20,31 @@ h6 {
 h1,
 .h1 {
   font-size: $h1;
-  letter-spacing: 0.05em;
 }
 
 h2,
 .h2 {
   font-size: $h2;
-  letter-spacing: 0.05em;
 }
 
 h3,
 .h3 {
   font-size: $h3;
-  letter-spacing: 0.05em;
 }
 
 h4,
 .h4 {
   font-size: $h4;
-  letter-spacing: 0.05em;
 }
 
 h6,
 .h6 {
   font-size: $h6;
-  letter-spacing: 0.05em;
 }
 
 p {
   line-height: 2em;
   font-size: 1.1em;
-  letter-spacing: 0.05em;
   font-family: $sans-serif-medium;
 }
 
@@ -147,6 +141,7 @@ blockquote {
     opacity: 0.65;
     font-style: normal;
     margin-left: 30px;
+    line-height: 1.4rem;
   }
 }
 

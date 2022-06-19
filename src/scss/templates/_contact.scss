@@ -1,164 +1,158 @@
 // ---- Contact page ----
 
 .contact {
-    margin-bottom: 90px;
+  margin-bottom: 90px;
 
-    fieldset {
-        border: none;
+  fieldset {
+    border: none;
+  }
+
+  input {
+    transition: all 200ms ease-in;
+
+    &:focus {
+      outline: 0;
+      border-bottom: 4px dashed $blue--light;
     }
+  }
 
-    input {
-        transition: all 200ms ease-in;
+  textarea {
+    display: block;
+    width: 100%;
+    min-height: 30vh;
+    border: none;
+    background-color: $blue--dark;
+    border-bottom: 4px dashed $turq;
+    color: white;
+    font-size: 1.6em;
+    resize: none;
 
-        &:focus {
-            outline: 0;
-            border-bottom: 4px dashed $blue--light;
-        }
+    &:focus {
+      outline: 0;
+      border-bottom: 4px dashed $blue--light;
     }
+  }
 
-    textarea {
-        display: block;
-        width: 100%;
-        min-height: 30vh;
-        border: none;
-        background-color: $blue--dark;
-        border-bottom: 4px dashed $turq;
-        color: white;
-        font-size: 1.600em;
-        resize: none;
+  #name {
+    z-index: 3;
+  }
 
-        &:focus {
-            outline: 0;
-            border-bottom: 4px dashed $blue--light;
-        }
+  #email-address {
+    z-index: 1;
+  }
+
+  select {
+    border: none;
+    background-color: $turq;
+    color: $white;
+    font-size: 2.25em;
+    width: 100%;
+
+    &:focus {
+      outline: 0;
+      color: white;
     }
-
-    #name {
-        z-index: 3;
-    }
-
-    #email-address {
-        z-index: 1;
-    }
-
-    select {
-        border: none;
-        background-color: $turq;
-        color: $white;
-        font-size: 2.25em;
-        width: 100%;
-
-        &:focus {
-            outline: 0;
-            color: white;
-        }
-    }
+  }
 }
 
 .form-text {
-    color: $blue--light;
-    font-size: 2.25em;
+  color: $blue--light;
+  font-size: 2.25em;
 }
 
 .form-row {
-    margin-bottom: 20px;
-    width: 100%;
+  margin-bottom: 20px;
+  width: 100%;
 }
 
 .contact-form {
-
-    input {
-        background-color: rgba(0, 0, 0, 0);
-        border: none;
-        border-bottom: 4px dashed $turq;
-        display: inline;
-        color: white;
-        font-size: 2.25em;
-        width: 100%;
-    }
+  input {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-bottom: 4px dashed $turq;
+    display: inline;
+    color: white;
+    font-size: 2.25em;
+    width: 100%;
+  }
 }
 
 input {
+  &.form-button {
+    margin-top: 30px;
+    background-color: $blue--light;
+    border: none;
+    color: $white;
+    border-radius: 5px;
+    transition: all 200ms ease-in;
+    padding: 8px 30px;
+    border-bottom: none;
 
-    &.form-button {
-        margin-top: 30px;
-        background-color: $blue--light;
-        border: none;
-        color: $white;
-        border-radius: 5px;
-        transition: all 200ms ease-in;
-        padding: 8px 30px;
-        border-bottom: none;
-
-        &:hover,
-        &:focus,
-        &:active {
-            background-color: $white;
-            color: $blue--light;
-            border-bottom: none;
-        }
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $white;
+      color: $blue--light;
+      border-bottom: none;
     }
+  }
 }
 
 @media (max-width: 951px) {
-
-    .contact {
-
-        fieldset {
-            margin: 60px;
-        }
+  .contact {
+    fieldset {
+      margin: 60px;
     }
+  }
 }
 
 @media (max-width: 479px) {
+  .contact-list {
+    text-align: center;
+    padding-left: 0;
 
-    .contact-list {
-        text-align: center;
-        padding-left: 0;
+    h6 {
+      text-align: center;
+      padding-left: 0;
+    }
+  }
 
-        h6 {
-            text-align: center;
-            padding-left: 0;
-        }
+  .contact {
+    fieldset {
+      margin: 0px;
+      width: 100%;
+    }
+  }
+
+  .contact-form {
+    fieldset {
+      margin: 0px;
+      width: 100%;
     }
 
-    .contact {
-
-        fieldset {
-            margin: 0px;
-            width: 100%;
-        }
+    .col {
+      width: 100%;
     }
 
-    .contact-form {
-
-        fieldset {
-            margin: 0px;
-            width: 100%;
-        }
-
-        .col {
-            width: 100%;
-        }
-
-        .contact-list-item {
-            text-align: left;
-        }
-
-        input {
-            font-size: 1.75em;
-        }
-
-        select {
-            font-size: 1.75em;
-        }
-
-        .form-text {
-          font-size: 1.75em;
-        }
+    .contact-list-item {
+      text-align: left;
     }
+
+    input {
+      font-size: 1.75em;
+    }
+
+    select {
+      font-size: 1.75em;
+    }
+
+    .form-text {
+      font-size: 1.75em;
+    }
+  }
 }
 
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
   color: lighten($blue--dark, 20%);
 }
