@@ -28,8 +28,6 @@ function Homepage({ data: { site, work, blog }, location }) {
   const workPosts = work.edges;
   const blogPosts = blog.edges;
 
-  console.log(workPosts);
-
   return (
     <Layout location={location} title={siteTitle} classes="main--noMargin">
       <SEO title="Work" />
