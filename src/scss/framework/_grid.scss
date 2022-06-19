@@ -1,167 +1,166 @@
-@use "sass:math";
+@use 'sass:math';
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .margin-left__128 {
-    margin-left: 128px;
+  margin-left: 128px;
 }
 
 .container {
-    width: $container;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1400px;
+  width: $container;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1400px;
 }
 
 .clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
+  content: '';
+  display: table;
+  clear: both;
 }
 
 .grid {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0;
-    list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
 }
 
 .flex-grid {
+  display: flex;
+
+  > .col {
+    flex: 1;
+
+    &--width__one {
+      flex-basis: math.div(1, 12) * 100%;
+    }
+
+    &--width__two {
+      flex-basis: math.div(2, 12) * 100%;
+    }
+
+    &--width__three {
+      flex-basis: math.div(3, 12) * 100%;
+    }
+
+    &--width__four {
+      flex-basis: math.div(4, 12) * 100%;
+    }
+
+    &--width__five {
+      flex-basis: math.div(5, 12) * 100%;
+    }
+
+    &--width__six {
+      flex-basis: math.div(6, 12) * 100%;
+    }
+
+    &--width__seven {
+      flex-basis: math.div(7, 12) * 100%;
+    }
+
+    &--width__eight {
+      flex-basis: math.div(8, 12) * 100%;
+    }
+
+    &--width__nine {
+      flex-basis: math.div(9, 12) * 100%;
+    }
+
+    &--width__ten {
+      flex-basis: math.div(10, 12) * 100%;
+    }
+
+    &--width__eleven {
+      flex-basis: math.div(11, 12) * 100%;
+    }
+
+    &--width__twelve {
+      flex-basis: math.div(12, 12) * 100%;
+    }
+  }
+
+  &--gutters {
     display: flex;
+    margin-left: -$grid--gutter;
 
     > .col {
-        flex: 1;
+      flex: 1;
+      padding-left: $grid--gutter;
 
-        &--width__one {
-            flex-basis: math.div(1, 12) * 100%;
-        }
+      &--width__one {
+        flex-basis: math.div(1, 12) * 100%;
+      }
 
-        &--width__two {
-            flex-basis: math.div(2, 12) * 100%;
-        }
+      &--width__two {
+        flex-basis: math.div(2, 12) * 100%;
+      }
 
-        &--width__three {
-            flex-basis: math.div(3, 12) * 100%;
-        }
+      &--width__three {
+        flex-basis: math.div(3, 12) * 100%;
+      }
 
-        &--width__four {
-            flex-basis: math.div(4, 12) * 100%;
-        }
+      &--width__four {
+        flex-basis: math.div(4, 12) * 100%;
+      }
 
-        &--width__five {
-            flex-basis: math.div(5, 12) * 100%;
-        }
+      &--width__five {
+        flex-basis: math.div(5, 12) * 100%;
+      }
 
-        &--width__six {
-            flex-basis: math.div(6, 12) * 100%;
-        }
+      &--width__six {
+        flex-basis: math.div(6, 12) * 100%;
+      }
 
-        &--width__seven {
-            flex-basis: math.div(7, 12) * 100%;
-        }
+      &--width__seven {
+        flex-basis: math.div(7, 12) * 100%;
+      }
 
-        &--width__eight {
-            flex-basis: math.div(8, 12) * 100%;
-        }
+      &--width__eight {
+        flex-basis: math.div(8, 12) * 100%;
+      }
 
-        &--width__nine {
-            flex-basis: math.div(9, 12) * 100%;
-        }
+      &--width__nine {
+        flex-basis: math.div(9, 12) * 100%;
+      }
 
-        &--width__ten {
-            flex-basis: math.div(10, 12) * 100%;
-        }
+      &--width__ten {
+        flex-basis: math.div(10, 12) * 100%;
+      }
 
-        &--width__eleven {
-            flex-basis: math.div(11, 12) * 100%;
-        }
+      &--width__eleven {
+        flex-basis: math.div(11, 12) * 100%;
+      }
 
-        &--width__twelve {
-            flex-basis: math.div(12, 12) * 100%;
-        }
+      &--width__twelve {
+        flex-basis: math.div(12, 12) * 100%;
+      }
     }
-
-    &--gutters {
-        display: flex;
-        margin-left: -$grid--gutter;
-
-        > .col {
-            flex: 1;
-            padding-left: $grid--gutter;
-
-            &--width__one {
-                flex-basis: math.div(1, 12) * 100%;
-            }
-
-            &--width__two {
-                flex-basis: math.div(2, 12) * 100%;
-            }
-
-            &--width__three {
-                flex-basis: math.div(3, 12) * 100%;
-            }
-
-            &--width__four {
-                flex-basis: math.div(4, 12) * 100%;
-            }
-
-            &--width__five {
-                flex-basis: math.div(5, 12) * 100%;
-            }
-
-            &--width__six {
-                flex-basis: math.div(6, 12) * 100%;
-            }
-
-            &--width__seven {
-                flex-basis: math.div(7, 12) * 100%;
-            }
-
-            &--width__eight {
-                flex-basis: math.div(8, 12) * 100%;
-            }
-
-            &--width__nine {
-                flex-basis: math.div(9, 12) * 100%;
-            }
-
-            &--width__ten {
-                flex-basis: math.div(10, 12) * 100%;
-            }
-
-            &--width__eleven {
-                flex-basis: math.div(11, 12) * 100%;
-            }
-
-            &--width__twelve {
-                flex-basis: math.div(12, 12) * 100%;
-            }
-        }
-    }
+  }
 }
 
 @media (max-width: $breakpoint--tablet) {
+  .flex-grid,
+  .flex-grid--gutters,
+  .flex-grid-thirds {
+    display: block;
 
-    .flex-grid,
-    .flex-grid--gutters,
-    .flex-grid-thirds {
-        display: block;
-
-        > .col {
-            display: block;
-            flex-basis: math.div(12, 12) * 100%;
-            width: 100%;
-            margin: 0 0 10px 0;
-        }
+    > .col {
+      display: block;
+      flex-basis: math.div(12, 12) * 100%;
+      width: 100%;
+      margin: 0 0 10px 0;
     }
+  }
 
-    .section-pad {
-        padding: 70px 0px;
-    }
+  .section-pad {
+    padding: 70px 0px;
+  }
 
-    .mobile-show {
-        display: inline;
-    }
+  .mobile-show {
+    display: inline;
+  }
 }

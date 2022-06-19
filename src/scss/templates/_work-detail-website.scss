@@ -1,209 +1,201 @@
 .type-image-box {
-
-    .type-image {
-        width: 100%;
-        padding : $padding-base-by-2;
-        display: block;
-        margin-top: $padding-base-by-2;
-        background-color: $white;
-        border-radius: 30px;
-    }
+  .type-image {
+    width: 100%;
+    padding: $padding-base-by-2;
+    display: block;
+    margin-top: $padding-base-by-2;
+    background-color: $white;
+    border-radius: 30px;
+  }
 }
 
 .color-box {
-    width: 100px;
-    height: 100px;
-    box-shadow: 0px 4px 26px 4px rgba(0,0,0,0.30);
-    position: relative;
-    border-radius: 24px;
-    display: inline-block;
-    margin-right: $padding-base-by-2;
-    margin-top: $padding-base-by-2;
+  width: 100px;
+  height: 100px;
+  box-shadow: 0px 4px 26px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+  border-radius: 24px;
+  display: inline-block;
+  margin-right: $padding-base-by-2;
+  margin-top: $padding-base-by-2;
 
-    .color-title {
-        background-color: white;
-        color: black;
-        width: 100%;
-        display: inline-block;
-        position: absolute;
-        bottom: 0;
-        border-bottom-left-radius: 24px;
-        border-bottom-right-radius: 24px;
-        padding: 10px;
-    }
+  .color-title {
+    background-color: white;
+    color: black;
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    padding: 10px;
+  }
 }
 
 .work-detail-website-primary,
 .work-detail-website-secondary,
 .work-detail-website-last {
-    padding-bottom: $padding-base;
+  padding-bottom: $padding-base;
 
-    .content {
-        padding-left: $padding-base;
-        margin-top: $padding-base-by-2;
-        padding-right: 25%;
+  .content {
+    padding-left: $padding-base;
+    margin-top: $padding-base-by-2;
+    padding-right: 25%;
+  }
+
+  .work-detail-website-primary-main-image,
+  .work-detail-website-secondary-main-image,
+  .work-detail-website-last-main-image {
+    width: 100%;
+    box-shadow: 0px 4px 26px 4px rgba(0, 0, 0, 0.3);
+    transition: all $base-transition;
+
+    &:hover,
+    &:active,
+    &:focus {
+      transform: translateY(-10px);
     }
-
-    .work-detail-website-primary-main-image,
-    .work-detail-website-secondary-main-image,
-    .work-detail-website-last-main-image {
-        width: 100%;
-        box-shadow: 0px 4px 26px 4px rgba(0,0,0,0.30);
-        transition: all $base-transition;
-
-        &:hover,
-        &:active,
-        &:focus {
-            transform: translateY(-10px);
-        }
-    }
+  }
 }
 
 .work-detail-website-primary {
+  .work-detail-website-primary-hero {
+    padding-bottom: $padding-base-by-2;
+  }
 
-    .work-detail-website-primary-hero {
-        padding-bottom: $padding-base-by-2;
-    }
-
-    &:first-child {
-        padding-bottom: 0;
-    }
+  &:first-child {
+    padding-bottom: 0;
+  }
 }
 
 .work-detail-website-tertiary {
-    position: relative;
+  position: relative;
 
-    .content {
-        width: 50%;
-        margin-bottom: $padding-base-by-2;
+  .content {
+    width: 50%;
+    margin-bottom: $padding-base-by-2;
+  }
+
+  .work-detail-website-tertiary-main-image {
+    z-index: 10;
+    display: inline;
+    box-shadow: 0px 4px 26px 4px rgba(0, 0, 0, 0.6);
+    transition: all $base-transition;
+
+    &:hover,
+    &:active,
+    &:focus {
+      transform: translateY(-10px);
     }
+  }
 
-    .work-detail-website-tertiary-main-image {
-        z-index: 10;
-        display: inline;
-        box-shadow: 0px 4px 26px 4px rgba(0,0,0,0.60);
-        transition: all $base-transition;
+  .work-detail-website-tertiary-bg-image {
+    width: auto;
+    position: absolute;
+    right: 0;
+    top: -100px;
+    z-index: 0;
+    box-shadow: 0px 4px 26px 4px rgba(0, 0, 0, 0.6);
+    transition: all $base-transition;
 
-        &:hover,
-        &:active,
-        &:focus {
-            transform: translateY(-10px);
-        }
+    &:hover,
+    &:active,
+    &:focus {
+      transform: translateY(-10px);
     }
-
-    .work-detail-website-tertiary-bg-image {
-        width: auto;
-        position: absolute;
-        right: 0;
-        top: -100px;
-        z-index: 0;
-        box-shadow: 0px 4px 26px 4px rgba(0,0,0,0.60);
-        transition: all $base-transition;
-
-        &:hover,
-        &:active,
-        &:focus {
-            transform: translateY(-10px);
-        }
-    }
+  }
 }
 
 .work-detail-iconography {
+  .icon-circle {
+    list-style-type: none;
+    width: 100px;
+    height: 100px;
+    border-radius: 1000px;
+    background: white;
+    position: relative;
+    display: inline-block;
+    margin-right: $padding-base-by-2;
+    box-shadow: 0px 4px 26px 4px rgba(255, 255, 255, 0.6);
 
-    .icon-circle {
-        list-style-type: none;
-        width: 100px;
-        height: 100px;
-        border-radius: 1000px;
-        background: white;
-        position: relative;
-        display: inline-block;
-        margin-right: $padding-base-by-2;
-        box-shadow: 0px 4px 26px 4px rgba(255,255,255,0.60);
-
-        &:first-child,
-        &:nth-child(2),
-        &:nth-child(3) {
-            margin-bottom: $padding-base-by-2;
-        }
-
-        img {
-            position: absolute;
-            width: 100%;
-            margin: 0 auto;
-            top: 50%;
-            transform: translatey(-50%);
-            border-radius: 1000px;
-        }
+    &:first-child,
+    &:nth-child(2),
+    &:nth-child(3) {
+      margin-bottom: $padding-base-by-2;
     }
+
+    img {
+      position: absolute;
+      width: 100%;
+      margin: 0 auto;
+      top: 50%;
+      transform: translatey(-50%);
+      border-radius: 1000px;
+    }
+  }
 }
 
 @media (max-width: 1342px) {
-    .work-detail-iconography {
-
-        .icon-circle {
-
-            &:first-child,
-            &:nth-child(2),
-            &:nth-child(3),
-            &:nth-child(4) {
-                margin-bottom: $padding-base-by-2;
-            }
-        }
+  .work-detail-iconography {
+    .icon-circle {
+      &:first-child,
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4) {
+        margin-bottom: $padding-base-by-2;
+      }
     }
+  }
 }
 
-
 @media (max-width: 1220px) {
-    .work-detail-website-tertiary {
-
-        .content {
-            width: 100%;
-        }
-
-        .work-detail-website-tertiary-bg-image {
-            position: static;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-            margin-top: $padding-base-by-2;
-            width: 100%;
-        }
+  .work-detail-website-tertiary {
+    .content {
+      width: 100%;
     }
+
+    .work-detail-website-tertiary-bg-image {
+      position: static;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      margin-top: $padding-base-by-2;
+      width: 100%;
+    }
+  }
 }
 
 @media (max-width: 1110px) {
-    .work-detail-website-primary,
-    .work-detail-website-secondary,
-    .work-detail-website-last {
-        padding-bottom: $padding-base;
+  .work-detail-website-primary,
+  .work-detail-website-secondary,
+  .work-detail-website-last {
+    padding-bottom: $padding-base;
 
-        .content {
-            padding-left: $padding-base;
-            margin-top: $padding-base-by-2;
-            padding-right: 0;
-        }
+    .content {
+      padding-left: $padding-base;
+      margin-top: $padding-base-by-2;
+      padding-right: 0;
     }
+  }
 }
 
 @media (max-width: 951px) {
-    .work-detail-website-primary,
-    .work-detail-website-secondary,
-    .work-detail-website-last {
-        padding-bottom: $padding-base;
+  .work-detail-website-primary,
+  .work-detail-website-secondary,
+  .work-detail-website-last {
+    padding-bottom: $padding-base;
 
-        .content {
-            padding-left: $padding-base;
-            margin-top: $padding-base-by-2;
-            padding-right: $padding-base-by-2;
-            padding-left: $padding-base-by-2;
-        }
+    .content {
+      padding-left: $padding-base;
+      margin-top: $padding-base-by-2;
+      padding-right: $padding-base-by-2;
+      padding-left: $padding-base-by-2;
     }
+  }
 
-    .work-detail-iconography {
-
-        .icon-circle {
-                margin-bottom: $padding-base-by-2;
-        }
+  .work-detail-iconography {
+    .icon-circle {
+      margin-bottom: $padding-base-by-2;
     }
+  }
 }
