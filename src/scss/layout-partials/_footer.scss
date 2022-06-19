@@ -1,83 +1,74 @@
 footer {
-    padding: 90px 0px;
+  padding: 90px 0px;
+  background-color: $blue--darker;
 
-    .logo {
-        
+  .logo {
+    @media (max-width: $breakpoint--tablet) {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+  }
 
-        @media (max-width: $breakpoint--tablet) {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 30px;
-        }
+  .flex-grid {
+    align-items: center;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+
+    li {
+      margin-bottom: 0px;
     }
 
-    .flex-grid {
-        align-items: center;
+    a {
+      padding: 10px 20px;
     }
+  }
+
+  .col > ul {
+    justify-content: center;
+  }
+
+  nav {
+    margin-left: auto;
+    display: flex;
 
     ul {
-        display: flex;
-        align-items: center;
-        padding: 0px;
-        margin: 0px;
-        list-style-type: none;
+      margin-left: auto;
 
-        li {
-            margin-bottom: 0px;
-        }
-        
-        a {
-            padding: 10px 20px;
-        }
+      @media (max-width: $breakpoint--tablet) {
+        margin-right: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
     }
+  }
 
-    .col > ul {
-        justify-content: center;
+  p {
+    font-size: 14px;
+    opacity: 0.5;
+
+    @media (max-width: $breakpoint--tablet) {
+      text-align: center;
     }
-
-    nav {
-        margin-left: auto;
-        display: flex;
-
-        ul {
-            margin-left: auto;
-
-            @media (max-width: $breakpoint--tablet) {
-                margin-right: auto;
-                margin-top: 30px;
-                margin-bottom: 30px;
-            }
-        }
-    }
-
-    p {
-        font-size: 14px;
-        opacity: .5;
-
-        @media (max-width: $breakpoint--tablet) {
-            text-align: center;
-        }
-    }
+  }
 }
 
 .SocialList {
+  li {
+    margin: 0px 15px;
 
-    li {
-        margin: 0px 15px;
-
-        a {
-            background-color: rgba($blue--base, 1);
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 100px;
-            padding: 0px;
-
-            &:hover {
-                background-color: rgba($blue--base, .5);
-            }
-        }
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100px;
+      padding: 0px;
     }
+  }
 }

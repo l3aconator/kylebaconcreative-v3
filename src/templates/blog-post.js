@@ -26,12 +26,10 @@ class BlogPostTemplate extends React.Component {
                   backgroundImage: `url(${image})`,
                 }}
               >
-                <div className="grid flex-grid--gutters">
+                <div className="grid flex--grid flex-grid--gutters">
                   <div className="col col--width__seven">
                     <h1 className="journal-main-heading">
-                      <Link to={`/journal${slug}`}>
-                        {post.frontmatter.title}
-                      </Link>
+                      <Link to={`/blog${slug}`}>{post.frontmatter.title}</Link>
                     </h1>
                   </div>
                   <div className="col col--width__six">
@@ -64,14 +62,14 @@ class BlogPostTemplate extends React.Component {
         </div>
         <section className="work-carousel align-center main-content">
           <div className="container">
-            <div className="grid flex-grid--gutters">
+            <div className="grid flex--grid flex-grid--gutters">
               <div className="col col--width__six">
-                <div className="grid flex-grid--gutters">
+                <div className="grid flex--grid flex-grid--gutters">
                   <div className="col col--width__nine left-name">
                     {previous && (
                       <React.Fragment>
                         <div className="work-carousel-name">Previous post</div>
-                        <Link to={`/journal${previous.fields.slug}`} rel="prev">
+                        <Link to={`/blog${previous.fields.slug}`} rel="prev">
                           <div className="work-carousel-project">
                             {previous.frontmatter.title}
                           </div>
@@ -82,12 +80,12 @@ class BlogPostTemplate extends React.Component {
                 </div>
               </div>
               <div className="col col--width__six">
-                <div className="grid flex-grid--gutters">
+                <div className="grid flex--grid flex-grid--gutters">
                   <div className="col col--width__nine right-name">
                     {next && (
                       <React.Fragment>
                         <div className="work-carousel-name">Next post</div>
-                        <Link to={`/journal${next.fields.slug}`} rel="next">
+                        <Link to={`/blog${next.fields.slug}`} rel="next">
                           <div className="work-carousel-project">
                             {next.frontmatter.title}
                           </div>

@@ -18,7 +18,7 @@ class Work extends React.Component {
             <div className="page-hero">
               <h1>Some of my work</h1>
             </div>
-            <div className="grid flex-grid--gutters">
+            <div className="grid flex--grid flex-grid--gutters">
               {posts.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug;
                 const teaser = node.frontmatter.homepageteaser;

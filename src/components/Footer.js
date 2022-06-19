@@ -57,14 +57,14 @@ export default function Footer({}) {
                   <Link to="/contact">Contact</Link>
                 </li>
                 <li>
-                  <Link to="/journal">Blog</Link>
+                  <Link to="/blog">Blog</Link>
                 </li>
               </ul>
             </nav>
           </div>
         </div>
         <div>
-          <p>© 2021 Kyle Bacon Creative, LLC</p>
+          <p>© 2022 Kyle Bacon Creative, LLC</p>
         </div>
       </div>
     </footer>

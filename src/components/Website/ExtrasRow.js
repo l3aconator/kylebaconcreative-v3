@@ -3,7 +3,7 @@ import React from 'react';
 export const ExtrasRow = (props) => (
   <section className="work-detail-extras">
     <div className="container">
-      <div className="grid flex-grid--gutters u-pad mobile-pad-cont">
+      <div className="grid flex--grid flex-grid--gutters u-pad mobile-pad-cont">
         {props.typography && (
           <div className="col col--width__six">
             <h4>Typography</h4>

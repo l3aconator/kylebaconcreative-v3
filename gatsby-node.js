@@ -6,7 +6,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   return graphql(`
     {
-      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/journal/" } }) {
+      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/blog/" } }) {
         edges {
           node {
             fields {
@@ -35,7 +35,7 @@ exports.createPages = ({ graphql, actions }) => {
         const next = index === 0 ? null : posts[index - 1].node;
 
         createPage({
-          path: `/journal${post.node.fields.slug}`,
+          path: `/blog${post.node.fields.slug}`,
           component: blogPostTemplate,
           context: {
             slug: post.node.fields.slug,

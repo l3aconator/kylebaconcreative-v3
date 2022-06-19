@@ -6,7 +6,7 @@ metadata:
     description: 'Journal Entry from Web Developer and Freelancer Kyle Bacon. It''s okay to be lost when everything seems to be hard. Deja Vu Summer Poster Show  in Portland, OR'
     'og:title': 'Deja Vu Summer Poster Show Journal Entry'
     'og:type': article
-    'og:url': 'http://www.kylebaconcreative.com/journal/deja-vu-summer-poster-show'
+    'og:url': 'http://www.kylebaconcreative.com/blog/deja-vu-summer-poster-show'
     'og:image': 'http://www.kylebaconcreative.com/user/pages/05.journal/deja-vu-summer-poster-show/tumblr_nd4urcOt5S1qcrdmgo6_1280.jpg'
     'twitter:card': 'Journal Entry from Web Developer and Freelancer Kyle Bacon. It''s okay to be lost when everything seems to be hard. Deja Vu Summer Poster Show  in Portland, OR'
     'twitter:title': 'Deja Vu Summer Poster Show Journal Entry'
