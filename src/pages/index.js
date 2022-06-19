@@ -70,7 +70,7 @@ class Homepage extends React.Component {
                 <div className="grid flex-grid--gutters">
                   {posts.map(({ node }) => {
                     const title = node.frontmatter.title || node.fields.slug;
-                    const slug = `/work/${node.fields.slug}`;
+                    const slug = `/work${node.fields.slug}`;
                     const image =
                       node.frontmatter.homepagepreview.childImageSharp.fluid
                         .src;
