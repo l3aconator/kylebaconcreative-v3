@@ -12,7 +12,7 @@ metadata:
     description: 'Journal Entry from Web Developer and Freelancer Kyle Bacon. Some travel photos during Design Week Portland.'
     'og:title': 'Some Travels During Design Week Portland Journal Entry'
     'og:type': article
-    'og:url': 'http://www.kylebaconcreative.com/journal/some-travels-during-design-week-portland'
+    'og:url': 'http://www.kylebaconcreative.com/blog/some-travels-during-design-week-portland'
     'og:image': 'http://www.kylebaconcreative.com/user/pages/05.journal/some-travels-during-design-week-portland/tumblr_nd1yy4yexH1qcrdmgo1_1280.jpg'
     'twitter:card': 'Journal Entry from Web Developer and Freelancer Kyle Bacon. Some travel photos during Design Week Portland.'
     'twitter:title': 'Some Travels During Design Week Portland Journal Entry'

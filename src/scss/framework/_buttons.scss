@@ -5,19 +5,20 @@ a .button,
 input .button,
 button,
 a button {
-    background-color: $turq;
-    color: $white;
-    border: none;
-    border-radius: 5px;
+    background-color: transparent;
+    color: $blue--light;
+    border: 2px solid $blue--light;
+    border-radius: 100px;
     text-decoration: none;
     transition: all 200ms ease-in;
-    padding: 8px 30px;
+    padding: 20px 30px;
 
     &:hover,
     &:active,
     &:focus {
-        background-color: white;
-        color: $turq;
+        background-color: $blue--light;
+        color: white;
+        text-decoration: none;
     }
 
     &.dark {
@@ -38,6 +39,16 @@ a button {
 }
 
 .text-link {
+    text-decoration: underline !important;
+    text-decoration-thickness: 3px !important;
+    text-underline-offset: 0.5rem !important;
+    transition: all 200ms ease-in;
+
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration-thickness: 3px;
+    }
 
     &.white {
         text-decoration: underline;

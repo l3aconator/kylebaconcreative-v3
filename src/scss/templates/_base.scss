@@ -4,4 +4,8 @@ body {
 
 main {
     margin-top: 160px;
+
+    &.main--noMargin {
+        margin-top: 0px;
+    }
 }

@@ -46,7 +46,7 @@ export default function Header({ classes = '' }) {
                 <Link to="/contact">Contact</Link>
               </li>
               <li>
-                <Link to="/journal">Blog</Link>
+                <Link to="/blog">Blog</Link>
               </li>
             </ul>
           </nav>

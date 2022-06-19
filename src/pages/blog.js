@@ -15,7 +15,7 @@ class Homepage extends React.Component {
         <SEO title="All posts" />
         <div className="main-content journal-feed">
           <div className="container" style={{ marginTop: 60 }}>
-            <div className="grid flex-grid--gutters">
+            <div className="grid flex--grid flex-grid--gutters">
               {posts.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug;
                 const image =
@@ -31,7 +31,7 @@ class Homepage extends React.Component {
                 return (
                   <div
                     className="col col--width__six"
-                    key={`/journal${node.fields.slug}`}
+                    key={`/blog${node.fields.slug}`}
                   >
                     <div className={`journal-feed-item ${generateClass}`}>
                       <div
@@ -41,9 +41,7 @@ class Homepage extends React.Component {
                         }}
                       >
                         <h4 className="journal-main-heading">
-                          <Link to={`/journal${node.fields.slug}`}>
-                            {title}
-                          </Link>
+                          <Link to={`/blog${node.fields.slug}`}>{title}</Link>
                         </h4>
                       </div>
                       <section className="journal-information">
@@ -57,7 +55,7 @@ class Homepage extends React.Component {
                         <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
                         <Link
                           className="button-link"
-                          to={`/journal${node.fields.slug}`}
+                          to={`/blog${node.fields.slug}`}
                         >
                           <button className="u-center dark">
                             Read more&hellip;
@@ -86,7 +84,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/journal/" } }
+      filter: { fileAbsolutePath: { regex: "/blog/" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {

@@ -2,7 +2,8 @@
 $dark-gray: #2C2C2C;
 $blue--base: #272B7E;
 $blue--light: #39ABF3;
-$blue--dark: #141640;
+$blue--dark: #090B2C;
+$blue--darker: #060721;
 $turq: #33B99C;
 $orange: #FCA11C;
 $pink: #DF3D93;
@@ -22,8 +23,9 @@ $padding-base-by-4: 15px;
 $margin-base: $padding-base;
 
 // ---- Font Stack ----
-$sans-serif-base: 'qanelas_softmedium', sans-serif;
+$sans-serif-base: 'qanelas_softbold', sans-serif;
 $sans-serif-semi-bold: 'qanelas_softsemibold', sans-serif;
+$sans-serif-medium: 'qanelas_softmedium', sans-serif;
 
 // ---- Font Size ----
 $body-size: 16px;
@@ -39,7 +41,7 @@ $base-transition: 200ms ease-in;
 
 // ---- Grid ----
 $container: 80%;
-$grid--gutter: 30px;
+$grid--gutter: 90px;
 
 // ---- Breakpoints ----
 $breakpoint--mobile: 480px;

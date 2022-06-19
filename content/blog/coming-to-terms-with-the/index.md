@@ -12,11 +12,11 @@ metadata:
     description: 'Journal Entry from Web Developer and Freelancer Kyle Bacon. Rant about coming to terms with the framework.'
     'og:title': 'Coming to Terms with the Framework Journal Entry'
     'og:type': article
-    'og:url': 'http://www.kylebaconcreative.com/journal/coming-to-terms-with-the-framework'
+    'og:url': 'http://www.kylebaconcreative.com/blog/coming-to-terms-with-the-framework'
     'twitter:card': 'Journal Entry from Web Developer and Freelancer Kyle Bacon. Rant about coming to terms with the framework.'
     'twitter:title': 'Coming to Terms with the Framework Journal Entry'
     'twitter:description': 'Journal Entry from Web Developer and Freelancer Kyle Bacon. Rant about coming to terms with the framework.'
-    'twitter:image': 'http://www.kylebaconcreative.com/user/pages/05.journal/coming-to-terms-with-the-framework/journal-hero.jpeg'
+    'twitter:image': 'http://www.kylebaconcreative.com/user/pages/05.journal/coming-to-terms-with-the-framework/blog-hero.jpeg'
 journalhero: journal-hero.jpeg
 journalherocircle: journal-circle.jpg
 journalherocirclealt: testingx`

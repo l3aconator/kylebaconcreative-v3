@@ -4,12 +4,14 @@ import Footer from './Footer';
 
 import '../scss/styles.scss';
 
-export default function Layout({ children }) {
+function Layout({ children, classes = '' }) {
   return (
     <>
       <Header />
-      <main>{children}</main>
+      <main className={classes}>{children}</main>
       <Footer />
     </>
   );
 }
+
+export default Layout;

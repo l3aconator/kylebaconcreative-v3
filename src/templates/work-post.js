@@ -137,7 +137,7 @@ const WorkPostTemplate = (props) => {
               alt={heroimagealt}
             />
             <div className="container">
-              <div className="grid flex-grid--gutters">
+              <div className="grid flex--grid flex-grid--gutters">
                 <div className="col col--width__six project">
                   <h1 className="name">{title}</h1>
                   <p
@@ -226,7 +226,7 @@ const WorkPostTemplate = (props) => {
           {squaretall && (
             <section className="work-detail-middle">
               <div className="container">
-                <div className="grid flex-grid--gutters">
+                <div className="grid flex--grid flex-grid--gutters">
                   <div className="col col--width__six">
                     <div className="work-detail-secondary-img">
                       <img
@@ -257,7 +257,7 @@ const WorkPostTemplate = (props) => {
           )}
           {twocolumn && (
             <div className="container">
-              <div className="grid flex-grid--gutters marg-bot">
+              <div className="grid flex--grid flex-grid--gutters marg-bot">
                 {twocolumncontent.assets.map(
                   ({ className, customlink, image, alt }) => (
                     <div
@@ -359,9 +359,9 @@ const WorkPostTemplate = (props) => {
       </div>
       <section className="work-carousel align-center main-content">
         <div className="container">
-          <div className="grid flex-grid--gutters">
+          <div className="grid flex--grid flex-grid--gutters">
             <div className="col col--width__six">
-              <div className="grid flex-grid--gutters">
+              <div className="grid flex--grid flex-grid--gutters">
                 <div className="col col--width__nine left-name">
                   {previous && (
                     <React.Fragment>
@@ -377,7 +377,7 @@ const WorkPostTemplate = (props) => {
               </div>
             </div>
             <div className="col col--width__six">
-              <div className="grid flex-grid--gutters">
+              <div className="grid flex--grid flex-grid--gutters">
                 <div className="col col--width__nine right-name">
                   {next && (
                     <React.Fragment>
