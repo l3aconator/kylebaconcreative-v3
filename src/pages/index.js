@@ -1,5 +1,11 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
@@ -22,6 +28,8 @@ function Homepage({ data: { site, work, blog }, location }) {
   const workPosts = work.edges;
   const blogPosts = blog.edges;
 
+  console.log(workPosts);
+
   return (
     <Layout location={location} title={siteTitle} classes="main--noMargin">
       <SEO title="Work" />
@@ -38,7 +46,48 @@ function Homepage({ data: { site, work, blog }, location }) {
       <section className="skills--block">
         <div className="container">
           <div className="flex--grid flex-grid--gutters">
-            <div className="col col-width__six">slider</div>
+            <div className="col col-width__six homepage--swiper">
+              {workPosts && (
+                <Swiper
+                  modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+                  spaceBetween={50}
+                  slidesPerView={1}
+                  loop={true}
+                  pagination={{ clickable: true }}
+                  autoplay={{
+                    delay: 3500,
+                  }}
+                >
+                  {workPosts.map(
+                    (
+                      {
+                        node: {
+                          frontmatter: { title, homepagepreview, client },
+                          fields: { slug },
+                        },
+                      },
+                      index
+                    ) => {
+                      return (
+                        <SwiperSlide key={index}>
+                          <Link to={`/work${slug}`}>
+                            <img
+                              src={homepagepreview.childImageSharp.fluid.src}
+                            />
+                            <div className="work--meta">
+                              <h4>
+                                <span>{title}</span>
+                              </h4>
+                              {client && <h5>{client}</h5>}
+                            </div>
+                          </Link>
+                        </SwiperSlide>
+                      );
+                    }
+                  )}
+                </Swiper>
+              )}
+            </div>
             <div className="col col-width__six">
               <div className="flex--grid flex-grid--gutters">
                 <div className="col col-width__six">

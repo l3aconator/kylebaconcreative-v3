@@ -64,7 +64,7 @@ export default function Footer({}) {
           </div>
         </div>
         <div>
-          <p>© 2021 Kyle Bacon Creative, LLC</p>
+          <p>© 2022 Kyle Bacon Creative, LLC</p>
         </div>
       </div>
     </footer>

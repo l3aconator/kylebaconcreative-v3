@@ -3,6 +3,9 @@ import { Link } from 'gatsby';
 import useScrollListener from '../hooks/useScrollListener';
 
 import Logo from './Logo';
+import LinkedInIcon from './svg/LinkedInIcon';
+import TwitterIcon from './svg/TwitterIcon';
+import GithubIcon from './svg/GithubIcon';
 
 export default function Header({ classes = '' }) {
   const [openMenu, setOpenMenu] = useState(false);
@@ -47,6 +50,24 @@ export default function Header({ classes = '' }) {
               </li>
               <li>
                 <Link to="/blog">Blog</Link>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/l3aconator"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <GithubIcon />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/baconcreative"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <LinkedInIcon />
+                </a>
               </li>
             </ul>
           </nav>

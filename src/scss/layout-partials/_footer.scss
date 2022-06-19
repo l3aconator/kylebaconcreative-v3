@@ -64,18 +64,11 @@ footer {
     margin: 0px 15px;
 
     a {
-      background-color: rgba($blue--base, 1);
-      width: 50px;
-      height: 50px;
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 100px;
       padding: 0px;
-
-      &:hover {
-        background-color: rgba($blue--base, 0.5);
-      }
     }
   }
 }
