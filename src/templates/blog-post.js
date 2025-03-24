@@ -10,94 +10,64 @@ class BlogPostTemplate extends React.Component {
     const siteTitle = this.props.data.site.siteMetadata.title;
     const { previous, next, slug } = this.props.pageContext;
     const image = post.frontmatter.journalhero.childImageSharp.fluid.src;
-    const cirlceImage =
-      post.frontmatter.journalherocircle.childImageSharp.fluid.src;
-    const cirlceImageAlt = post.frontmatter.journalherocirclealt;
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout
+        location={this.props.location}
+        title={siteTitle}
+        classes="main--noMargin"
+      >
         <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <div className="blog-content-item">
-          <div className="item">
-            <div className="journal-header">
-              <section
-                className="journal-hero main-content image-here"
-                style={{
-                  backgroundImage: `url(${image})`,
-                }}
-              >
-                <div className="grid flex--grid flex-grid--gutters">
-                  <div className="col col--width__seven">
-                    <h1 className="journal-main-heading">
-                      <Link to={`/blog${slug}`}>{post.frontmatter.title}</Link>
-                    </h1>
-                  </div>
-                  <div className="col col--width__six">
-                    <div className="journal-hero-circle large">
-                      <img src={cirlceImage} alt={cirlceImageAlt} />
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <section className="journal-information main-content">
-                <span className="list-blog-date">
-                  <span>
-                    Posted on
-                    <span> {post.frontmatter.date} </span>
-                  </span>
-                </span>
-              </section>
+        <div className="blog-post">
+          {/* Hero image section with title */}
+          <div
+            className="blog-post-hero"
+            style={{
+              backgroundImage: `url(${image})`,
+            }}
+          >
+            <div className="blog-post-hero-overlay" />
+            <div className="blog-post-hero-title">
+              <h1>{post.frontmatter.title}</h1>
+              <div className="blog-post-meta">
+                <time>{post.frontmatter.date}</time>
+              </div>
             </div>
-            <section className="main-content journal-content clearfix">
-              <div className="container">
-                <div className="journal-item">
-                  <div
-                    className="list-blog-padding"
-                    dangerouslySetInnerHTML={{ __html: post.html }}
-                  />
+          </div>
+
+          {/* Content section */}
+          <div className="blog-post-container">
+            <div
+              className="blog-post-content"
+              dangerouslySetInnerHTML={{ __html: post.html }}
+            />
+          </div>
+
+          {/* Next/Previous posts */}
+          <div className="blog-post-navigation">
+            <div className="blog-post-navigation-container">
+              <div className="prev-next-grid">
+                <div className="prev-post">
+                  {previous && (
+                    <Link to={`/blog${previous.fields.slug}`} rel="prev">
+                      <span>← Previous Post</span>
+                      <p>{previous.frontmatter.title}</p>
+                    </Link>
+                  )}
+                </div>
+
+                <div className="next-post">
+                  {next && (
+                    <Link to={`/blog${next.fields.slug}`} rel="next">
+                      <span>Next Post →</span>
+                      <p>{next.frontmatter.title}</p>
+                    </Link>
+                  )}
                 </div>
               </div>
-            </section>
+            </div>
           </div>
         </div>
-        <section className="work-carousel align-center main-content">
-          <div className="container">
-            <div className="grid flex--grid flex-grid--gutters">
-              <div className="col col--width__six">
-                <div className="grid flex--grid flex-grid--gutters">
-                  <div className="col col--width__nine left-name">
-                    {previous && (
-                      <React.Fragment>
-                        <div className="work-carousel-name">Previous post</div>
-                        <Link to={`/blog${previous.fields.slug}`} rel="prev">
-                          <div className="work-carousel-project">
-                            {previous.frontmatter.title}
-                          </div>
-                        </Link>
-                      </React.Fragment>
-                    )}
-                  </div>
-                </div>
-              </div>
-              <div className="col col--width__six">
-                <div className="grid flex--grid flex-grid--gutters">
-                  <div className="col col--width__nine right-name">
-                    {next && (
-                      <React.Fragment>
-                        <div className="work-carousel-name">Next post</div>
-                        <Link to={`/blog${next.fields.slug}`} rel="next">
-                          <div className="work-carousel-project">
-                            {next.frontmatter.title}
-                          </div>
-                        </Link>
-                      </React.Fragment>
-                    )}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
       </Layout>
     );
   }
@@ -127,14 +97,6 @@ export const pageQuery = graphql`
             }
           }
         }
-        journalherocircle {
-          childImageSharp {
-            fluid {
-              src
-            }
-          }
-        }
-        journalherocirclealt
       }
     }
   }
