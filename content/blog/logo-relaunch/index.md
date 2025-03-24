@@ -23,5 +23,7 @@ journalherocircle: ''
 journalherocirclealt: ''
 ---
 
-Today I am relaunching Kyle Bacon Creative’s Logo with a new refresh. I've been thinking about this for years and finally decided to execute! It's a pun on ‘When Pigs Fly’. I am also excited to launch BaconBits, the branding of my blog and experiments I'd like to kick off to learn the intersection of design, programming and just general fun
+Today I am relaunching Kyle Bacon Creative’s Logo with a new refresh. I've been thinking about this for years and finally decided to execute! It's a pun on ‘When Pigs Fly’. 
+
+I am also excited to launch BaconBits, my new space to experiment with the intersection of design, AI, and code. Bit-by-bit.
 
