@@ -71,31 +71,25 @@
 
 .journal-content {
   margin-bottom: 90px;
+  background-color: $blue--base;
+  padding: 2rem;
+  color: white;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+  p {
+    margin-top: 0px;
+  }
+
+  a {
+    margin-top: 1rem;
+    display: inline-block;
+  }
 }
 
 .journal-item {
   p {
     font-size: 1.2em;
-    margin-left: -15px;
-    margin-right: -15px;
-    padding-left: 15px;
-    padding-right: 15px;
-
-    &:first-child {
-      margin-top: 90px;
-      font-family: $sans-serif-semi-bold;
-      font-size: 1.5em;
-      color: $white;
-      z-index: 2;
-      font-weight: bold;
-      line-height: 1.6em;
-
-      &:first-letter {
-        font-size: 3.5em;
-        color: $turq;
-        z-index: 2;
-      }
-    }
   }
 
   img {
@@ -279,4 +273,124 @@
       }
     }
   }
+}
+
+// Blog list layout
+.journal-feed {
+  .container {
+    max-width: 800px;
+    margin: 60px auto;
+  }
+
+  .journal-item {
+    margin-bottom: 40px;
+
+    .journal-hero {
+      position: relative;
+      height: 300px;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+
+      &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        z-index: 1;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+      }
+
+      &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.1) 0%,
+          rgba(0, 0, 0, 0.7) 100%
+        );
+        z-index: 2;
+      }
+
+      &__content {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        z-index: 3;
+
+        h2 {
+          margin-bottom: 10px;
+          color: white;
+
+          a {
+            color: white;
+            text-decoration: none;
+          }
+        }
+
+        .journal-date {
+          color: rgba(255, 255, 255, 0.8);
+          margin: 0;
+        }
+      }
+    }
+
+    .journal-content {
+      margin-bottom: 0;
+
+      button {
+        padding: 8px 16px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+          background-color: #555;
+        }
+      }
+    }
+
+    hr {
+      margin: 40px 0;
+      opacity: 0.2;
+    }
+  }
+}
+
+.journal-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.journal-header__content {
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+.journal-hero {
+  background-color: $blue--base;
+  padding-top: 160px !important;
+  padding-bottom: 90px !important;
+}
+
+.bacon-bits-logo {
+  max-width: 400px;
+  width: 100%;
 }

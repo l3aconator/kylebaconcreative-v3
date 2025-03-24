@@ -10,6 +10,7 @@ function Layout({ children, classes = '' }) {
       <Header />
       <main className={classes}>{children}</main>
       <Footer />
+      <div className="noise" />
     </>
   );
 }
