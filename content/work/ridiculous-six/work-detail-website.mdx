@@ -34,4 +34,16 @@ workdetailwebsiteprimarycontentbgimagealt: 'Call to action preview'
 workdetailwebsiteprimarybutton: 'Go to the site'
 workdetailwebsiteprimaryurl: 'https://dev.kylebaconcreative.com/school/the-ridiculous-six/'
 ---
-Netflix produces quite a bit of content now, but the way they market it is using a simple template that ties directly into the web app. I felt like they are missing an opportunity to make a themed website that ties directly to the content to stir up more of an interest to the user of the site. I decided to go with The Ridiculous Six as a proof of concept because it was a poorly received movie, but with a little design love, the movie maybe a little more enticing through a single page marketing site that could eventually be tied directly to Netflix's infastructure. The idea is to provide more in-depth marketing while stuff providing a seamless user pass off.
+
+<WorkHeader
+    title={props.pageContext.frontmatter.title}
+    heroimagealt={props.pageContext.frontmatter.heroimagealt}
+    circleteaserone={props.pageContext.frontmatter.circleteaserone}
+    circleteaseronealt={props.pageContext.frontmatter.circleteaseronealt}
+    circleteasertwo={props.pageContext.frontmatter.circleteasertwo}
+    circleteasertwoalt={props.pageContext.frontmatter.circleteasertwoalt}
+>
+   Netflix produces quite a bit of content now, but the way they market it is using a simple template that ties directly into the web app. I felt like they are missing an opportunity to make a themed website that ties directly to the content to stir up more of an interest to the user of the site. I decided to go with The Ridiculous Six as a proof of concept because it was a poorly received movie, but with a little design love, the movie maybe a little more enticing through a single page marketing site that could eventually be tied directly to Netflix's infastructure. The idea is to provide more in-depth marketing while stuff providing a seamless user pass off.
+</WorkHeader>
+
+

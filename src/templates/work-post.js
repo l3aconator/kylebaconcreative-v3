@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import { MDXProvider } from '@mdx-js/react';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
 import Layout from '../components/Layout';
@@ -10,17 +11,12 @@ import { FooterRow } from '../components/Website/FooterRow';
 import { ExtrasRow } from '../components/Website/ExtrasRow';
 import { IconRow } from '../components/Website/IconRow';
 
-const WorkPostTemplate = (props) => {
-  const post = props.data.markdownRemark;
-  const siteTitle = props.data.site.siteMetadata.title;
-  const { previous, next } = props.pageContext;
+const WorkPostTemplate = ({ data, children, location, pageContext }) => {
+  const post = data.mdx;
+  const siteTitle = data.site.siteMetadata.title;
+  const { previous, next } = pageContext;
   const {
     title,
-    heroimagealt,
-    circleteaserone,
-    circleteasertwo,
-    circleteaseronealt,
-    circleteasertwoalt,
     middle,
     middlealt,
     workdetailwebsiteprimary,
@@ -125,56 +121,26 @@ const WorkPostTemplate = (props) => {
     post.frontmatter.workdetailwebsitefooterimage.childImageSharp
       .gatsbyImageData.images.fallback.src;
 
+  console.log(children);
+
+  const shortcodes = {
+    Link,
+    WorkHeader: (props) => (
+      <WorkHeader
+        {...props}
+        heroimage={heroimage}
+        circleteaseroneimage={circleteaseroneimage}
+        circleteasertwoimage={circleteasertwoimage}
+      />
+    ),
+    WorkCarousel,
+  };
+
   return (
-    <Layout location={props.location} title={siteTitle}>
+    <Layout location={location} title={siteTitle}>
       <SEO title={title} description={post.excerpt} />
       <div className="main-content work-detail">
-        <section className="work-detail-header">
-          <div className="work-detail-img-box">
-            <img
-              className="work-detail-full-img"
-              src={heroimage}
-              alt={heroimagealt}
-            />
-            <div className="container">
-              <div className="grid flex--grid flex-grid--gutters">
-                <div className="col col--width__six project">
-                  <h1 className="name">{title}</h1>
-                  <p
-                    className="description"
-                    dangerouslySetInnerHTML={{ __html: post.html }}
-                  />
-                </div>
-                <div className="col col--width__six">
-                  {circleteaserone && (
-                    <div className="close-up-circle large">
-                      <img
-                        src={circleteaseroneimage}
-                        alt={circleteaseronealt}
-                      />
-                    </div>
-                  )}
-                  {circleteasertwo && (
-                    <div className="close-up-circle medium">
-                      <img
-                        src={circleteasertwoimage}
-                        alt={circleteasertwoalt}
-                      />
-                    </div>
-                  )}
-                  <div className="down-circle">
-                    <a href="#down">
-                      <img
-                        src="/down-arrow.svg"
-                        alt="An arrow to go down to images of the projects."
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <MDXProvider components={shortcodes}>{children}</MDXProvider>
         <section id="down">
           {middle && (
             <div className="work-detail-img-box">
@@ -277,6 +243,7 @@ const WorkPostTemplate = (props) => {
             </div>
           )}
         </section>
+
         {footer && (
           <section>
             <div className="work-detail-img-box">
@@ -357,47 +324,106 @@ const WorkPostTemplate = (props) => {
           />
         )}
       </div>
-      <section className="work-carousel align-center main-content">
+      <WorkCarousel previous={previous} next={next} />
+    </Layout>
+  );
+};
+
+function WorkHeader({
+  title,
+  heroimage,
+  heroimagealt,
+  circleteaserone,
+  circleteaseroneimage,
+  circleteaseronealt,
+  circleteasertwo,
+  circleteasertwoimage,
+  circleteasertwoalt,
+  children,
+}) {
+  return (
+    <section className="work-detail-header">
+      <div className="work-detail-img-box">
+        <img
+          className="work-detail-full-img"
+          src={heroimage}
+          alt={heroimagealt}
+        />
         <div className="container">
           <div className="grid flex--grid flex-grid--gutters">
-            <div className="col col--width__six">
-              <div className="grid flex--grid flex-grid--gutters">
-                <div className="col col--width__nine left-name">
-                  {previous && (
-                    <React.Fragment>
-                      <div className="work-carousel-name">Previous post</div>
-                      <Link to={`/work${previous.fields.slug}`} rel="prev">
-                        <div className="work-carousel-project">
-                          {previous.frontmatter.title}
-                        </div>
-                      </Link>
-                    </React.Fragment>
-                  )}
-                </div>
-              </div>
+            <div className="col col--width__six project">
+              <h1 className="name">{title}</h1>
+              <p className="description">{children}</p>
             </div>
             <div className="col col--width__six">
-              <div className="grid flex--grid flex-grid--gutters">
-                <div className="col col--width__nine right-name">
-                  {next && (
-                    <React.Fragment>
-                      <div className="work-carousel-name">Next post</div>
-                      <Link to={`/work${next.fields.slug}`} rel="next">
-                        <div className="work-carousel-project">
-                          {next.frontmatter.title}
-                        </div>
-                      </Link>
-                    </React.Fragment>
-                  )}
+              {circleteaserone && (
+                <div className="close-up-circle large">
+                  <img src={circleteaseroneimage} alt={circleteaseronealt} />
                 </div>
+              )}
+              {circleteasertwo && (
+                <div className="close-up-circle medium">
+                  <img src={circleteasertwoimage} alt={circleteasertwoalt} />
+                </div>
+              )}
+              <div className="down-circle">
+                <a href="#down">
+                  <img
+                    src="/down-arrow.svg"
+                    alt="An arrow to go down to images of the projects."
+                  />
+                </a>
               </div>
             </div>
           </div>
         </div>
-      </section>
-    </Layout>
+      </div>
+    </section>
   );
-};
+}
+
+function WorkCarousel({ previous, next }) {
+  return (
+    <section className="work-carousel align-center main-content">
+      <div className="container">
+        <div className="grid flex--grid flex-grid--gutters">
+          <div className="col col--width__six">
+            <div className="grid flex--grid flex-grid--gutters">
+              <div className="col col--width__nine left-name">
+                {previous && (
+                  <React.Fragment>
+                    <div className="work-carousel-name">Previous post</div>
+                    <Link to={`/work${previous.fields.slug}`} rel="prev">
+                      <div className="work-carousel-project">
+                        {previous.frontmatter.title}
+                      </div>
+                    </Link>
+                  </React.Fragment>
+                )}
+              </div>
+            </div>
+          </div>
+          <div className="col col--width__six">
+            <div className="grid flex--grid flex-grid--gutters">
+              <div className="col col--width__nine right-name">
+                {next && (
+                  <React.Fragment>
+                    <div className="work-carousel-name">Next post</div>
+                    <Link to={`/work${next.fields.slug}`} rel="next">
+                      <div className="work-carousel-project">
+                        {next.frontmatter.title}
+                      </div>
+                    </Link>
+                  </React.Fragment>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export default WorkPostTemplate;
 
@@ -409,13 +435,14 @@ export const pageQuery = graphql`
         author
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    mdx(fields: { slug: { eq: $slug } }) {
       id
+      children {
+        id
+      }
       excerpt(pruneLength: 160)
-      html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
         heroimage {
           childImageSharp {
             gatsbyImageData(layout: FULL_WIDTH)

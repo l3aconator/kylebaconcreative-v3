@@ -299,12 +299,11 @@ export const pageQuery = graphql`
         title
       }
     }
-    work: allMarkdownRemark(
+    work: allMdx(
       filter: {
-        fileAbsolutePath: { regex: "/work/" }
+        internal: { contentFilePath: { regex: "/work/" } }
         frontmatter: { featured: { eq: true } }
       }
-      sort: { frontmatter: { date: DESC } }
       limit: 4
     ) {
       edges {
@@ -314,7 +313,6 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
             title
             homepagepreview {
               childImageSharp {

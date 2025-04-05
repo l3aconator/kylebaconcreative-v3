@@ -7,7 +7,7 @@ import SEO from '../components/seo';
 
 function Work({ data, location }) {
   const siteTitle = data.site.siteMetadata.title;
-  const posts = data.allMarkdownRemark.edges;
+  const posts = data.allMdx.edges;
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -61,18 +61,16 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/work/" } }
+    allMdx(
       sort: { frontmatter: { title: ASC } }
+      filter: { internal: { contentFilePath: { regex: "/work/" } } }
     ) {
       edges {
         node {
-          excerpt
           fields {
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
             title
             homepagepreview {
               childImageSharp {

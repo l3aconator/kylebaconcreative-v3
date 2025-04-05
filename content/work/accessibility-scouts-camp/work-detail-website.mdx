@@ -60,6 +60,16 @@ workdetailwebsitefootercontent: 'The camp is split up into manuals of the differ
 workdetailwebsitefooterimage: 'accessibility-footer.jpg'
 workdetailwebsitefooterimagealt: 'The camp manual images.'
 ---
-This project is for Kyle Bacon’s senior thesis in the Portland State Graphic Design program. It is heavily inspired by camping and scout field manuals because the forest of the digital world is a scary place and should be accessible for all. This guide is meant to get people up to speed in creating accessible Internet experience as quickly as possible in a fun and quirky manner.
 
-This site is by no means 100% complete as of launch and a project I hope to maintain, perfect, and build upon in the future to keep up with changes in technologies and improving the learning experience. (It's also open source, so slap in a PR if you'd like.)
+<WorkHeader
+    title={props.pageContext.frontmatter.title}
+    heroimagealt={props.pageContext.frontmatter.heroimagealt}
+    circleteaserone={props.pageContext.frontmatter.circleteaserone}
+    circleteaseronealt={props.pageContext.frontmatter.circleteaseronealt}
+    circleteasertwo={props.pageContext.frontmatter.circleteasertwo}
+    circleteasertwoalt={props.pageContext.frontmatter.circleteasertwoalt}
+>
+    This project is for Kyle Bacon’s senior thesis in the Portland State Graphic Design program. It is heavily inspired by camping and scout field manuals because the forest of the digital world is a scary place and should be accessible for all. This guide is meant to get people up to speed in creating accessible Internet experience as quickly as possible in a fun and quirky manner.
+
+    This site is by no means 100% complete as of launch and a project I hope to maintain, perfect, and build upon in the future to keep up with changes in technologies and improving the learning experience. (It's also open source, so slap in a PR if you'd like.)
+</WorkHeader>
