@@ -87,7 +87,8 @@ class Homepage extends React.Component {
                   Don't get left behind. Bridge the gap between Engineering, UX,
                   Design, and AI—bit by bit with snackable lessons that help you
                   write cleaner code, design smarter interfaces, and stay
-                  relevant in a world where staying static means falling behind.{' '}
+                  relevant in a world where staying static means falling
+                  behind.{' '}
                 </p>
               </div>
             </div>
@@ -167,7 +168,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/blog/" } }
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
     ) {
       edges {
         node {

@@ -1,5 +1,7 @@
+@use "../framework/variables";
+
 body {
-  background-color: $blue--dark;
+  background-color: variables.$blue--dark;
 }
 
 main {

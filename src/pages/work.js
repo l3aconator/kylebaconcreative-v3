@@ -82,7 +82,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/work/" } }
-      sort: { fields: [frontmatter___title], order: ASC }
+      sort: { frontmatter: { title: ASC } }
     ) {
       edges {
         node {

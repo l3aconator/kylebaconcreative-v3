@@ -1,8 +1,10 @@
+@use "../framework/variables";
+
 .journal-feed {
   margin-bottom: 90px;
 
   .journal-feed-item {
-    transition: $base-transition;
+    transition: variables.$base-transition;
     height: 710px;
     background-color: white;
     margin-bottom: 30px;
@@ -10,23 +12,23 @@
     border: 20px solid transparent;
 
     &.journal--orange {
-      border-color: $orange;
-      background-color: $orange;
+      border-color: variables.$orange;
+      background-color: variables.$orange;
     }
 
     &.journal--blue__light {
-      border-color: $blue--light;
-      background-color: $blue--light;
+      border-color: variables.$blue--light;
+      background-color: variables.$blue--light;
     }
 
     &.journal--pink {
-      border-color: $pink;
-      background-color: $pink;
+      border-color: variables.$pink;
+      background-color: variables.$pink;
     }
 
     &.journal--turq {
-      border-color: $turq;
-      background-color: $turq;
+      border-color: variables.$turq;
+      background-color: variables.$turq;
     }
 
     &:hover,
@@ -48,12 +50,12 @@
   }
 
   .journal-hero {
-    background-color: $blue--base;
+    background-color: variables.$blue--base;
     min-height: 266px;
 
     .journal-main-heading {
-      padding-left: $padding-base-by-2;
-      padding-right: $padding-base-by-2;
+      padding-left: variables.$padding-base-by-2;
+      padding-right: variables.$padding-base-by-2;
       font-size: 1.75em;
       word-wrap: break-word;
       margin-bottom: 0px;
@@ -61,19 +63,19 @@
   }
 
   .journal-feed-content {
-    padding-left: $padding-base-by-2;
-    padding-right: $padding-base-by-2;
+    padding-left: variables.$padding-base-by-2;
+    padding-right: variables.$padding-base-by-2;
     font-size: 16px;
-    color: $white;
+    color: variables.$white;
 
     button {
       width: 100%;
-      margin-bottom: $margin-base;
+      margin-bottom: variables.$margin-base;
     }
   }
 
   .journal-information {
-    padding: $padding-base-by-2;
+    padding: variables.$padding-base-by-2;
 
     .list-blog-date {
       font-size: 0.875em;
