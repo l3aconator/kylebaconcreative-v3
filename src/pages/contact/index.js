@@ -6,23 +6,28 @@ import Layout from '../../components/Layout';
 import SEO from '../../components/seo';
 
 const EmailReveal = () => {
+  const isBrowser = typeof window !== 'undefined';
   const [isRevealed, setIsRevealed] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
   const email = 'hello@kylebaconcreative.com';
-  const jsConfetti = new JSConfetti();
+  let jsConfetti;
   const confettiOptions = {
     emojis: ['👋', '🥓', '🐖', '🐽', '🥓', '🥓', '🥓', '🥓', '🥓', '🥓'],
   };
 
+  if (isBrowser) {
+    jsConfetti = new JSConfetti();
+  }
+
   const handleReveal = () => {
     setIsRevealed(true);
-    jsConfetti.addConfetti(confettiOptions);
+    isBrowser && jsConfetti.addConfetti(confettiOptions);
   };
 
   const handleCopy = () => {
     navigator.clipboard.writeText(email).then(() => {
       setIsCopied(true);
-      jsConfetti.addConfetti(confettiOptions);
+      isBrowser && jsConfetti.addConfetti(confettiOptions);
       setTimeout(() => {
         setIsCopied(false);
       }, 2000);

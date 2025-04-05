@@ -2,16 +2,21 @@ import React, { useEffect } from 'react';
 import { Link, graphql } from 'gatsby';
 import JSConfetti from 'js-confetti';
 
-import Layout from '../../../components/Layout';
-import SEO from '../../../components/seo';
+import Layout from '../../components/Layout';
+import SEO from '../../components/seo';
 
 function Thanks({ location, data }) {
+  const isBrowser = typeof window !== 'undefined';
   const siteTitle = data.site.siteMetadata.title;
-  const jsConfetti = new JSConfetti();
+  const confettiOptions = {
+    emojis: ['👋', '🥓', '🐖', '🐽', '🥓', '🥓', '🥓', '🥓', '🥓', '🥓'],
+  };
+
   useEffect(() => {
-    jsConfetti.addConfetti({
-      emojis: ['👋', '🥓', '🐖', '🐽', '🥓', '🥓', '🥓', '🥓', '🥓', '🥓'],
-    });
+    if (isBrowser) {
+      const jsConfetti = new JSConfetti();
+      jsConfetti.addConfetti(confettiOptions);
+    }
   }, []);
 
   return (
