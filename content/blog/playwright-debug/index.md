@@ -19,12 +19,14 @@ Today I learned that [Playwright](https://playwright.dev/) has some pretty excel
 
 Fire up this in your terminal: 
 
-```
+```javascript
 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --remote-debugging-port=9222
 ```
 
 And configure your code with the following:
 
-```
+```javascript
 const browser = await chromium.connectOverCDP("http://localhost:9222");
 ```
+
+Now you are able write whatever script (maybe nefarious) you want!
