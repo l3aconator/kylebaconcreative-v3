@@ -1,3 +1,6 @@
+@use "sass:color";
+@use "../framework/variables";
+
 // ---- Contact page ----
 
 .contact {
@@ -12,7 +15,7 @@
 
     &:focus {
       outline: 0;
-      border-bottom: 4px dashed $blue--light;
+      border-bottom: 4px dashed variables.$blue--light;
     }
   }
 
@@ -21,15 +24,15 @@
     width: 100%;
     min-height: 30vh;
     border: none;
-    background-color: $blue--dark;
-    border-bottom: 4px dashed $turq;
+    background-color: variables.$blue--dark;
+    border-bottom: 4px dashed variables.$turq;
     color: white;
     font-size: 1.6em;
     resize: none;
 
     &:focus {
       outline: 0;
-      border-bottom: 4px dashed $blue--light;
+      border-bottom: 4px dashed variables.$blue--light;
     }
   }
 
@@ -43,8 +46,8 @@
 
   select {
     border: none;
-    background-color: $turq;
-    color: $white;
+    background-color: variables.$turq;
+    color: variables.$white;
     font-size: 2.25em;
     width: 100%;
 
@@ -56,7 +59,7 @@
 }
 
 .form-text {
-  color: $blue--light;
+  color: variables.$blue--light;
   font-size: 2.25em;
 }
 
@@ -69,7 +72,7 @@
   input {
     background-color: rgba(0, 0, 0, 0);
     border: none;
-    border-bottom: 4px dashed $turq;
+    border-bottom: 4px dashed variables.$turq;
     display: inline;
     color: white;
     font-size: 2.25em;
@@ -80,9 +83,9 @@
 input {
   &.form-button {
     margin-top: 30px;
-    background-color: $blue--light;
+    background-color: variables.$blue--light;
     border: none;
-    color: $white;
+    color: variables.$white;
     border-radius: 5px;
     transition: all 200ms ease-in;
     padding: 8px 30px;
@@ -91,8 +94,8 @@ input {
     &:hover,
     &:focus,
     &:active {
-      background-color: $white;
-      color: $blue--light;
+      background-color: variables.$white;
+      color: variables.$blue--light;
       border-bottom: none;
     }
   }
@@ -154,5 +157,5 @@ input {
 
 ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
-  color: lighten($blue--dark, 20%);
+  color: color.adjust(variables.$blue--dark, $lightness: 20%);
 }

@@ -1,9 +1,11 @@
+@use "../framework/variables";
+
 footer {
   padding: 90px 0px;
-  background-color: $blue--darker;
+  background-color: variables.$blue--darker;
 
   .logo {
-    @media (max-width: $breakpoint--tablet) {
+    @media (max-width: variables.$breakpoint--tablet) {
       display: flex;
       justify-content: center;
       margin-bottom: 30px;
@@ -41,7 +43,7 @@ footer {
     ul {
       margin-left: auto;
 
-      @media (max-width: $breakpoint--tablet) {
+      @media (max-width: variables.$breakpoint--tablet) {
         margin-right: auto;
         margin-top: 30px;
         margin-bottom: 30px;
@@ -53,7 +55,7 @@ footer {
     font-size: 14px;
     opacity: 0.5;
 
-    @media (max-width: $breakpoint--tablet) {
+    @media (max-width: variables.$breakpoint--tablet) {
       text-align: center;
     }
   }

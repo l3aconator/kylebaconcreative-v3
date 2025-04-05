@@ -1,3 +1,5 @@
+@use "../framework/variables";
+
 // ---- Work Detail ----
 
 .work-detail {
@@ -40,7 +42,7 @@
 
 .down-circle {
   margin: 10% 30% 0 auto;
-  background: $turq;
+  background: variables.$turq;
   box-shadow: 0px 4px 26px 4px rgba(0, 0, 0, 0.4);
   border-radius: 100%;
   width: 44px;
@@ -111,7 +113,7 @@
 }
 
 .download-amount-section {
-  background-color: $turq;
+  background-color: variables.$turq;
   padding: 120px;
   color: white;
   text-align: center;
@@ -120,7 +122,7 @@
 }
 
 .quote-section {
-  background-color: $turq;
+  background-color: variables.$turq;
   padding: 120px;
   color: white;
   text-align: center;
@@ -129,7 +131,7 @@
 }
 
 .quote-mark {
-  font-family: $sans-serif-base;
+  font-family: variables.$sans-serif-base;
   font-size: 5em;
   text-transform: uppercase;
   letter-spacing: 0.1666em;
@@ -140,20 +142,20 @@
 
 .quote-attribute {
   font-size: 0.5em;
-  font-family: $sans-serif-base;
+  font-family: variables.$sans-serif-base;
   text-transform: uppercase;
   letter-spacing: 0.1666em;
 }
 
 .download-amount {
-  font-family: $sans-serif-base;
+  font-family: variables.$sans-serif-base;
   font-size: 3em;
   text-transform: uppercase;
   letter-spacing: 0.1666em;
 }
 
 .work-carousel {
-  background-color: $blue--light;
+  background-color: variables.$blue--light;
   padding: 30px;
   color: white;
 
@@ -170,7 +172,7 @@
 
 .work-carousel-name {
   display: inline;
-  font-family: $sans-serif-base;
+  font-family: variables.$sans-serif-base;
   font-size: 0.9333em;
   letter-spacing: 0.1666em;
   text-transform: uppercase;
@@ -251,13 +253,13 @@
 }
 
 .cta-bar {
-  background-color: $blue--light;
+  background-color: variables.$blue--light;
   padding: 60px 120px;
   margin: 0px;
 }
 
 .cta-text {
-  font-family: $sans-serif-base;
+  font-family: variables.$sans-serif-base;
   font-size: 2.25em;
   color: white;
 }

@@ -1,28 +1,28 @@
 // Load Normalize
-@import 'normalize/normalize';
+@use 'normalize/normalize';
 
 // Load Variables and Mixins
-@import 'framework/fonts';
-@import 'framework/variables';
+@use 'framework/fonts';
+@use 'framework/variables';
 
 // Load Base Framework
-@import 'framework/grid';
-@import 'framework/typography';
-@import 'framework/buttons';
-@import 'framework/backgrounds';
-@import 'framework/utilities';
+@use 'framework/grid';
+@use 'framework/typography';
+@use 'framework/buttons';
+@use 'framework/backgrounds';
+@use 'framework/utilities';
 
 // Load Layout Partials
-@import 'layout-partials/header';
-@import 'layout-partials/footer';
+@use 'layout-partials/header';
+@use 'layout-partials/footer';
 
 // Load Page Templates
-@import 'templates/base';
-@import 'templates/home';
-@import 'templates/work';
-@import 'templates/work-detail';
-@import 'templates/work-detail-website';
-@import 'templates/contact';
-@import 'templates/blog-feed';
-@import 'templates/blog-entry';
-@import 'templates/temp-media-queries';
+@use 'templates/base';
+@use 'templates/home';
+@use 'templates/work';
+@use 'templates/work-detail';
+@use 'templates/work-detail-website';
+@use 'templates/contact';
+@use 'templates/blog-feed';
+@use 'templates/blog-entry';
+@use 'templates/temp-media-queries';

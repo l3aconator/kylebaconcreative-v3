@@ -1,7 +1,13 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
+import {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Autoplay,
+} from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -260,7 +266,7 @@ export const pageQuery = graphql`
         fileAbsolutePath: { regex: "/work/" }
         frontmatter: { featured: { eq: true } }
       }
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
       limit: 4
     ) {
       edges {
@@ -285,7 +291,7 @@ export const pageQuery = graphql`
     }
     blog: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/blog/" } }
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
       limit: 2
     ) {
       edges {

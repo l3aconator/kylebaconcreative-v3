@@ -1,4 +1,7 @@
+@use "variables";
+
 /*Buttons*/
+@use 'sass:color';
 
 .button,
 a .button,
@@ -6,8 +9,8 @@ input .button,
 button,
 a button {
   background-color: transparent;
-  color: $blue--light;
-  border: 2px solid $blue--light;
+  color: variables.$blue--light;
+  border: 2px solid variables.$blue--light;
   border-radius: 100px;
   text-decoration: none;
   transition: all 200ms ease-in;
@@ -16,20 +19,20 @@ a button {
   &:hover,
   &:active,
   &:focus {
-    background-color: $blue--light;
+    background-color: variables.$blue--light;
     color: white;
     text-decoration: none;
   }
 
   &.dark {
-    color: $white;
-    background-color: $blue--dark;
+    color: variables.$white;
+    background-color: variables.$blue--dark;
 
     &:hover,
     &:active,
     &:focus {
       background-color: white;
-      color: $blue--dark;
+      color: variables.$blue--dark;
     }
   }
 }
@@ -52,12 +55,12 @@ a button {
 
   &.white {
     text-decoration: underline;
-    color: $blue--light;
+    color: variables.$blue--light;
 
     &:hover,
     &:active,
     &:focus {
-      color: lighten($blue--light, 20%);
+      color: color.adjust(variables.$blue--light, $lightness: 20%);
     }
   }
 }

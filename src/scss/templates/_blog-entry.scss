@@ -1,3 +1,7 @@
+@use "../framework/variables";
+
+@use 'sass:color';
+
 .journal-header {
   position: relative;
 }
@@ -47,31 +51,31 @@
 }
 
 .journal-information {
-  background-color: $blue--base;
+  background-color: variables.$blue--base;
   padding: 52px 130px;
-  font-family: $sans-serif-base;
+  font-family: variables.$sans-serif-base;
   text-transform: uppercase;
-  color: $turq;
+  color: variables.$turq;
   letter-spacing: 0.15em;
 }
 
 .journal-tags {
   a {
-    color: $blue--light;
+    color: variables.$blue--light;
     text-decoration: none;
     transition: all 400ms ease-in;
 
     &:hover,
     &:active,
     &:focus {
-      color: lighten($blue--light, 10%);
+      color: color.adjust(variables.$blue--light, $lightness: 10%);
     }
   }
 }
 
 .journal-content {
   margin-bottom: 90px;
-  background-color: $blue--base;
+  background-color: variables.$blue--base;
   padding: 2rem;
   color: white;
   border-bottom-left-radius: 30px;
@@ -149,7 +153,7 @@
     border-top: 3px solid black;
 
     p {
-      font-family: $sans-serif-base;
+      font-family: variables.$sans-serif-base;
       font-size: 1.25em;
       display: inline-block;
       color: #6c6c6c;
@@ -385,7 +389,7 @@
 }
 
 .journal-hero {
-  background-color: $blue--base;
+  background-color: variables.$blue--base;
   padding-top: 160px !important;
   padding-bottom: 90px !important;
 }
@@ -552,7 +556,9 @@
         text-decoration: none;
         color: inherit;
         padding: 1.5rem;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
 
         &:hover {
           transform: translateY(-3px);
