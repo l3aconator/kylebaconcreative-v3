@@ -58,4 +58,18 @@ workdetailwebsitefooterimagealt: 'The ebook covers'
   - [5 Reasons Your Club or League Website is Costing You Wins](https://www.teamsnap.com/community/ebook/5-reasons-your-club-or-league-website-is-costing-you-wins)
 </WorkHeader>
 
+<ContentRowPrimary
+    imageAlt={props.pageContext.frontmatter.workdetailwebsiteprimaryheroalt}
+    heading={props.pageContext.frontmatter.workdetailwebsiteprimaryheading}
+    content={props.pageContext.frontmatter.workdetailwebsiteprimarycontent}
+    contentAlt={props.pageContext.frontmatter.workdetailwebsiteprimarycontentbgimagealt}
+    url={props.pageContext.frontmatter.workdetailwebsiteprimaryurl}
+    buttonContent={props.pageContext.frontmatter.workdetailwebsiteprimarybutton}
+    className="primary"
+/>
 
+<FooterRow
+    imageAlt={props.pageContext.frontmatter.workdetailwebsitefooterimagealt}
+    heading={props.pageContext.frontmatter.workdetailwebsitefooterheading}
+    content={props.pageContext.frontmatter.workdetailwebsitefootercontent}
+/>

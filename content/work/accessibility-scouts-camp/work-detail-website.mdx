@@ -73,3 +73,39 @@ workdetailwebsitefooterimagealt: 'The camp manual images.'
 
     This site is by no means 100% complete as of launch and a project I hope to maintain, perfect, and build upon in the future to keep up with changes in technologies and improving the learning experience. (It's also open source, so slap in a PR if you'd like.)
 </WorkHeader>
+
+<ContentRowPrimary
+    imageAlt={props.pageContext.frontmatter.workdetailwebsiteprimaryheroalt}
+    heading={props.pageContext.frontmatter.workdetailwebsiteprimaryheading}
+    content={props.pageContext.frontmatter.workdetailwebsiteprimarycontent}
+    contentAlt={props.pageContext.frontmatter.workdetailwebsiteprimarycontentbgimagealt}
+    url={props.pageContext.frontmatter.workdetailwebsiteprimaryurl}
+    buttonContent={props.pageContext.frontmatter.workdetailwebsiteprimarybutton}
+    className="primary"
+/>
+
+<ContentRowSecondary
+    imageAlt={props.pageContext.frontmatter.workdetailwebsitesecondarycontentmainimagealt}
+    heading={props.pageContext.frontmatter.workdetailwebsitesecondaryheading}
+    content={props.pageContext.frontmatter.workdetailwebsitesecondarycontent}
+    contentAlt={props.pageContext.frontmatter.workdetailwebsitesecondarycontentmainimagealt}
+    url={props.pageContext.frontmatter.workdetailwebsitesecondaryurl}
+    buttonContent={props.pageContext.frontmatter.workdetailwebsitesecondarybutton}
+    className="secondary"
+/>
+
+<ContentRowLast
+    imageAlt={props.pageContext.frontmatter.workdetailwebsitelastcontentmainimagealt}
+    heading={props.pageContext.frontmatter.workdetailwebsitelastheading}
+    content={props.pageContext.frontmatter.workdetailwebsitelastcontent}
+    contentAlt={props.pageContext.frontmatter.workdetailwebsitelastcontentmainimagealt}
+    url={props.pageContext.frontmatter.workdetailwebsitelasturl}
+    buttonContent={props.pageContext.frontmatter.workdetailwebsitesecondarybutton}
+    className="last"
+/>
+
+<FooterRow
+    imageAlt={props.pageContext.frontmatter.workdetailwebsitefooterimagealt}
+    heading={props.pageContext.frontmatter.workdetailwebsitefooterheading}
+    content={props.pageContext.frontmatter.workdetailwebsitefootercontent}
+/>
