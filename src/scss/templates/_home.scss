@@ -87,10 +87,11 @@
   width: 50%;
 
   img {
-    height: 400px;
+    min-height: 500px;
     object-fit: cover;
     object-position: center;
     width: 100%;
+    border-radius: 30px;
   }
 
   a {
