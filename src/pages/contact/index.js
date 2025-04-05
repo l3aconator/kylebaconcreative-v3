@@ -1,8 +1,54 @@
-import React from 'react';
-import { Link, graphql } from 'gatsby';
+import React, { useState } from 'react';
+import { graphql } from 'gatsby';
+import JSConfetti from 'js-confetti';
 
 import Layout from '../../components/Layout';
 import SEO from '../../components/seo';
+
+const EmailReveal = () => {
+  const [isRevealed, setIsRevealed] = useState(false);
+  const [isCopied, setIsCopied] = useState(false);
+  const email = 'hello@kylebaconcreative.com';
+  const jsConfetti = new JSConfetti();
+  const confettiOptions = {
+    emojis: ['👋', '🥓', '🐖', '🐽', '🥓', '🥓', '🥓', '🥓', '🥓', '🥓'],
+  };
+
+  const handleReveal = () => {
+    setIsRevealed(true);
+    jsConfetti.addConfetti(confettiOptions);
+  };
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(email).then(() => {
+      setIsCopied(true);
+      jsConfetti.addConfetti(confettiOptions);
+      setTimeout(() => {
+        setIsCopied(false);
+      }, 2000);
+    });
+  };
+
+  return (
+    <div className="email-reveal">
+      {!isRevealed ? (
+        <button onClick={handleReveal} className="reveal-button">
+          Reveal Email
+        </button>
+      ) : (
+        <div className="email-container">
+          <span className="email">{email}</span>
+          <button
+            onClick={handleCopy}
+            className={`copy-button ${isCopied ? 'copied' : ''}`}
+          >
+            {isCopied ? 'Copied!' : 'Copy'}
+          </button>
+        </div>
+      )}
+    </div>
+  );
+};
 
 class Contact extends React.Component {
   render() {
@@ -13,85 +59,85 @@ class Contact extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="Contact" />
         <div className="main-content contact">
-          <div className="container">
-            <div className="page-hero">
-              <h1>Give me a holler!</h1>
-              <h3>
-                I would love to help consult, code, or design your next project!
-              </h3>
+          <div className="contact-grid container">
+            <div className="contact-info">
+              <h1>Contact me</h1>
+              <p className="contact-intro">
+                If you have a project or business opportunity you would like to
+                discuss, or just want to say hi, feel free to reach out.
+              </p>
+
+              <div className="contact-methods">
+                <div className="contact-method">
+                  <h2>BUSINESS INQUIRES</h2>
+                  <EmailReveal />
+                </div>
+              </div>
             </div>
-            <fieldset className="contact-form">
+
+            <div className="contact-form-container">
               <form
                 data-netlify="true"
                 method="POST"
                 data-netlify-honeypot="bot-field"
                 name="contact"
                 action="/contact/thanks"
+                className="contact-form"
               >
                 <input type="hidden" name="form-name" value="contact" />
-                <div className="form-row">
-                  <div className="grid flex-grid">
-                    <div className="col--width__six">
-                      <div className="form-text">Hey Bacon, my name is:</div>
-                    </div>
-                    <div className="col--width__six">
-                      <input
-                        id="name"
-                        type="text"
-                        name="name"
-                        placeholder="Darth Vader"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="form-row">
-                  <div className="grid flex-grid">
-                    <div className="col--width__three">
-                      <div className="form-text">My email is:</div>
-                    </div>
-                    <div className="col--width__nine">
-                      <input
-                        id="email-address"
-                        type="email"
-                        name="email"
-                        placeholder="luke@iamyourfather.com"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="form-row">
-                  <div className="grid flex-grid">
-                    <div className="col--width__six">
-                      <div className="form-text">
-                        I am contacting you about:
-                      </div>
-                    </div>
-                    <div className="col--width__six">
-                      <select name="contact-reason">
-                        <option value="select">--</option>
-                        <option value="new-project">a new project</option>
-                        <option value="portfolio">a piece of your work</option>
-                        <option value="screw-up">a comment I have</option>
-                        <option value="other">other</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <textarea
-                  name="message"
-                  draggable="false"
-                  placeholder="Transmission here…"
-                />
                 <input type="hidden" name="bot-field" />
-                <button
-                  className="form-button"
-                  type="submit"
-                  style={{ marginTop: 30 }}
-                >
-                  Send
+
+                <div className="form-row">
+                  <div className="form-group">
+                    <label htmlFor="name">NAME</label>
+                    <input
+                      id="name"
+                      type="text"
+                      name="name"
+                      placeholder="Full name"
+                      required
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="email">EMAIL</label>
+                    <input
+                      id="email"
+                      type="email"
+                      name="email"
+                      placeholder="Email address"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="subject">SUBJECT</label>
+                  <input
+                    id="subject"
+                    type="text"
+                    name="subject"
+                    placeholder="Subject line"
+                    required
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="message">MESSAGE</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Write your message here..."
+                    rows="5"
+                    required
+                  />
+                </div>
+
+                <button type="submit" className="submit-button">
+                  Submit
                 </button>
               </form>
-            </fieldset>
+            </div>
           </div>
         </div>
       </Layout>
