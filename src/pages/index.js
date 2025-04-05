@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, graphql } from 'gatsby';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {
@@ -12,18 +12,18 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-
+import { gb } from '@yuvalkarif/gradient-blob';
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
 
 function CTAs() {
   return (
     <div className="mt45 ctas">
-      <Link to="/work" className="button">
-        See my portfolio
+      <Link to="/contact" className="button full">
+        Let's talk
       </Link>
-      <Link to="/contact" className="text-link">
-        Get in touch
+      <Link to="/work" className="text-link">
+        Explore work
       </Link>
     </div>
   );
@@ -34,15 +34,53 @@ function Homepage({ data: { site, work, blog }, location }) {
   const workPosts = work.edges;
   const blogPosts = blog.edges;
 
+  const coordinates = 20;
+  const [gradientBlob, setGradientBlob] = useState(gb(coordinates));
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setGradientBlob(gb(coordinates));
+    }, 1500);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <Layout location={location} title={siteTitle} classes="main--noMargin">
       <SEO title="Work" />
       <section className="hero--full">
+        <div
+          style={{
+            position: 'relative',
+            width: '100%',
+            height: '100%',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            zIndex: 1,
+            filter: `blur(100px)`,
+          }}
+        >
+          <div
+            className="blob"
+            style={{
+              clipPath: `polygon(${gradientBlob})`,
+              width: '100%',
+              backgroundColor: '#1D2068',
+              height: '100%',
+              transition: 'clip-path 2.5s ease, background-color 2.5s ease',
+            }}
+          ></div>
+        </div>
         <img src="/bg-callout.svg" className="svg--callout" />
-        <div className="container">
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div className="content--container">
-            <p className="callout">THE HUMAN CONDITION, MATTERS</p>
-            <h1>Bacon is a lover of design, code, and hard problems.</h1>
+            <p className="callout">LOVER OF DESIGN, CODE, AND HARD PROBLEMS</p>
+            <h1>
+              Hi, I'm 🥓. I help companies design, prototype and code 0-1
+              products and market them through user- and business-centered
+              design.
+            </h1>
             <CTAs />
           </div>
         </div>
@@ -51,6 +89,7 @@ function Homepage({ data: { site, work, blog }, location }) {
         <div className="container">
           <div className="flex--grid flex-grid--gutters">
             <div className="col col-width__six homepage--swiper">
+              <h3 style={{ marginBottom: 18 }}>Featured work</h3>
               {workPosts && (
                 <Swiper
                   modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
@@ -108,15 +147,14 @@ function Homepage({ data: { site, work, blog }, location }) {
                 <div className="col col-width__six">
                   <h3>Development</h3>
                   <ul className="list">
-                    <li>React</li>
-                    <li>Elixir (intermediate)</li>
+                    <li>React & React Native</li>
                     <li>Next.js</li>
-                    <li>Gatsby.js</li>
-                    <li>ES5+ JavaScript</li>
+                    <li>Elixir</li>
+                    <li>ES6+ JavaScript</li>
                     <li>Debugging</li>
-                    <li>Flat-file CMSs</li>
                     <li>Web performance consulting</li>
-                    <li>Webflow / Wordpress / Shopify</li>
+                    <li>Webflow/Wordpress/Shopify</li>
+                    <li>Mobile apps</li>
                   </ul>
                 </div>
               </div>

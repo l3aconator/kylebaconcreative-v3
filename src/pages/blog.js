@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import { gb, gbc } from '@yuvalkarif/gradient-blob';
+import { gb } from '@yuvalkarif/gradient-blob';
 
 import Layout from '../components/Layout';
 import SEO from '../components/seo';

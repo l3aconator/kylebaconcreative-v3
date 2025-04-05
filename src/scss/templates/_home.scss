@@ -1,4 +1,4 @@
-@use "../framework/variables";
+@use '../framework/variables';
 
 .hero--full {
   min-height: 90vh;
@@ -18,7 +18,7 @@
 
   .callout {
     font-size: 1.2rem;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.1rem;
     font-family: variables.$sans-serif-medium;
     margin: 0px;
 
@@ -27,13 +27,10 @@
     }
   }
 
-  .content--container {
-    max-width: 1000px;
-  }
-
   h1 {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
     color: variables.$turq;
+    font-size: 4rem;
 
     @media (max-width: variables.$breakpoint--tablet) {
       font-size: 2rem;
@@ -86,7 +83,7 @@
   width: 50%;
 
   img {
-    height: 285px;
+    height: 400px;
     object-fit: cover;
     object-position: center;
     width: 100%;

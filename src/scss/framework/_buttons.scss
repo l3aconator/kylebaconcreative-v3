@@ -1,4 +1,4 @@
-@use "variables";
+@use 'variables';
 
 /*Buttons*/
 @use 'sass:color';
@@ -34,6 +34,18 @@ a button {
       background-color: white;
       color: variables.$blue--dark;
     }
+  }
+}
+
+.button.full {
+  background-color: variables.$blue--light;
+  color: white;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: transparent;
+    color: variables.$blue--light;
   }
 }
 
