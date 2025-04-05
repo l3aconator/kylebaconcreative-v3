@@ -50,10 +50,10 @@ colorpalette:
 
 typography:
     -
-        image: 'ITC American Typewri.png'
+        image: 'itc.png'
         imagealt: 'An image of the typeface named ITC American Typewriter.'
     -
-        image: 'ATC Overlook Family.png'
+        image: 'atc.png'
         imagealt: 'An image of the typeface named ATC Overlook'
 
 workdetailwebsiteprimary: true
@@ -135,3 +135,45 @@ workdetailwebsitefooterimagealt: 'A preview of the Kelley, Ink 404 page.'
    This website was designed and developed for a dear colleague and friend. The logo was developed in tandum with the site. She is a wonderful writer and project manager. Most of all, a great communicator. During our research phase, we took a deep look at who she is and how she would like to portray herself as a business owner, we went as far as dreaming up a simple animation that was inspired by pressing the button of a typewriter (see the blog for an example of this.) She now is up to 13 clients and had about ten project requests for work on day one. So, I’d say this site has been a great tool for her to showcase her writing portfolio. Scroll below to see some artifacts of the process.
 </WorkHeader>
 
+<ExtrasRow colorpalette={props.pageContext.frontmatter.colorpalette} />
+
+<ContentRowPrimary
+    imageAlt={props.pageContext.frontmatter.workdetailwebsiteprimaryheroalt}
+    heading={props.pageContext.frontmatter.workdetailwebsiteprimaryheading}
+    content={props.pageContext.frontmatter.workdetailwebsiteprimarycontent}
+    contentAlt={props.pageContext.frontmatter.workdetailwebsiteprimarycontentbgimagealt}
+    url={props.pageContext.frontmatter.workdetailwebsiteprimaryurl}
+    buttonContent={props.pageContext.frontmatter.workdetailwebsiteprimarybutton}
+    className="primary"
+/>
+
+<ContentRowSecondary
+    imageAlt={props.pageContext.frontmatter.workdetailwebsitesecondarycontentmainimagealt}
+    heading={props.pageContext.frontmatter.workdetailwebsitesecondaryheading}
+    content={props.pageContext.frontmatter.workdetailwebsitesecondarycontent}
+    contentAlt={props.pageContext.frontmatter.workdetailwebsitesecondarycontentmainimagealt}
+    url={props.pageContext.frontmatter.workdetailwebsitesecondaryurl}
+    buttonContent={props.pageContext.frontmatter.workdetailwebsitesecondarybutton}
+    className="secondary"
+/>
+
+<OffsetRow
+    image={props.pageContext.frontmatter.workdetailwebsitetertiarycontentbgimage}
+    imageAlt={props.pageContext.frontmatter.workdetailwebsitetertiarycontentbgimagealt}
+    heading={props.pageContext.frontmatter.workdetailwebsitetertiaryheading}
+    content={props.pageContext.frontmatter.workdetailwebsitetertiarycontent}
+    className="tertiary"
+/>
+
+<FooterRow
+    imageAlt={props.pageContext.frontmatter.workdetailwebsitefooterimagealt}
+    heading={props.pageContext.frontmatter.workdetailwebsitefooterheading}
+    content={props.pageContext.frontmatter.workdetailwebsitefootercontent}
+/>
+
+<IconRow
+    heading={props.pageContext.frontmatter.workdetailiconographyheading}
+    content={props.pageContext.frontmatter.workdetailiconographycontent}
+    buttonContent={props.pageContext.frontmatter.workdetailiconographybutton}
+    url={props.pageContext.frontmatter.workdetailiconographyurl}
+/>

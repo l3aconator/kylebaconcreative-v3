@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import { MDXProvider } from '@mdx-js/react';
-import { GatsbyImage } from 'gatsby-plugin-image';
 
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
@@ -10,6 +9,16 @@ import { OffsetRow } from '../components/Website/OffsetRow';
 import { FooterRow } from '../components/Website/FooterRow';
 import { ExtrasRow } from '../components/Website/ExtrasRow';
 import { IconRow } from '../components/Website/IconRow';
+import {
+  WorkHeader,
+  WorkCarousel,
+  WorkMiddle,
+  WorkSingleColumnFull,
+  WorkSingleColumn,
+  WorkTwoColumn,
+  WorkSquareTall,
+  WorkDetailFooter,
+} from '../components/work';
 
 const WorkPostTemplate = ({ data, children, location, pageContext }) => {
   const post = data.mdx;
@@ -17,62 +26,14 @@ const WorkPostTemplate = ({ data, children, location, pageContext }) => {
   const { previous, next } = pageContext;
   const {
     title,
-    middle,
-    middlealt,
-    workdetailwebsiteprimary,
-    workdetailwebsiteprimaryheading,
-    workdetailwebsiteprimarycontent,
-    workdetailwebsiteprimaryheroalt,
-    workdetailwebsiteprimarycontentbgimagealt,
-    workdetailwebsiteprimarybutton,
-    workdetailwebsiteprimaryurl,
-    workdetailwebsitesecondary,
-    workdetailwebsitesecondaryheading,
-    workdetailwebsitesecondarycontent,
-    workdetailwebsitesecondarycontentmainimagealt,
-    workdetailwebsitesecondarybutton,
-    workdetailwebsitesecondaryurl,
-    workdetailwebsitelast,
-    workdetailwebsitelastheading,
-    workdetailwebsitelastcontent,
-    workdetailwebsitelastcontentmainimagealt,
-    workdetailwebsitelastbutton,
-    workdetailwebsitelasturl,
-    workdetailwebsitetertiary,
-    workdetailwebsitetertiaryheading,
-    workdetailwebsitetertiarycontent,
-    workdetailwebsitetertiarycontentbgimagealt,
-    workdetailwebsitetertiarycontentmainimagealt,
-    workdetailwebsitefooter,
-    workdetailwebsitefooterheading,
-    workdetailwebsitefootercontent,
-    workdetailwebsitefooterimagealt,
-    colorpalette,
     typography,
-    workdetailiconography,
-    workdetailiconographyheading,
-    workdetailiconographycontent,
-    workdetailiconographybutton,
-    workdetailiconographyurl,
     workdetailiconographyicons,
-    singlecolumnfull,
-    singlecolumn,
-    twocolumn,
     singlecolumnfullcontent,
     singlecolumncontent,
     twocolumncontent,
-    infographic,
-    infographicimage,
-    infographicimagealt,
-    squaretall,
     squareimage,
-    squarealt,
-    squareimagecaption,
     tallimage,
-    tallalt,
-    footer,
     footerimage,
-    footeralt,
   } = post.frontmatter;
 
   // Imagery for all the templates
@@ -121,8 +82,6 @@ const WorkPostTemplate = ({ data, children, location, pageContext }) => {
     post.frontmatter.workdetailwebsitefooterimage.childImageSharp
       .gatsbyImageData.images.fallback.src;
 
-  console.log(children);
-
   const shortcodes = {
     Link,
     WorkHeader: (props) => (
@@ -133,6 +92,62 @@ const WorkPostTemplate = ({ data, children, location, pageContext }) => {
         circleteasertwoimage={circleteasertwoimage}
       />
     ),
+    WorkMiddle: (props) => <WorkMiddle {...props} middleimage={middleimage} />,
+    WorkSingleColumnFull: (props) => (
+      <WorkSingleColumnFull
+        {...props}
+        singlecolumnfullcontent={singlecolumnfullcontent}
+      />
+    ),
+    WorkSingleColumn: (props) => (
+      <WorkSingleColumn {...props} singlecolumncontent={singlecolumncontent} />
+    ),
+    WorkSquareTall: (props) => (
+      <WorkSquareTall
+        {...props}
+        squareimage={squareimage}
+        tallimage={tallimage}
+      />
+    ),
+    WorkTwoColumn: (props) => (
+      <WorkTwoColumn {...props} twocolumncontent={twocolumncontent} />
+    ),
+    WorkDetailFooter: (props) => (
+      <WorkDetailFooter {...props} footerimage={footerimage} />
+    ),
+    ExtrasRow: (props) => <ExtrasRow {...props} typography={typography} />,
+    ContentRowPrimary: (props) => (
+      <ContentRow
+        {...props}
+        contentImage={workdetailwebsiteprimarycontentmainimage}
+        image={workdetailwebsiteprimaryhero}
+      />
+    ),
+    ContentRowSecondary: (props) => (
+      <ContentRow
+        {...props}
+        contentImage={workdetailwebsitesecondarycontentmainimage}
+      />
+    ),
+    ContentRowLast: (props) => (
+      <ContentRow
+        {...props}
+        contentImage={workdetailwebsitelastcontentmainimage}
+      />
+    ),
+    OffsetRow: (props) => (
+      <OffsetRow
+        {...props}
+        contentImage={workdetailwebsitetertiarycontentmainimage}
+        image={workdetailwebsitetertiarycontentbgimage}
+      />
+    ),
+    FooterRow: (props) => (
+      <FooterRow {...props} image={workdetailwebsitefooterimage} />
+    ),
+    IconRow: (props) => (
+      <IconRow {...props} icons={workdetailiconographyicons} />
+    ),
     WorkCarousel,
   };
 
@@ -141,289 +156,11 @@ const WorkPostTemplate = ({ data, children, location, pageContext }) => {
       <SEO title={title} description={post.excerpt} />
       <div className="main-content work-detail">
         <MDXProvider components={shortcodes}>{children}</MDXProvider>
-        <section id="down">
-          {middle && (
-            <div className="work-detail-img-box">
-              <img
-                className="work-detail-full-img"
-                src={middleimage}
-                alt={middlealt}
-              />
-            </div>
-          )}
-          {singlecolumnfull &&
-            singlecolumnfullcontent.assets.map(({ className, image, alt }) => (
-              <img
-                className={className}
-                src={
-                  image &&
-                  image.childImageSharp.gatsbyImageData.images.fallback.src
-                }
-                alt={alt}
-              />
-            ))}
-          {singlecolumn &&
-            singlecolumncontent.assets.map(({ className, image, alt }) => (
-              <div className={`container ${className}`}>
-                <img
-                  src={
-                    image &&
-                    image.childImageSharp.gatsbyImageData.images.fallback.src
-                  }
-                  alt={alt}
-                />
-              </div>
-            ))}
-          {infographic && (
-            <div className="infographic-container">
-              <Link to={infographicimage.publicURL}>
-                <img
-                  className="infographic"
-                  src={
-                    infographicimage &&
-                    infographicimage.childImageSharp.gatsbyImageData.images
-                      .fallback.src
-                  }
-                  alt={infographicimagealt}
-                />
-              </Link>
-            </div>
-          )}
-          {squaretall && (
-            <section className="work-detail-middle">
-              <div className="container">
-                <div className="grid flex--grid flex-grid--gutters">
-                  <div className="col col--width__six">
-                    <div className="work-detail-secondary-img">
-                      <img
-                        src={
-                          squareimage?.childImageSharp?.gatsbyImageData?.images
-                            ?.fallback?.src
-                        }
-                        alt={squarealt}
-                      />
-                    </div>
-                    <p>{squareimagecaption}</p>
-                  </div>
-                  <div className="col col--width__six">
-                    <div className="work-detail-tall-img">
-                      <img
-                        className="work-detail-tall-img"
-                        src={
-                          tallimage?.childImageSharp?.gatsbyImageData?.images
-                            ?.fallback?.src
-                        }
-                        alt={tallalt}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          )}
-          {twocolumn && (
-            <div className="container">
-              <div className="grid flex--grid flex-grid--gutters marg-bot">
-                {twocolumncontent.assets.map(
-                  ({ className, customlink, image, alt }) => (
-                    <div
-                      className={`col col--width__six church-icon-set-container ${
-                        className ? className : ''
-                      }`}
-                      style={{ marginLeft: -30 }}
-                    >
-                      <img src={image.publicURL} alt={alt} />
-                      {customlink && (
-                        <p dangerouslySetInnerHTML={{ __html: customlink }} />
-                      )}
-                    </div>
-                  )
-                )}
-              </div>
-            </div>
-          )}
-        </section>
-
-        {footer && (
-          <section>
-            <div className="work-detail-img-box">
-              <img
-                className="work-detail-full-img"
-                src={
-                  footerimage?.childImageSharp?.gatsbyImageData?.images
-                    ?.fallback?.src
-                }
-                alt={footeralt}
-              />
-            </div>
-          </section>
-        )}
-        {colorpalette && typography && (
-          <ExtrasRow colorpalette={colorpalette} typography={typography} />
-        )}
-        {workdetailwebsiteprimary && (
-          <ContentRow
-            image={workdetailwebsiteprimaryhero}
-            imageAlt={workdetailwebsiteprimaryheroalt}
-            heading={workdetailwebsiteprimaryheading}
-            content={workdetailwebsiteprimarycontent}
-            contentImage={workdetailwebsiteprimarycontentmainimage}
-            contentAlt={workdetailwebsiteprimarycontentbgimagealt}
-            url={workdetailwebsiteprimaryurl}
-            buttonContent={workdetailwebsiteprimarybutton}
-            className="primary"
-          />
-        )}
-        {workdetailwebsitesecondary && (
-          <ContentRow
-            heading={workdetailwebsitesecondaryheading}
-            content={workdetailwebsitesecondarycontent}
-            contentImage={workdetailwebsitesecondarycontentmainimage}
-            contentAlt={workdetailwebsitesecondarycontentmainimagealt}
-            url={workdetailwebsitesecondaryurl}
-            buttonContent={workdetailwebsitesecondarybutton}
-            className="secondary"
-          />
-        )}
-        {workdetailwebsitelast && (
-          <ContentRow
-            heading={workdetailwebsitelastheading}
-            content={workdetailwebsitelastcontent}
-            contentImage={workdetailwebsitelastcontentmainimage}
-            contentAlt={workdetailwebsitelastcontentmainimagealt}
-            url={workdetailwebsitelasturl}
-            buttonContent={workdetailwebsitelastbutton}
-            className="last"
-          />
-        )}
-        {workdetailwebsitetertiary && (
-          <OffsetRow
-            image={workdetailwebsitetertiarycontentbgimage}
-            imageAlt={workdetailwebsitetertiarycontentbgimagealt}
-            heading={workdetailwebsitetertiaryheading}
-            content={workdetailwebsitetertiarycontent}
-            contentImage={workdetailwebsitetertiarycontentmainimage}
-            contentAlt={workdetailwebsitetertiarycontentmainimagealt}
-          />
-        )}
-        {workdetailwebsitefooter && (
-          <FooterRow
-            image={workdetailwebsitefooterimage}
-            imageAlt={workdetailwebsitefooterimagealt}
-            heading={workdetailwebsitefooterheading}
-            content={workdetailwebsitefootercontent}
-          />
-        )}
-        {workdetailiconography && (
-          <IconRow
-            heading={workdetailiconographyheading}
-            content={workdetailiconographycontent}
-            buttonContent={workdetailiconographybutton}
-            url={workdetailiconographyurl}
-            icons={workdetailiconographyicons}
-          />
-        )}
       </div>
       <WorkCarousel previous={previous} next={next} />
     </Layout>
   );
 };
-
-function WorkHeader({
-  title,
-  heroimage,
-  heroimagealt,
-  circleteaserone,
-  circleteaseroneimage,
-  circleteaseronealt,
-  circleteasertwo,
-  circleteasertwoimage,
-  circleteasertwoalt,
-  children,
-}) {
-  return (
-    <section className="work-detail-header">
-      <div className="work-detail-img-box">
-        <img
-          className="work-detail-full-img"
-          src={heroimage}
-          alt={heroimagealt}
-        />
-        <div className="container">
-          <div className="grid flex--grid flex-grid--gutters">
-            <div className="col col--width__six project">
-              <h1 className="name">{title}</h1>
-              <p className="description">{children}</p>
-            </div>
-            <div className="col col--width__six">
-              {circleteaserone && (
-                <div className="close-up-circle large">
-                  <img src={circleteaseroneimage} alt={circleteaseronealt} />
-                </div>
-              )}
-              {circleteasertwo && (
-                <div className="close-up-circle medium">
-                  <img src={circleteasertwoimage} alt={circleteasertwoalt} />
-                </div>
-              )}
-              <div className="down-circle">
-                <a href="#down">
-                  <img
-                    src="/down-arrow.svg"
-                    alt="An arrow to go down to images of the projects."
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function WorkCarousel({ previous, next }) {
-  return (
-    <section className="work-carousel align-center main-content">
-      <div className="container">
-        <div className="grid flex--grid flex-grid--gutters">
-          <div className="col col--width__six">
-            <div className="grid flex--grid flex-grid--gutters">
-              <div className="col col--width__nine left-name">
-                {previous && (
-                  <React.Fragment>
-                    <div className="work-carousel-name">Previous post</div>
-                    <Link to={`/work${previous.fields.slug}`} rel="prev">
-                      <div className="work-carousel-project">
-                        {previous.frontmatter.title}
-                      </div>
-                    </Link>
-                  </React.Fragment>
-                )}
-              </div>
-            </div>
-          </div>
-          <div className="col col--width__six">
-            <div className="grid flex--grid flex-grid--gutters">
-              <div className="col col--width__nine right-name">
-                {next && (
-                  <React.Fragment>
-                    <div className="work-carousel-name">Next post</div>
-                    <Link to={`/work${next.fields.slug}`} rel="next">
-                      <div className="work-carousel-project">
-                        {next.frontmatter.title}
-                      </div>
-                    </Link>
-                  </React.Fragment>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 export default WorkPostTemplate;
 
@@ -448,93 +185,55 @@ export const pageQuery = graphql`
             gatsbyImageData(layout: FULL_WIDTH)
           }
         }
-        heroimagealt
-        circleteaserone
         circleteaseroneimage {
           childImageSharp {
             gatsbyImageData(layout: FULL_WIDTH)
           }
         }
-        circleteaseronealt
-        circleteasertwo
         circleteasertwoimage {
           childImageSharp {
             gatsbyImageData(layout: FULL_WIDTH)
           }
         }
-        circleteasertwoalt
-        middle
         middleimage {
           childImageSharp {
             gatsbyImageData(layout: FULL_WIDTH)
           }
         }
-        middlealt
-        workdetailwebsiteprimary
         workdetailwebsiteprimaryhero {
           childImageSharp {
             gatsbyImageData(layout: FULL_WIDTH)
           }
         }
-        workdetailwebsiteprimaryheroalt
-        workdetailwebsiteprimaryheading
-        workdetailwebsiteprimarycontent
         workdetailwebsiteprimarycontentmainimage {
           childImageSharp {
             gatsbyImageData(layout: FULL_WIDTH)
           }
         }
-        workdetailwebsiteprimarycontentbgimagealt
-        workdetailwebsiteprimarybutton
-        workdetailwebsiteprimaryurl
-        workdetailwebsitesecondary
-        workdetailwebsitesecondaryheading
-        workdetailwebsitesecondarycontent
         workdetailwebsitesecondarycontentmainimage {
           childImageSharp {
             gatsbyImageData(layout: FULL_WIDTH)
           }
         }
-        workdetailwebsitesecondarycontentmainimagealt
-        workdetailwebsitesecondarybutton
-        workdetailwebsitesecondaryurl
-        workdetailwebsitelast
-        workdetailwebsitelastheading
-        workdetailwebsitelastcontent
         workdetailwebsitelastcontentmainimage {
           childImageSharp {
             gatsbyImageData(layout: FULL_WIDTH)
           }
         }
-        workdetailwebsitelastcontentmainimagealt
-        workdetailwebsitelastbutton
-        workdetailwebsitelasturl
-        workdetailwebsitetertiary
-        workdetailwebsitetertiaryheading
-        workdetailwebsitetertiarycontent
         workdetailwebsitetertiarycontentbgimage {
           childImageSharp {
             gatsbyImageData(layout: FULL_WIDTH)
           }
         }
-        workdetailwebsitetertiarycontentbgimagealt
         workdetailwebsitetertiarycontentmainimage {
           childImageSharp {
             gatsbyImageData(layout: FULL_WIDTH)
           }
         }
-        workdetailwebsitetertiarycontentmainimagealt
-        workdetailwebsitefooter
-        workdetailwebsitefooterheading
-        workdetailwebsitefootercontent
         workdetailwebsitefooterimage {
           childImageSharp {
             gatsbyImageData(layout: FULL_WIDTH)
           }
-        }
-        workdetailwebsitefooterimagealt
-        colorpalette {
-          value
         }
         typography {
           image {
@@ -544,20 +243,12 @@ export const pageQuery = graphql`
           }
           imagealt
         }
-        workdetailiconography
-        workdetailiconographyheading
-        workdetailiconographycontent
-        workdetailiconographybutton
-        workdetailiconographyurl
         workdetailiconographyicons {
           iconimage {
             publicURL
           }
           iconimagealt
         }
-        singlecolumnfull
-        singlecolumn
-        twocolumn
         singlecolumnfullcontent {
           assets {
             class
@@ -590,30 +281,22 @@ export const pageQuery = graphql`
             customlink
           }
         }
-        infographic
         infographicimage {
           publicURL
           childImageSharp {
             gatsbyImageData(layout: FULL_WIDTH)
           }
         }
-        inforgraphicimagealt
-        squaretall
         squareimage {
           childImageSharp {
             gatsbyImageData(layout: FULL_WIDTH)
           }
         }
-        squarealt
-        squareimagecaption
         tallimage {
           childImageSharp {
             gatsbyImageData(layout: FULL_WIDTH)
           }
         }
-        tallalt
-        footer
-        footeralt
         footerimage {
           childImageSharp {
             gatsbyImageData(layout: FULL_WIDTH)

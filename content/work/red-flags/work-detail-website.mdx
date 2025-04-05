@@ -59,3 +59,22 @@ workdetailwebsitelasturl: 'https://pensive-heyrovsky-a34277.netlify.com/checkout
     The problem was improving their site to be more visually engaging and interactive. I created a demo of the game and revamped the entire marketing and purchasing experience with both business goals and end user goals in mind.
 </WorkHeader>
 
+<ContentRowPrimary
+    imageAlt={props.pageContext.frontmatter.workdetailwebsiteprimaryheroalt}
+    heading={props.pageContext.frontmatter.workdetailwebsiteprimaryheading}
+    content={props.pageContext.frontmatter.workdetailwebsiteprimarycontent}
+    contentAlt={props.pageContext.frontmatter.workdetailwebsiteprimarycontentbgimagealt}
+    url={props.pageContext.frontmatter.workdetailwebsiteprimaryurl}
+    buttonContent={props.pageContext.frontmatter.workdetailwebsiteprimarybutton}
+    className="primary"
+/>
+
+<ContentRowSecondary
+    imageAlt={props.pageContext.frontmatter.workdetailwebsitesecondarycontentmainimagealt}
+    heading={props.pageContext.frontmatter.workdetailwebsitesecondaryheading}
+    content={props.pageContext.frontmatter.workdetailwebsitesecondarycontent}
+    contentAlt={props.pageContext.frontmatter.workdetailwebsitesecondarycontentmainimagealt}
+    url={props.pageContext.frontmatter.workdetailwebsitesecondaryurl}
+    buttonContent={props.pageContext.frontmatter.workdetailwebsitesecondarybutton}
+    className="secondary"
+/>

@@ -36,10 +36,6 @@ squareimagecaption: 'With the diverse amount of programs already living under Br
 tallimage: 'detail-image.jpg'
 tallalt: 'A look at the branding system.'
 
-# footer: true
-# footerimage: 'bridgetown-footer.jpg'
-# footeralt: 'A spread from the Bops Fest Events booklet'
-
 taxonomy:
     tag: [featured, Print, Typography, Branding, Web/UX]
 ---
@@ -59,3 +55,10 @@ taxonomy:
     You can view a full pdf of the deliverable (if not, checkout some highlight images below):
     * [Brand book](bridgetown-inc-brand-book-rev-1-03.pdf)
 </WorkHeader>
+
+<WorkSquareTall
+    squarealt={props.pageContext.frontmatter.squarealt}
+    tallalt={props.pageContext.frontmatter.tallalt}
+    squareimagecaption={props.pageContext.frontmatter.squareimagecaption}
+    tallimagecaption={props.pageContext.frontmatter.tallimagecaption}
+/>
