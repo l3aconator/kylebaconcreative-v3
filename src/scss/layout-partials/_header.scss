@@ -1,4 +1,4 @@
-@use "../framework/variables";
+@use '../framework/variables';
 
 .Header {
   padding: 20px 0px;
@@ -79,6 +79,12 @@
 
   @media (max-width: variables.$breakpoint--tablet) {
     width: 100%;
+  }
+
+  svg {
+    @media (max-width: variables.$breakpoint--tablet) {
+      width: 200px;
+    }
   }
 }
 

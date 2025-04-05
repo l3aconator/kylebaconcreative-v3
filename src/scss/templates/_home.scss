@@ -7,6 +7,10 @@
   background: linear-gradient(0deg, #141640 0%, rgba(20, 22, 64, 0) 100%);
   position: relative;
 
+  @media (max-width: variables.$breakpoint--tablet) {
+    margin-top: 3rem;
+  }
+
   .svg--callout {
     position: absolute;
     z-index: -1;
