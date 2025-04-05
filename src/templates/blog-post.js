@@ -17,7 +17,11 @@ class BlogPostTemplate extends React.Component {
         title={siteTitle}
         classes="main--noMargin"
       >
-        <SEO title={post.frontmatter.title} description={post.excerpt} />
+        <SEO
+          title={post.frontmatter.title}
+          description={post.excerpt}
+          image={image}
+        />
         <div className="blog-post">
           {/* Hero image section with title */}
           <div
