@@ -62,7 +62,7 @@ export const pageQuery = graphql`
       }
     }
     allMdx(
-      sort: { frontmatter: { title: ASC } }
+      sort: { frontmatter: { order: ASC } }
       filter: { internal: { contentFilePath: { regex: "/work/" } } }
     ) {
       edges {
