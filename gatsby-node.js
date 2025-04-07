@@ -61,6 +61,15 @@ exports.createPages = ({ graphql, actions }) => {
                 }
                 frontmatter {
                   title
+                  workPageTitle
+                  homepagepreview {
+                    childImageSharp {
+                      fluid {
+                        src
+                      }
+                    }
+                  }
+                  homepageteaser
                 }
               }
             }
