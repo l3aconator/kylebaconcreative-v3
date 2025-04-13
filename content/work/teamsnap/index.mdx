@@ -3,9 +3,10 @@ title: 'In-House Marketing Design & Development Support Ending in a Successful E
 workPageTitle: 'TeamSnap'
 order: 4
 homepagepreview: 'homepage-preview.jpg'
-homepageteaser: "Born from a vision to help men thrive, Mancamped offers a space for authentic connection, growth, and becoming your best self."
+homepageteaser: "Effective employee, effective design, effective business."
 ---
-import video from './test.mp4'
+import video from './styleguide.mp4'
+import hboMax from './hbo-max.mp4'
 
 <Hero>
    <Container>
@@ -13,7 +14,7 @@ import video from './test.mp4'
             <h1>{props.pageContext.frontmatter.title}</h1>
         </Block>
         <AssetImage>
-            ![Manframe](./hero.avif)
+            ![Manframe](./1.jpg)
         </AssetImage>
    </Container>
 </Hero>
@@ -29,45 +30,41 @@ import video from './test.mp4'
         <Block>
             ### Mission
 
-            Mancamped was born out my co-founder vision and my alignment to build a platform and ecosystem for men to become their peak selves. It is designed for men to be authentically themselves, tap into gamification, and create a place for men to vent, learn, and grow in our ever changing society. 
+            TeamSnap is a successful Youth Sports ecosystem serving over 25 million users. They are a household name in the industry for managing your team at any level, including at the business level
         </Block>
 
         <Block>
             ### My Contributions
 
-            I have built upwards of 3 apps, mobile and web as we built out our offering. I designed and built multiple brands as we explored product market fit. As well supporting the team with sales automation, analytics, database management, and design as need for marketing initiatives.
+            I was an employee with TeamSnap for six years and have contracted off and on since leaving. I have contributed to many parts of the business but my main role was managing the main website and was typically a bridge between product design and marketing design. I supported many marketing initiatives, the company had a successful exit to private equity. We grew like crazy while I was a part of the team.
         </Block>
    </MainColumn>
    <Sidebar>
         <Block>
             ### Company
 
-            Mancamped
+            TeamSnap
         </Block>
         <Block>
             ### Services
 
             - User Interface Design
-            - User Experience Design
-            - User Research & User Flows
-            - Wireframing
-            - Elixir development
-            - Team and project management
-            - A/B Testing & CRO
-            - Web design
-            - Webflow development
+            - Web Design
+            - Web Development 
+            - Custom Analytics Development
+            - Sales Team Support
+            - Digital Advertising Support
+            - A/B Testing Lead
         </Block>
         <Block>
             ### Tools & Tech
 
             - Figma
             - Next.JS
-            - React
-            - React Native
-            - Elixir (Phoenix Framework)
-            - Webflow
-            - Tailwind CSS
-            - VWO (for A/B testing)
+            - Wordpress (for blog)
+            - Sanity CMS
+            - Netlify
+            - TeamSnap UI
         </Block>
    </Sidebar>
 </Container>
@@ -76,28 +73,33 @@ import video from './test.mp4'
     <Block>
         ## Impact
         
-        Any metric we can drive forward to help men be better and save them from suicide is a positive metric. Here are some metrics we have been able to drive so far:
+        Here are some various metrics I drove over the years:
 
         <Metrics>
             <Metric>
-                ### $60k
+                ### -6
                 
-                In self generated revenue for the business
+                Seconds reduced from site speed from old CMS to new stack
             </Metric>
             <Metric>
-                ### 120+
+                ### 1
                 
-                Initial users
+                Successful exit support
             </Metric>
             <Metric>
-                ### 12
+                ### +7 million
                 
-                Weeks in Founders University; graduated from the program
+                Users we acquired as a company during my tenure
             </Metric>
             <Metric>
-                ### 500k
+                ### 50k
                 
-                Followers added to ex-influencer’s following
+                A month visitors to our Return to Sport initiative during COVID
+            </Metric>
+            <Metric>
+                ### 3
+                
+                Promotions in six years for strong job performance and metrics
             </Metric>
         </Metrics>
     </Block>
@@ -107,72 +109,123 @@ import video from './test.mp4'
     <Block>
         <hr />
         
-        ## 0-1 Journey
+        ## Select Initiatives
 
     </Block>
 </Container>
 
 <Container>
     <Block>
-        ### The Start
+        ### Health Check Launch and Return to Sport
 
-        My co-founder first approached me with some business ideas for us to tackle. We tried a couple but ended settling on creating a brand called Manframe. We built a mobile application and partnered with an influencer we had lined up to test. We drove traffic and iterated quickly on the product.
-    </Block>
-    <Assets className="two-column">
-        <AssetImage>
-            ![Manframe](./homepage-preview.jpg)
-            *image_caption*
-        </AssetImage>
-        <AssetVideo src={video} />
-    </Assets>
-</Container>
-
-<Container>
-    <Block>
-        ### Next Steps
-
-        We quickly started to learn after weeks of iterating, we were on to something but we had some problems with adoption. We moved on to create  another brand and product strategy to better suit the market. We ended up generating most of our sales here, got even more traffic to resonate with our content and offering. We built out a robust sales funnel and process to get men onto the content and program we created. Interviewing users and monitoring test along the way.
+        During COVID, with youth sports coming to and end temporarily. The whole company rallied to avoid losing a ton of revenue with a feature to help users return to sport. We built an entire content play to capture traffic and keep TeamSnap top of mind. We also launched a new feature and set of landing pages on the marketing site. We were able to stave off too much of a slump and kept our brand top of mind when looking for COVID and youth sports content
     </Block>
     <Assets className="three-column">
         <AssetImage>
-            ![Manframe](./homepage-preview.jpg)
-            *image_caption*
+            ![Health Check Landing Page](./2.jpg)
+            *Health Check Landing Page*
         </AssetImage>
-        <AssetVideo src={video} />
+        <AssetImage>
+            ![Return to Sports Heatmap](./3.jpg)
+            *Return to Sports Heatmap*
+        </AssetImage>
+        <AssetImage>
+            ![3 Million Health Checks Announcement](./4.jpg)
+            *3 Million Health Checks Announcement*
+        </AssetImage>
     </Assets>
 </Container>
 
 <Container>
     <Block>
-        ### Enter Mancamped
+        ### CMS Conversion, Rebuild, and Performance Tuning
 
-        We started to realize, while we were having success, it would take a lot of human-hours and sales people to scale this business and we wanted to take a PLG approach to acquisition. Sales started to slow with the in-person approach, so we pivoted again to create a brand that was much more flexible and mature. Mancamped started to have success until our influencer ghosted the business and were left without a traction channel.
-    </Block>
-    <Assets className="four-column">
-        <AssetImage>
-            ![Manframe](./homepage-preview.jpg)
-            *image_caption*
-        </AssetImage>
-        <AssetVideo src={video} />
-        <AssetImage>
-            ![Manframe](./homepage-preview.jpg)
-            *image_caption*
-        </AssetImage>
-        <AssetVideo src={video} />
-    </Assets>
-</Container>
-
-<Container>
-    <Block>
-        ### Founder’s U and Current Product
-        
-        Fast forward a few months of figuring out a new traction channel and graduating from Founder’s U, we tested paid advertising, kicked off SEO and started beta testing our newest iteration. We have a revamped sign up funnel that serves both as a data mine and a application process. We are running weekly calls with our users as part of the product offering and have a full suite of tools and more on the way to help guys grow and succeed—including my co-founder and myself.
+        When I first joined TeamSnap was when Google started really caring about web performance in their algorithm. Our site took almost 8 seconds to load on a good day, this was all attributed to an obscure and legacy CMS. I went on a 3-month sprint to convert the site over to Next.js, Sanity CMS, and Headless Wordpress and site speed has held steady at under 2 seconds to load. I also innovated ways to load our third-party tools with “facades” to keep load times fast. Content editors are happy, Google is happy and the site is still running at peak performance with 4,000+ pages of ingested content from the various API.
     </Block>
     <Assets>
         <AssetImage>
-            ![Manframe](./homepage-preview.jpg)
-            *image_caption*
+            ![Manframe](./6.jpg)
+            *CMS Conversion Data Model*
         </AssetImage>
+    </Assets>
+    <Assets className="two-column">
+        <AssetImage>
+            ![Diagaram of the the CMS data structure](./5.jpg)
+            *Diagaram of the the CMS data structure*
+        </AssetImage>
+        <AssetImage>
+            ![Facade code that loads a button that triggers loading the library](./7.jpg)
+            *Facade code that loads a button that triggers loading the library*
+        </AssetImage>
+    </Assets>
+</Container>
+
+<Container>
+    <Block>
+        ### Pricing and Homepage A/B Tests
+
+        Throughout the years we iterated on our homepage and pricing pages constantly. Some tests successful, some not as the A/B testing game goes. The test that won, have stood the test of time for the brand.
+    </Block>
+    <Assets className="two-column">
+        <AssetImage>
+            ![Mobile A/B Test and below fold desktop](./8.jpg)
+            *Mobile A/B Test and below fold desktop*
+        </AssetImage>
+        <AssetImage>
+            ![Pricing Page A/B Test](./9.jpg)
+            *Pricing Page A/B Test*
+        </AssetImage>
+    </Assets>
+</Container>
+
+<Container>
+    <Block>
+        ### Web Styleguide
+        
+        I created a web styleguide for TeamSnap to share with external partners, it is a living document with some awesome brand moments and kept us consistent across our marketing.
+    </Block>
+    <Assets>
         <AssetVideo src={video} />
+    </Assets>
+</Container>
+
+<Container>
+    <Block>
+        ### Gated Content Systems
+        
+        For both B2C and B2B, we built a custom gated content system to keep the UX/UI on site, but offer helpful content and resources to both audiences. It is simple account systems integrated into the CRM on the B2B side and a simple Google Sheet for speed on the B2C side.
+    </Block>
+    <Assets className="two-column">
+        <AssetImage>
+            ![Coaches' Corner Sign up Gate and below fold](./10.jpg)
+            *Coaches' Corner Sign up Gate and below fold*
+        </AssetImage>
+        <AssetImage>
+            ![B2B Gated Content System](./11.jpg)
+            *B2B Gated Content System*
+        </AssetImage>
+    </Assets>
+</Container>
+
+<Container>
+    <Block>
+        ### Advertising LoB Support
+        
+        As TeamSnap started adding advertising as a Line of Business, I helped scaffold out some of the offerings on the marketing site and delivered on custom landing pages. We also would build very custom web presentations to try win business from potential partners
+    </Block>
+    <Assets>
+        <AssetVideo src={hboMax}>
+            *HBO Max Campaign*
+        </AssetVideo>
+    </Assets>
+    <Assets className="two-column">
+        <AssetImage>
+            ![Manframe](./12.jpg)
+            *Milk Pep Sports Campaign*
+        </AssetImage>
+        <AssetImage>
+            ![Manframe](./13.jpg)
+            *Sponsored Holiday Guide*
+        </AssetImage>
     </Assets>
 </Container>
