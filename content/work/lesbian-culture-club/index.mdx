@@ -3,9 +3,8 @@ title: 'Bringing a Niche Community to Life with Global Implications'
 workPageTitle: 'Lesbian Culture Club'
 order: 3
 homepagepreview: 'homepage-preview.jpg'
-homepageteaser: "Born from a vision to help men thrive, Mancamped offers a space for authentic connection, growth, and becoming your best self."
+homepageteaser: "Lesbian Culture Club is a community-driven platform/mobile app that celebrates the unique experiences and perspectives of lesbian women."
 ---
-import video from './test.mp4'
 
 <Hero>
    <Container>
@@ -13,7 +12,7 @@ import video from './test.mp4'
             <h1>{props.pageContext.frontmatter.title}</h1>
         </Block>
         <AssetImage>
-            ![Manframe](./hero.avif)
+            ![LCC Hero](./1.jpg)
         </AssetImage>
    </Container>
 </Hero>
@@ -29,20 +28,22 @@ import video from './test.mp4'
         <Block>
             ### Mission
 
-            Mancamped was born out my co-founder vision and my alignment to build a platform and ecosystem for men to become their peak selves. It is designed for men to be authentically themselves, tap into gamification, and create a place for men to vent, learn, and grow in our ever changing society. 
+            The Lesbian Culture Club emerged from a longing for dedicated spaces where queer women can gather and experience a deep sense of belonging and joy. Their mission is to create a dynamic and inclusive space where members can celebrate their identities, support one another, and build lasting connections.
         </Block>
 
         <Block>
             ### My Contributions
 
-            I have built upwards of 3 apps, mobile and web as we built out our offering. I designed and built multiple brands as we explored product market fit. As well supporting the team with sales automation, analytics, database management, and design as need for marketing initiatives.
+            I supported the founder in building out the application, marketing site and merch store. I handled every part of the product development flow as a nimble team of one to get the product from idea to app store in under 3 months
         </Block>
    </MainColumn>
    <Sidebar>
         <Block>
             ### Company
 
-            Mancamped
+            Lesbian Culture Club
+            **via Good & Gold**
+
         </Block>
         <Block>
             ### Services
@@ -51,23 +52,22 @@ import video from './test.mp4'
             - User Experience Design
             - User Research & User Flows
             - Wireframing
-            - Elixir development
-            - Team and project management
-            - A/B Testing & CRO
-            - Web design
-            - Webflow development
+            - Web Design
+            - Web Development 
+            - Mobile App Development
+            - Custom Analytics Development
         </Block>
         <Block>
             ### Tools & Tech
 
             - Figma
             - Next.JS
-            - React
             - React Native
-            - Elixir (Phoenix Framework)
-            - Webflow
-            - Tailwind CSS
-            - VWO (for A/B testing)
+            - Supabase (database)
+            - Resend (for email)
+            - Amplitude (for analytics)
+            - Expo and EAS
+
         </Block>
    </Sidebar>
 </Container>
@@ -76,28 +76,23 @@ import video from './test.mp4'
     <Block>
         ## Impact
         
-        Any metric we can drive forward to help men be better and save them from suicide is a positive metric. Here are some metrics we have been able to drive so far:
+        The launch metrics so far:
 
         <Metrics>
             <Metric>
-                ### $60k
+                ### 1,000+
                 
-                In self generated revenue for the business
+                Day 1 signups after local news broadcast
             </Metric>
             <Metric>
-                ### 120+
+                ### 3
                 
-                Initial users
+                Months to launched MVP
             </Metric>
             <Metric>
-                ### 12
+                ### $10k
                 
-                Weeks in Founders University; graduated from the program
-            </Metric>
-            <Metric>
-                ### 500k
-                
-                Followers added to ex-influencer’s following
+                In initial premium subscriptions
             </Metric>
         </Metrics>
     </Block>
@@ -114,65 +109,39 @@ import video from './test.mp4'
 
 <Container>
     <Block>
-        ### The Start
+        ### Marketing Site and E-commerce store
 
-        My co-founder first approached me with some business ideas for us to tackle. We tried a couple but ended settling on creating a brand called Manframe. We built a mobile application and partnered with an influencer we had lined up to test. We drove traffic and iterated quickly on the product.
+        We moved fast. To get Lesbian Culture Club online quickly, we skipped traditional wireframes and designed directly in the browser. Figma was only used when absolutely necessary for key components. This browser-first approach allowed us to iterate in real time with the founder and secure quick approvals.
+
+        The marketing site and merch store were built to reflect the brand’s energy and values, while keeping conversion top of mind. I also implemented a custom Stripe integration to support their unique pricing model. This setup acted as the foundational infrastructure for the eventual app, capturing early interest and paid subscriptions while validating demand.
     </Block>
     <Assets className="two-column">
         <AssetImage>
-            ![Manframe](./homepage-preview.jpg)
-            *image_caption*
+            ![Manframe](./2.jpg)
         </AssetImage>
-        <AssetVideo src={video} />
+        <AssetImage>
+            ![Manframe](./3.jpg)
+        </AssetImage>
     </Assets>
 </Container>
 
 <Container>
     <Block>
-        ### Next Steps
+        ### The App
 
-        We quickly started to learn after weeks of iterating, we were on to something but we had some problems with adoption. We moved on to create  another brand and product strategy to better suit the market. We ended up generating most of our sales here, got even more traffic to resonate with our content and offering. We built out a robust sales funnel and process to get men onto the content and program we created. Interviewing users and monitoring test along the way.
+        The app started with a handful of working sessions between me and the founder. She served as the voice of the customer, guiding features and priorities based on real community needs. We skipped polished mockups and instead tested working prototypes with actual users—getting fast, actionable feedback that shaped the experience.
+
+        To move quickly, I used AI tools as a kind of junior developer—accelerating the build while I focused on architecture, flow, and polish. The app was designed end-to-end, including both frontend and backend logic via Next.js API routes. The founder needed to feel the product evolve in real time, which made the iterative, hands-on process essential to our success.
     </Block>
-    <Assets className="three-column">
+    <Assets className="two-column">
         <AssetImage>
-            ![Manframe](./homepage-preview.jpg)
-            *image_caption*
+            ![Manframe](./4.jpg)
         </AssetImage>
-        <AssetVideo src={video} />
-    </Assets>
-</Container>
-
-<Container>
-    <Block>
-        ### Enter Mancamped
-
-        We started to realize, while we were having success, it would take a lot of human-hours and sales people to scale this business and we wanted to take a PLG approach to acquisition. Sales started to slow with the in-person approach, so we pivoted again to create a brand that was much more flexible and mature. Mancamped started to have success until our influencer ghosted the business and were left without a traction channel.
-    </Block>
-    <Assets className="four-column">
         <AssetImage>
-            ![Manframe](./homepage-preview.jpg)
-            *image_caption*
+            ![Manframe](./5.jpg)
         </AssetImage>
-        <AssetVideo src={video} />
         <AssetImage>
-            ![Manframe](./homepage-preview.jpg)
-            *image_caption*
+            ![Manframe](./6.jpg)
         </AssetImage>
-        <AssetVideo src={video} />
-    </Assets>
-</Container>
-
-<Container>
-    <Block>
-        ### Founder’s U and Current Product
-        
-        Fast forward a few months of figuring out a new traction channel and graduating from Founder’s U, we tested paid advertising, kicked off SEO and started beta testing our newest iteration. We have a revamped sign up funnel that serves both as a data mine and a application process. We are running weekly calls with our users as part of the product offering and have a full suite of tools and more on the way to help guys grow and succeed—including my co-founder and myself.
-    </Block>
-    <Assets>
-        <AssetImage>
-            ![Manframe](./homepage-preview.jpg)
-            *image_caption*
-        </AssetImage>
-        <AssetVideo src={video} />
     </Assets>
 </Container>
