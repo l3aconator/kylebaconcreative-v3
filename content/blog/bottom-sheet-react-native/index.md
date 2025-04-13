@@ -1,5 +1,5 @@
 ---
-title: 'TIL: Playwright Configuration'
+title: 'TIL: Bottom Sheet React Native'
 published: true
 date: '2025-04-12'
 metadata:
