@@ -105,7 +105,11 @@ function Homepage({ data: { site, work, blog }, location }) {
                     (
                       {
                         node: {
-                          frontmatter: { title, homepagepreview, client },
+                          frontmatter: {
+                            workPageTitle,
+                            homepagepreview,
+                            client,
+                          },
                           fields: { slug },
                         },
                       },
@@ -119,7 +123,7 @@ function Homepage({ data: { site, work, blog }, location }) {
                             />
                             <div className="work--meta">
                               <h4>
-                                <span>{title}</span>
+                                <span>{workPageTitle}</span>
                               </h4>
                               {client && <h5>{client}</h5>}
                             </div>
@@ -313,7 +317,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            title
+            workPageTitle
             homepagepreview {
               childImageSharp {
                 fluid {
