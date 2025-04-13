@@ -32,6 +32,7 @@ import {
   AssetVideo,
   Hero,
 } from '../components/new-work';
+import SweptAnimation from '../components/custom/SweptAnimation';
 
 const WorkPostTemplate = ({ data, children, location, pageContext }) => {
   const post = data.mdx;
@@ -173,6 +174,7 @@ const WorkPostTemplate = ({ data, children, location, pageContext }) => {
     AssetImage,
     AssetVideo,
     Hero,
+    SweptAnimation,
   };
 
   return (
