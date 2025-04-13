@@ -3,9 +3,9 @@ title: 'Product Design & Development for a Managing a Photographer’s Business 
 workPageTitle: 'Picsello'
 order: 1
 homepagepreview: 'homepage-preview.jpg'
-homepageteaser: "Born from a vision to help men thrive, Mancamped offers a space for authentic connection, growth, and becoming your best self."
+homepageteaser: "Picsello was created to help photographers make more money doing what they love instead of focusing on the day-to-day operations of running a photography business."
 ---
-import video from './test.mp4'
+import video from './churn-fix.mp4'
 
 <Hero>
    <Container>
@@ -13,7 +13,7 @@ import video from './test.mp4'
             <h1>{props.pageContext.frontmatter.title}</h1>
         </Block>
         <AssetImage>
-            ![Manframe](./hero.avif)
+            ![Picsello](./1.jpg)
         </AssetImage>
    </Container>
 </Hero>
@@ -29,20 +29,20 @@ import video from './test.mp4'
         <Block>
             ### Mission
 
-            Mancamped was born out my co-founder vision and my alignment to build a platform and ecosystem for men to become their peak selves. It is designed for men to be authentically themselves, tap into gamification, and create a place for men to vent, learn, and grow in our ever changing society. 
+            Picsello was created to help photographers make more money doing what they love instead of focusing on the day-to-day operations of running a photography business. It operates and automates from start to finish, the entire workflow a photography business goes through. From capturing a lead on their website, to booking them, reminding of the shoot and finally gallery delivery and purchasing of digitals & prints.
         </Block>
 
         <Block>
             ### My Contributions
 
-            I have built upwards of 3 apps, mobile and web as we built out our offering. I designed and built multiple brands as we explored product market fit. As well supporting the team with sales automation, analytics, database management, and design as need for marketing initiatives.
+            I was employee number 4 at Picsello, and was with the business for 3 years swiftly leading and executing on the product vision. I took the web app through every stage of the UX design process, led a development team to ship the roadmap, and hoped in and coded to help accelerate the dev team and time-to-market. I am a Player/Coach leader at heart. I also contributed to the marketing site through design and development.
         </Block>
    </MainColumn>
    <Sidebar>
         <Block>
             ### Company
 
-            Mancamped
+            Picsello
         </Block>
         <Block>
             ### Services
@@ -56,18 +56,23 @@ import video from './test.mp4'
             - A/B Testing & CRO
             - Web design
             - Webflow development
+            - SEO
+
         </Block>
         <Block>
             ### Tools & Tech
 
-            - Figma
-            - Next.JS
-            - React
-            - React Native
             - Elixir (Phoenix Framework)
+            - Google Cloud Platform
             - Webflow
+            - Mailchimp
+            - Sendgrid
             - Tailwind CSS
-            - VWO (for A/B testing)
+            - Render
+            - Postgres
+            - Figma
+            - Lyssna (User Testing)
+
         </Block>
    </Sidebar>
 </Container>
@@ -76,28 +81,33 @@ import video from './test.mp4'
     <Block>
         ## Impact
         
-        Any metric we can drive forward to help men be better and save them from suicide is a positive metric. Here are some metrics we have been able to drive so far:
+        The initial launch had a large amount of churn within the user base, further iterations and a strike team I led was deployed for these final metrics:
 
         <Metrics>
             <Metric>
-                ### $60k
+                ### -50%
                 
-                In self generated revenue for the business
+                The amount churn was reduced
             </Metric>
             <Metric>
-                ### 120+
+                ### 7k
                 
-                Initial users
+                Visitors to the marketing site organically
             </Metric>
             <Metric>
-                ### 12
+                ### 150+
                 
-                Weeks in Founders University; graduated from the program
+               Initial subscribers to the web app upon launch
             </Metric>
             <Metric>
-                ### 500k
+                ### 8
                 
-                Followers added to ex-influencer’s following
+                Developers managed
+            </Metric>
+            <Metric>
+                ### 6
+                
+                Huge features shipped quickly after launch
             </Metric>
         </Metrics>
     </Block>
@@ -107,72 +117,151 @@ import video from './test.mp4'
     <Block>
         <hr />
         
-        ## 0-1 Journey
+        ## Iterating the MVP
 
     </Block>
 </Container>
 
 <Container>
     <Block>
-        ### The Start
+        ### Discovery & Background
 
-        My co-founder first approached me with some business ideas for us to tackle. We tried a couple but ended settling on creating a brand called Manframe. We built a mobile application and partnered with an influencer we had lined up to test. We drove traffic and iterated quickly on the product.
+        The CEO was a seasoned photographer who ran a successful photography business. In 2020, she realized, with no work because of the pandemic, she was still managing the business with fragmented and overpriced tools. She fired up a survey to 5000+ photographers and the idea was born. She started to form the team and before jumping into design, I analyzed all of the data, competitive landscape, and ran some user interviews on that pool of photographers to begin scoping and understanding their jobs-to-be-done.
+    </Block>
+</Container>
+
+<Container>
+    <Block>
+        ### Workflow/UX
+
+        In theory, building a vertical SaaS with a CRM as the base and a photo uploader is easy, but in reality, the photography world has some tight workflows they like to work through.The software had to both be opinionated and flexible to meet the varying needs of the user base. One major educator taught things should be done this way, while another preached another one. Then there’s different types of photographers, those that do “In Person Sales” vs. those who take wedding photos on the weekend as a side gig. I meticulously studied those workflows and created diagrams for the team to agree upon and run past users.
     </Block>
     <Assets className="two-column">
         <AssetImage>
-            ![Manframe](./homepage-preview.jpg)
+            ![Manframe](./2.jpg)
             *image_caption*
         </AssetImage>
-        <AssetVideo src={video} />
+        <AssetImage>
+            ![Manframe](./3.jpg)
+            *image_caption*
+        </AssetImage>
     </Assets>
 </Container>
 
 <Container>
     <Block>
-        ### Next Steps
+        ### UI Design
 
-        We quickly started to learn after weeks of iterating, we were on to something but we had some problems with adoption. We moved on to create  another brand and product strategy to better suit the market. We ended up generating most of our sales here, got even more traffic to resonate with our content and offering. We built out a robust sales funnel and process to get men onto the content and program we created. Interviewing users and monitoring test along the way.
+        The goal of the UI design was to be simple and clean. No frills on the photographer’s view and a clean client frontend for when photographers were sending out proposals and automated booking flows. A consistent component library was leveraged to apply across all flows and UX to speed up development and keep consistency top of mind.
     </Block>
-    <Assets className="three-column">
+    <Assets className="two-column">
         <AssetImage>
-            ![Manframe](./homepage-preview.jpg)
-            *image_caption*
+            ![Manframe](./4.jpg)
         </AssetImage>
-        <AssetVideo src={video} />
+        <AssetImage>
+            ![Manframe](./5.jpg)
+        </AssetImage>
+        <AssetImage>
+            ![Manframe](./7.jpg)
+        </AssetImage>
+        <AssetImage>
+            ![Manframe](./6.jpg)
+        </AssetImage>
     </Assets>
 </Container>
 
 <Container>
     <Block>
-        ### Enter Mancamped
-
-        We started to realize, while we were having success, it would take a lot of human-hours and sales people to scale this business and we wanted to take a PLG approach to acquisition. Sales started to slow with the in-person approach, so we pivoted again to create a brand that was much more flexible and mature. Mancamped started to have success until our influencer ghosted the business and were left without a traction channel.
-    </Block>
-    <Assets className="four-column">
-        <AssetImage>
-            ![Manframe](./homepage-preview.jpg)
-            *image_caption*
-        </AssetImage>
-        <AssetVideo src={video} />
-        <AssetImage>
-            ![Manframe](./homepage-preview.jpg)
-            *image_caption*
-        </AssetImage>
-        <AssetVideo src={video} />
-    </Assets>
-</Container>
-
-<Container>
-    <Block>
-        ### Founder’s U and Current Product
+        ### Continuous User Research
         
-        Fast forward a few months of figuring out a new traction channel and graduating from Founder’s U, we tested paid advertising, kicked off SEO and started beta testing our newest iteration. We have a revamped sign up funnel that serves both as a data mine and a application process. We are running weekly calls with our users as part of the product offering and have a full suite of tools and more on the way to help guys grow and succeed—including my co-founder and myself.
+        One should trust their gut to a certain extent when building a new product, but I am a big believer in running ideas, mocks, and flows across users, a) this saves development budget if you’re wrong and b) makes sure you are solving the right problem at the right time. I leveraged Lyssna and Figma prototypes to quickly iterate flows and capture user feedback to keep the product development flow tight. Certain times I would also build the feature in code really quick and provide a live prototype behind a feature flag to our Photography Advisory Board that I spearheaded creating. Between Figma mocks and live prototypes, we typically shipped features that users already loved.
     </Block>
     <Assets>
         <AssetImage>
-            ![Manframe](./homepage-preview.jpg)
-            *image_caption*
+            ![Manframe](./8.jpg)
         </AssetImage>
-        <AssetVideo src={video} />
     </Assets>
+</Container>
+
+<Container>
+    <Block>
+        <hr />
+        
+        ## Busting Churn
+
+    </Block>
+</Container>
+
+<Container>
+    <Block>
+        ### Data analysis
+        
+        When Picsello first launched, we noticed we had a decent conversion rate, but folks weren’t sticking around and if they did, they’d churn after the 14 day trial. This was seen in GA4 and our Stripe data. I suggested the business settle on what an activated user was:
+
+        - Stripe Connect setup
+        - 1 job booked
+            - Dollars ran through the system
+        - 2 galleries uploaded
+            - (Most tire-kickers would upload and preview a gallery day 1 to see if it fit their needs)
+
+        After building an analytics dashboard to uncover the problem, we set out to interview users to get some qualitative data via closed/won interviews. The churners who took the incentive, iterated that they were overwhelmed with transferring software or starting from scratch.
+    </Block>
+    <Assets>
+        <AssetImage>
+            ![Manframe](./9.jpg)
+        </AssetImage>
+    </Assets>
+</Container>
+
+<Container>
+    <Block>
+        ### The Fix
+        
+        After further analysis and doing some closed/won interviews with churners who took the incentive to talk to us, I landed on creating a simplified checklist of things they need to do to get setup quickly in the software. It was baked with gamification and reward functions, users loved it and I was able to reduce churn by 50%. We doubled down on this by revamping our onboarding sequence, offering white-glove transfer services as an upsell, and leveraged Intercom to help at certain touchpoints in addition to the checklist.
+    </Block>
+    <Assets>
+       <AssetVideo src={video} />
+    </Assets>
+</Container>
+
+<Container>
+    <Block>
+        <hr />
+        
+        ## The Marketing Site
+
+    </Block>
+</Container>
+
+<Container>
+    <Block>
+        ### Simple Funnel
+        
+        As with the UI design, a big tenant of the brand is to be simple and transparent. We ditched the complex pricing table competitors had, lowered the price, gave unlimited gallery storage for the price. We spoke and designed in clean language. Photographers are a strong-minded and critical audience—that forced us to be clean and solid.
+    </Block>
+    <Assets className="two-column">
+        <AssetImage>
+            ![Manframe](./10.jpg)
+        </AssetImage>
+        <AssetImage>
+            ![Manframe](./11.jpg)
+        </AssetImage>
+    </Assets>
+</Container>
+
+<Container>
+    <Block>
+        <hr />
+        
+        ## Challenges
+
+    </Block>
+</Container>
+
+<Container>
+    <Block>
+        ### Funding Demise and Crowded Space
+        
+        In all transparency, the company ended up not closing a series A and the lights are still on for the users who adopted before marketing stopped. The competitors also woke up and started shipping product they should’ve shipped years ago (most the players were in the space for 10+ years) thanks to some of what we were innovating. This was a fantastic product to work on for 3 years and was great to grow as a leader and shipping a 0-1 product quickly.
+    </Block>
 </Container>
