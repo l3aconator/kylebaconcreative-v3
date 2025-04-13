@@ -5,7 +5,8 @@ order: 5
 homepagepreview: 'homepage-preview.jpg'
 homepageteaser: "Born from a vision to help men thrive, Mancamped offers a space for authentic connection, growth, and becoming your best self."
 ---
-import video from './test.mp4'
+import newHero from './new-hero.mp4'
+import btl from './btl.mp4'
 
 <Hero>
    <Container>
@@ -13,7 +14,7 @@ import video from './test.mp4'
             <h1>{props.pageContext.frontmatter.title}</h1>
         </Block>
         <AssetImage>
-            ![Manframe](./hero.avif)
+            ![Manframe](./1.jpg)
         </AssetImage>
    </Container>
 </Hero>
@@ -29,20 +30,20 @@ import video from './test.mp4'
         <Block>
             ### Mission
 
-            Mancamped was born out my co-founder vision and my alignment to build a platform and ecosystem for men to become their peak selves. It is designed for men to be authentically themselves, tap into gamification, and create a place for men to vent, learn, and grow in our ever changing society. 
+            Dark Horse Consulting has unparalleled expertise in the Cell and Gene Therapy space. The goal was to revamp their site to reflect that expertise in the market and continue to stand out ahead of the competition.
         </Block>
 
         <Block>
             ### My Contributions
 
-            I have built upwards of 3 apps, mobile and web as we built out our offering. I designed and built multiple brands as we explored product market fit. As well supporting the team with sales automation, analytics, database management, and design as need for marketing initiatives.
+            I worked closely with the team and project manager to go through the entire web design process in a 6-month timeframe as we needed room for a lot of executive approvals and by ins. I helped drive the design and development. They are content dense brand given what they do. I continue to work with Dark Horse and have helped launch 2 new initiatives with separate websites + continuously improving their site and SEO.
         </Block>
    </MainColumn>
    <Sidebar>
         <Block>
             ### Company
 
-            Mancamped
+            Dark Horse Consulting Group
         </Block>
         <Block>
             ### Services
@@ -51,23 +52,17 @@ import video from './test.mp4'
             - User Experience Design
             - User Research & User Flows
             - Wireframing
-            - Elixir development
-            - Team and project management
-            - A/B Testing & CRO
-            - Web design
-            - Webflow development
+            - Web Design
+            - Web Development 
+            - SEO
         </Block>
         <Block>
             ### Tools & Tech
 
             - Figma
-            - Next.JS
             - React
-            - React Native
-            - Elixir (Phoenix Framework)
             - Webflow
-            - Tailwind CSS
-            - VWO (for A/B testing)
+            - Finsweet Webflow Library  
         </Block>
    </Sidebar>
 </Container>
@@ -76,28 +71,13 @@ import video from './test.mp4'
     <Block>
         ## Impact
         
-        Any metric we can drive forward to help men be better and save them from suicide is a positive metric. Here are some metrics we have been able to drive so far:
+        The primary metric for this was getting a job and a brand the client was satisfied with!
 
         <Metrics>
             <Metric>
-                ### $60k
+                ### 6,000+
                 
-                In self generated revenue for the business
-            </Metric>
-            <Metric>
-                ### 120+
-                
-                Initial users
-            </Metric>
-            <Metric>
-                ### 12
-                
-                Weeks in Founders University; graduated from the program
-            </Metric>
-            <Metric>
-                ### 500k
-                
-                Followers added to ex-influencer’s following
+                More site visitors a year (this is a low volume but high dollar value industry for sales)
             </Metric>
         </Metrics>
     </Block>
@@ -107,72 +87,96 @@ import video from './test.mp4'
     <Block>
         <hr />
         
-        ## 0-1 Journey
+        ## Site Process
 
     </Block>
 </Container>
 
 <Container>
     <Block>
-        ### The Start
+        ### Discovery & Structure
 
-        My co-founder first approached me with some business ideas for us to tackle. We tried a couple but ended settling on creating a brand called Manframe. We built a mobile application and partnered with an influencer we had lined up to test. We drove traffic and iterated quickly on the product.
+        We kicked things off with a collaborative discovery sprint to understand DHC’s wants and needs. Most importantly what they didn’t want. I iterated on some wireframes and initial mock ups of the site. We worked quickly in some collaborative working sessions to define the overall site styleguide; the client is very much a “I’ll know it when I see it” type of client
     </Block>
     <Assets className="two-column">
         <AssetImage>
-            ![Manframe](./homepage-preview.jpg)
-            *image_caption*
+            ![Sitemap](./2.jpg)
+            *Sitemap*
         </AssetImage>
-        <AssetVideo src={video} />
+        <AssetImage>
+            ![Wireframes](./3.jpg)
+            *Wireframes*
+        </AssetImage>
     </Assets>
 </Container>
 
 <Container>
     <Block>
-        ### Next Steps
+        ### Site design
 
-        We quickly started to learn after weeks of iterating, we were on to something but we had some problems with adoption. We moved on to create  another brand and product strategy to better suit the market. We ended up generating most of our sales here, got even more traffic to resonate with our content and offering. We built out a robust sales funnel and process to get men onto the content and program we created. Interviewing users and monitoring test along the way.
+        The design needed to be simple, handle a lot of text and be very professional looking with a slight edge, embodying some of DHC’s expertise.
     </Block>
-    <Assets className="three-column">
+    <Assets className="two-column">
         <AssetImage>
-            ![Manframe](./homepage-preview.jpg)
-            *image_caption*
+            ![Mockups](./4.jpg)
         </AssetImage>
-        <AssetVideo src={video} />
+        <AssetImage>
+            ![Mockups](./5.jpg)
+        </AssetImage>
     </Assets>
 </Container>
 
 <Container>
     <Block>
-        ### Enter Mancamped
+        ### Site build
 
-        We started to realize, while we were having success, it would take a lot of human-hours and sales people to scale this business and we wanted to take a PLG approach to acquisition. Sales started to slow with the in-person approach, so we pivoted again to create a brand that was much more flexible and mature. Mancamped started to have success until our influencer ghosted the business and were left without a traction channel.
+        Built entirely in Webflow, the site uses flexible, client-editable content blocks and a clean CMS setup. There a few custom features with how case studies are filtered and leveraging Finsweet’s libraries of tools for combining disparate collections so we can show nested and reusable data. Their team is their product so we had to be creative on reusing them across case studies, and their capabilities.
     </Block>
-    <Assets className="four-column">
+    <Assets className="two-column">
         <AssetImage>
-            ![Manframe](./homepage-preview.jpg)
-            *image_caption*
+            ![Case studies](./6.jpg)
         </AssetImage>
-        <AssetVideo src={video} />
         <AssetImage>
-            ![Manframe](./homepage-preview.jpg)
-            *image_caption*
+            ![Webflow code](./7.jpg)
         </AssetImage>
-        <AssetVideo src={video} />
     </Assets>
 </Container>
 
 <Container>
     <Block>
-        ### Founder’s U and Current Product
-        
-        Fast forward a few months of figuring out a new traction channel and graduating from Founder’s U, we tested paid advertising, kicked off SEO and started beta testing our newest iteration. We have a revamped sign up funnel that serves both as a data mine and a application process. We are running weekly calls with our users as part of the product offering and have a full suite of tools and more on the way to help guys grow and succeed—including my co-founder and myself.
+        ### On-going Support
     </Block>
+    <Assets >
+        <AssetVideo src={newHero}>
+            *New Hero Animation*
+        </AssetVideo>
+    </Assets>
+    <Assets className="two-column">
+        <AssetImage>
+            ![Manframe](./8.jpg)
+            *Update icons for service offerings*
+        </AssetImage>
+        <AssetImage>
+            ![Manframe](./9.jpg)
+            *Acquired company logo updates (BTL)*
+        </AssetImage>
+    </Assets>
+    <Assets >
+        <AssetVideo src={btl}>
+            *BTL homepage animation*
+        </AssetVideo>
+    </Assets>
+    <Assets className="two-column">
+        <AssetImage>
+            ![Manframe](./10.jpg)
+            *New initiative, ICMC Certification library*
+        </AssetImage>
+        <AssetImage>
+            ![Manframe](./11.jpg)
+            *Custom built certificate generator with React*
+        </AssetImage>
+    </Assets>
     <Assets>
-        <AssetImage>
-            ![Manframe](./homepage-preview.jpg)
-            *image_caption*
-        </AssetImage>
-        <AssetVideo src={video} />
+        <div style={{position: "relative", paddingTop: "56.25%"}}><iframe src="https://player.vimeo.com/video/625195713?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;show=card" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style={{position:"absolute", top:0, left:0, width: "100%", height:"100%"}} title="Dark Horse Consulting Introduction 2021 v2"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
     </Assets>
 </Container>
