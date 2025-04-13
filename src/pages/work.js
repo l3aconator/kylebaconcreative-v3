@@ -25,6 +25,7 @@ function Work({ data, location }) {
             {posts.map(({ node }) => {
               const title = node.frontmatter.title || node.fields.slug;
               const teaser = node.frontmatter.homepageteaser;
+              const workPageTitle = node.frontmatter.workPageTitle;
               const slug = `/work${node.fields.slug}`;
               const image =
                 node.frontmatter.homepagepreview.childImageSharp.fluid.src;
@@ -35,7 +36,9 @@ function Work({ data, location }) {
                     <div className="work-meta">
                       <div className="work-meta--content">
                         <div>
-                          <h3 className="work-meta--content-title">{title}</h3>
+                          <h3 className="work-meta--content-title">
+                            {workPageTitle}
+                          </h3>
                           <MoveUpRight className="work-meta--content-arrow" />
                         </div>
                         <p className="work-meta--content-teaser">{teaser}</p>
@@ -62,7 +65,7 @@ export const pageQuery = graphql`
       }
     }
     allMdx(
-      sort: { frontmatter: { title: ASC } }
+      sort: { frontmatter: { order: ASC } }
       filter: { internal: { contentFilePath: { regex: "/work/" } } }
     ) {
       edges {
@@ -72,6 +75,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            workPageTitle
             homepagepreview {
               childImageSharp {
                 fluid {

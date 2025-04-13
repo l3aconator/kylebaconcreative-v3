@@ -1,4 +1,4 @@
-@use "../framework/variables";
+@use '../framework/variables';
 
 // ---- Work Detail ----
 
@@ -155,19 +155,23 @@
 }
 
 .work-carousel {
-  background-color: variables.$blue--light;
-  padding: 30px;
+  background-color: #141640;
   color: white;
+  padding-top: 90px;
 
   img {
     width: 100%;
-    border-radius: 1000px;
   }
 
   .icon-box {
     width: 74px;
     height: 74px;
   }
+}
+
+.work-carousel-title {
+  font-size: 2.75rem;
+  margin-bottom: 2rem;
 }
 
 .work-carousel-name {
@@ -262,4 +266,132 @@
   font-family: variables.$sans-serif-base;
   font-size: 2.25em;
   color: white;
+}
+
+.block {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.asset-image .gatsby-resp-image-wrapper {
+  max-width: 100% !important;
+}
+
+.asset-image img,
+.asset-video video,
+.asset-image .gatsby-resp-image-background-image,
+.asset-image .gatsby-resp-image-wrapper {
+  border-radius: 30px;
+}
+
+.asset-video video {
+  width: 100%;
+}
+
+.work-post-hero {
+  margin-bottom: 4rem;
+}
+
+.work-post-hero h1 {
+  margin-bottom: 2rem;
+}
+
+.work-container {
+  margin-bottom: 4rem;
+}
+
+.assets {
+  margin-top: 4rem;
+}
+
+.asset-image em,
+.asset-video em {
+  display: block;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.asset-image > p {
+  margin-top: 0px;
+}
+
+.assets {
+  display: grid;
+  gap: 2rem;
+}
+
+.assets.two-column {
+  grid-template-columns: 1fr 1fr;
+}
+
+.assets.one-column {
+  grid-template-columns: 1fr;
+}
+
+.assets.three-column {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.assets.four-column {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.work-intro {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  max-width: 1000px;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 2rem;
+  column-gap: 6rem;
+  margin-top: 4rem;
+}
+
+.metrics h3 {
+  font-size: 2.75rem;
+}
+
+.block hr {
+  margin-bottom: 4rem;
+}
+
+.footer-cta {
+  padding-top: 90px;
+  padding-bottom: 180px;
+}
+
+.footer-cta .container {
+  max-width: 1000px;
+  text-align: center;
+}
+
+.footer-cta h2 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .assets,
+  .assets.two-column,
+  .assets.one-column,
+  .assets.three-column,
+  .assets.four-column {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .work-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-cta h2 {
+    font-size: 2.75rem;
+  }
 }

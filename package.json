@@ -1,7 +1,7 @@
 {
   "name": "kyle-bacon-creative-v3",
   "private": true,
-  "description": "Portfolio Site",
+  "description": "Work Site",
   "version": "3.1.0",
   "author": "Kyle Bacon",
   "bugs": {
@@ -28,11 +28,12 @@
     "gatsby-remark-copy-linked-files": "6.14.0",
     "gatsby-remark-images": "7.14.0",
     "gatsby-remark-prismjs": "7.14.0",
-    "gatsby-remark-responsive-iframe": "6.14.0",
     "gatsby-remark-smartypants": "6.14.0",
+    "gatsby-remark-video": "^1.2.5",
     "gatsby-source-filesystem": "^5.14.0",
     "gatsby-transformer-remark": "6.14.0",
     "gatsby-transformer-sharp": "5.14.0",
+    "gsap": "^3.12.7",
     "js-confetti": "^0.12.0",
     "lucide-react": "^0.487.0",
     "prismjs": "1.30.0",

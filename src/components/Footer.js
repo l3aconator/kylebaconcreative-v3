@@ -51,13 +51,13 @@ export default function Footer({}) {
             <nav>
               <ul>
                 <li>
-                  <Link to="/work">Portfolio</Link>
+                  <Link to="/work">Work</Link>
                 </li>
                 <li>
                   <Link to="/contact">Contact</Link>
                 </li>
                 <li>
-                  <Link to="/blog">Experiments</Link>
+                  <Link to="/blog">Blog</Link>
                 </li>
               </ul>
             </nav>

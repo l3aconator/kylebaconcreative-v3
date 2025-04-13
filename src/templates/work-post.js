@@ -19,6 +19,20 @@ import {
   WorkSquareTall,
   WorkDetailFooter,
 } from '../components/work';
+import {
+  Container,
+  MainColumn,
+  Sidebar,
+  Block,
+  Metrics,
+  Metric,
+  AssetContainer,
+  Assets,
+  AssetImage,
+  AssetVideo,
+  Hero,
+} from '../components/new-work';
+import SweptAnimation from '../components/custom/SweptAnimation';
 
 const WorkPostTemplate = ({ data, children, location, pageContext }) => {
   const post = data.mdx;
@@ -148,7 +162,19 @@ const WorkPostTemplate = ({ data, children, location, pageContext }) => {
     IconRow: (props) => (
       <IconRow {...props} icons={workdetailiconographyicons} />
     ),
+    Container,
+    MainColumn,
+    Sidebar,
+    Block,
+    Metrics,
+    Metric,
     WorkCarousel,
+    AssetContainer,
+    Assets,
+    AssetImage,
+    AssetVideo,
+    Hero,
+    SweptAnimation,
   };
 
   return (

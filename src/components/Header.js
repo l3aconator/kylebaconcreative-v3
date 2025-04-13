@@ -43,13 +43,13 @@ export default function Header({ classes = '' }) {
           <nav className={openMenu ? 'Header--openMenu' : ''}>
             <ul>
               <li>
-                <Link to="/work">Portfolio</Link>
+                <Link to="/work">Work</Link>
               </li>
               <li>
                 <Link to="/contact">Contact</Link>
               </li>
               <li>
-                <Link to="/blog">Experiments</Link>
+                <Link to="/blog">Blog</Link>
               </li>
               <li>
                 <a
